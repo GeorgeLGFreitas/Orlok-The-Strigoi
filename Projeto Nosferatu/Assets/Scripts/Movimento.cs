@@ -20,10 +20,10 @@ public class Movimento : MonoBehaviour
        if(ctrl.isGrounded)
        {
            movi.y = 0;
-           if(Input.GetButtonDown("Jump"))
-           {
-               movi.y = jump;
-           }
+           //if(Input.GetButtonDown("Jump"))
+           //{
+               //movi.y = jump;
+           //}
        }
 
        movi.x = 0;
