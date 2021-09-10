@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BehaviourTree : MonoBehaviour
 {
-    BTNode root;
+    public BTNode root;
 
     public IEnumerator Begin()
     {

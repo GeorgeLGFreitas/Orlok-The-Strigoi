@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 public class BTSequence : BTNode
 {
-    List<BTNode> children = new List<BTNode>();
+    public List<BTNode> children = new List<BTNode>();
 
     public override IEnumerator Run(BehaviourTree bt)
     {
