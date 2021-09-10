@@ -8,6 +8,7 @@ public class BTTemColetavel : BTNode
         GameObject encontrou = GameObject.FindWithTag("Coletavel");
         if (encontrou) status = Status.SUCCESS;
         else status = Status.FAILURE;
+        Print(bt);
         yield break;
     }
 }
