@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Coletavel
+  - NPC
   layers:
   - Default
   - TransparentFX
