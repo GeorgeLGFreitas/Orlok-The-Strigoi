@@ -4,26 +4,36 @@ using UnityEngine;
 
 public class CannonController : MonoBehaviour
 {
-    public float rotationSpeed = 1;
-    public float BlastPower = 5;
+    public float BlastPower;
 
+    float bPower;
     public GameObject Cannonball;
     public Transform ShotPoint;
 
-    private void Update()
+    void Start()
     {
-        float HorizontalRotation = Input.GetAxis("Horizontal");
-        float VericalRotation = Input.GetAxis("Vertical");
+        bPower = BlastPower;
+    }
+    private void LateUpdate()
+    {
 
-        transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles + 
-            new Vector3(0, HorizontalRotation * rotationSpeed, VericalRotation * rotationSpeed));
+        if (Input.GetKey(KeyCode.Mouse1))
+        {   
+            BlastPower += Input.mouseScrollDelta.y * 0.3f;
+        
+            if (Input.GetKeyDown(KeyCode.Mouse0))
+            {
+                GameObject CreatedCannonball = Instantiate(Cannonball, ShotPoint.position, ShotPoint.rotation);
+                CreatedCannonball.GetComponent<Rigidbody>().velocity = ShotPoint.transform.up * BlastPower;
 
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            GameObject CreatedCannonball = Instantiate(Cannonball, ShotPoint.position, ShotPoint.rotation);
-            CreatedCannonball.GetComponent<Rigidbody>().velocity = ShotPoint.transform.up * BlastPower;
-           
+            }
+            
         }
+        else
+        {
+            BlastPower = bPower;
+        }
+      
     }
 
 
