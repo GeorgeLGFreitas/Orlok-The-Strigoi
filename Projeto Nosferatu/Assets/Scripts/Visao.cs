@@ -20,7 +20,7 @@ public class Visao : MonoBehaviour
 
     
     void Update()
-    {    
+    {   
         Vector3 rotation = transform.localEulerAngles;
         rotation.y += Input.GetAxis("Mouse X") * sensibility;
         transform.localEulerAngles = rotation;
