@@ -7,11 +7,17 @@ using UnityEngine.UI;
 public class Jogador : MonoBehaviour
 {
     Selecionavel selecionado;
+    public GameObject tochaGO;
     public Text areaDeTexto;
+    public bool chave;
+
+    public bool tocha;
+
     // Start is called before the first frame update
     void Start()
     {
-
+        chave = false;
+        tocha = false;
     }
 
     // Update is called once per frame
@@ -24,7 +30,7 @@ public class Jogador : MonoBehaviour
         
         Selecionavel novaSelecao = null;
 
-        if(Physics.Raycast(raio, out hit, 5))
+        if(Physics.Raycast(raio, out hit, 3.5f))
         {
            novaSelecao = hit.transform.GetComponent<Selecionavel>();
         }
@@ -51,7 +57,16 @@ public class Jogador : MonoBehaviour
                 }
             }
         }
-        //else{areaDeTexto.text = "";}
+        else{areaDeTexto.text = "";}
+
+        if(tocha == true)
+        {
+            tochaGO.SetActive(true);
+        }
+        else
+        {
+            tochaGO.SetActive(false);
+        }
     }
  
     

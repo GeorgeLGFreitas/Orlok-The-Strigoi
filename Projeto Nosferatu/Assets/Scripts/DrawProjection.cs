@@ -5,7 +5,7 @@ using UnityEngine;
 public class DrawProjection : MonoBehaviour
 {
     CannonController cannonController;
-    LineRenderer lineRenderer;
+    public LineRenderer lineRenderer;
 
     // Number of points on the line
     public int numPoints = 50;
@@ -18,7 +18,7 @@ public class DrawProjection : MonoBehaviour
     void Start()
     {
         cannonController = GetComponent<CannonController>();
-        lineRenderer = GetComponent<LineRenderer>();
+        
     }
 
 
