@@ -14,10 +14,13 @@ public class Movimento : MonoBehaviour
     float crouch;
     Vector3 movi = Vector3.zero;
 
+    Stats stats;
+
     void Start()
     {
         ctrl = GetComponent<CharacterController>();
         cannonC = GetComponent<CannonController>();
+        stats = GetComponent<Stats>();
         vel = velocity;
         crouch = ctrl.height;
 
@@ -28,9 +31,9 @@ public class Movimento : MonoBehaviour
        {
            velocity = vel / 3;
        }
-       else if (Input.GetKey(KeyCode.LeftShift) & cannonC.mirando == false)
+       else if (Input.GetKey(KeyCode.LeftShift) & cannonC.mirando == false & stats.atualStamina >= 0)
        {
-           velocity = vel * 2;
+            velocity = vel * 2;
        }
        else if(Input.GetKey(KeyCode.LeftControl))
        {

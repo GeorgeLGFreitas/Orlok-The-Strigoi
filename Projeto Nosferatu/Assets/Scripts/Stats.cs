@@ -8,7 +8,7 @@ public class Stats : MonoBehaviour
 
     [SerializeField]
     float maxStamina;
-    float atualStamina;
+    public float atualStamina;
 
     [SerializeField]
     float maxSanidade;
@@ -21,6 +21,11 @@ public class Stats : MonoBehaviour
     [SerializeField]
     float maxTocha;
     float atualTocha;
+
+    [SerializeField]
+    float timer;
+    [SerializeField]
+    float sanidadeDecaimento;
 
     [Header("Sliders")]
 
@@ -83,6 +88,11 @@ public class Stats : MonoBehaviour
             atualStamina -= 0.1f;
         }
 
+        if (atualStamina < 0)
+        {
+            atualStamina = 0;
+        }
+
         if (atualCantil == 0)
         {
             
@@ -125,6 +135,7 @@ public class Stats : MonoBehaviour
 
             float tochaDecaimento = 0.05f;
             atualTocha -= tochaDecaimento * Time.deltaTime;
+            atualSanidade = maxSanidade;
 
             if (atualTocha > 70)
             {
@@ -172,7 +183,11 @@ public class Stats : MonoBehaviour
         }
         else
         {
-            return;
+            timer -= Time.deltaTime;
+            if (timer < 0)
+            {
+                atualSanidade -= sanidadeDecaimento;
+            }
         }
     }
 }
