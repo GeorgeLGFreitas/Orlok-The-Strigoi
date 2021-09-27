@@ -116,7 +116,7 @@ public class Stats : MonoBehaviour
             SceneManager.LoadScene("GameOver");
         }
 
-        if (jogador.tocha)
+        if (jogador.tocha == true)
         {
             tochaSlider.gameObject.SetActive(true);
 
