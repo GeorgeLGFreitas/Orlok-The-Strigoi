@@ -63,10 +63,7 @@ public class Jogador : MonoBehaviour
         {
             tochaGO.SetActive(true);
         }
-        else
-        {
-            tochaGO.SetActive(false);
-        }
+        else tochaGO.SetActive(false);
     }
  
     

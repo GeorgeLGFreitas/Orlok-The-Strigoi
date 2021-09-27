@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.12731749, g: 0.13414757, b: 0.1210787, a: 1}
+  m_IndirectSpecularColor: {r: 0.04598044, g: 0.037229113, b: 0.021817014, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -173,7 +173,6 @@ GameObject:
   - component: {fileID: 124014660}
   - component: {fileID: 124014659}
   - component: {fileID: 124014658}
-  - component: {fileID: 124014657}
   - component: {fileID: 124014656}
   - component: {fileID: 124014649}
   - component: {fileID: 124014654}
@@ -218,7 +217,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0636f92a2314c034899443995cd50438, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BlastPower: 10
+  BlastPower: 5
+  mirando: 0
   Cannonball: {fileID: 7775227165712630763, guid: 5afa8c75303c9bc4c84d96b14a36aceb, type: 3}
   ShotPoint: {fileID: 398090168}
 --- !u!114 &124014651
@@ -234,8 +234,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lineRenderer: {fileID: 2082335007}
-  numPoints: 50
-  timeBetweenPoints: 0.1
+  numPoints: 100
+  timeBetweenPoints: 0.01
   CollidableLayers:
     serializedVersion: 2
     m_Bits: 567
@@ -281,7 +281,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gravity: 5
-  velocity: 5
+  velocity: 3
   jump: 6
 --- !u!54 &124014656
 Rigidbody:
@@ -299,20 +299,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!136 &124014657
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 124014648}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  m_Radius: 0.0887591
-  m_Height: 0.2289189
-  m_Direction: 1
-  m_Center: {x: 0.000000022351742, y: -0.001409173, z: -0.00040417444}
 --- !u!23 &124014658
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -564,7 +550,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 398090167}
   m_LocalRotation: {x: 0.4437005, y: 0.000000026969593, z: 0.000000026969593, w: 0.8961752}
-  m_LocalPosition: {x: 0, y: 0, z: 1.9321554}
+  m_LocalPosition: {x: -4.51, y: 0, z: 0.9}
   m_LocalScale: {x: 1.991318, y: 1.991318, z: 1.9913177}
   m_Children: []
   m_Father: {fileID: 624807578}
@@ -835,7 +821,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!108 &476472045
 Light:
   m_ObjectHideFlags: 0
@@ -905,13 +891,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 476472044}
-  m_LocalRotation: {x: -0.07020377, y: -0, z: -0, w: 0.99753267}
+  m_LocalRotation: {x: -0.0628002, y: -0.001271187, z: 0.0026620603, w: 0.9980218}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -8.051, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -7.201, y: -0.166, z: 0.316}
 --- !u!64 &533985852
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2897,7 +2883,7 @@ LineRenderer:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0.08571625
+        value: 0.061904907
         inSlope: 0
         outSlope: 0
         tangentMode: 0

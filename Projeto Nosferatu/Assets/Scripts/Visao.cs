@@ -17,8 +17,6 @@ public class Visao : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;   
           
     }
-
-    
     void Update()
     {   
         Vector3 rotation = transform.localEulerAngles;
@@ -26,7 +24,7 @@ public class Visao : MonoBehaviour
         transform.localEulerAngles = rotation;
     
         bracoRotation.x -= Input.GetAxis("Mouse Y") * sensibility;
-        bracoRotation.x = Mathf.Clamp(bracoRotation.x, -60, 60);
+        bracoRotation.x = Mathf.Clamp(bracoRotation.x, -50, 50);
         braco.localEulerAngles = bracoRotation;     
     }
 }

@@ -18,10 +18,7 @@ public class DrawProjection : MonoBehaviour
     void Start()
     {
         cannonController = GetComponent<CannonController>();
-        
     }
-
-
     void LateUpdate()
     {
         lineRenderer.positionCount = (int)numPoints;

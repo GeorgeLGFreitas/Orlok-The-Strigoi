@@ -7,6 +7,10 @@ public class CannonController : MonoBehaviour
     public float BlastPower;
 
     float bPower;
+    float bPowerT;
+    float bPowerTC;
+
+    public bool mirando;
     public GameObject Cannonball;
     public Transform ShotPoint;
 
@@ -19,19 +23,22 @@ public class CannonController : MonoBehaviour
 
         if (Input.GetKey(KeyCode.Mouse1))
         {   
-            BlastPower += Input.mouseScrollDelta.y * 0.3f;
-        
+            mirando = true;
+            bPowerT += Input.mouseScrollDelta.y * 0.3f;
+            bPowerTC = Mathf.Clamp(bPowerT,5,10);
+            bPowerT = bPowerTC;
+            BlastPower = bPowerT;
+
             if (Input.GetKeyDown(KeyCode.Mouse0))
             {
                 GameObject CreatedCannonball = Instantiate(Cannonball, ShotPoint.position, ShotPoint.rotation);
                 CreatedCannonball.GetComponent<Rigidbody>().velocity = ShotPoint.transform.up * BlastPower;
-
             }
-            
         }
         else
         {
             BlastPower = bPower;
+            mirando = false;
         }
       
     }
