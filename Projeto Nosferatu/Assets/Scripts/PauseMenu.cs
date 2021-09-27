@@ -54,7 +54,6 @@ public class PauseMenu : MonoBehaviour
                 pause = Pause.PAUSED;
             }
         }
-        Debug.Log(Time.deltaTime);
     }
 
     void UnPaused()
