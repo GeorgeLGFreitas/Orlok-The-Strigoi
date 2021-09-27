@@ -64,9 +64,11 @@ public class Stats : MonoBehaviour
 
         tochaSlider.maxValue = maxTocha;
         tochaSlider.value = atualTocha;
+        atualTocha = 100;
 
         tochaSlider.gameObject.SetActive(false);
     }
+
     private void FixedUpdate()
     {
         #region Sliders
@@ -83,7 +85,7 @@ public class Stats : MonoBehaviour
 
         if (atualCantil == 0)
         {
-            return;
+            
         }
         else
         {
@@ -118,6 +120,7 @@ public class Stats : MonoBehaviour
 
         if (jogador.tocha == true)
         {
+            
             tochaSlider.gameObject.SetActive(true);
 
             float tochaDecaimento = 0.05f;
