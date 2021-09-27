@@ -6,6 +6,7 @@ public class BehaviourTree : MonoBehaviour
 {
     public BTNode root;
 
+
     public IEnumerator Begin()
     {
         while(true)
