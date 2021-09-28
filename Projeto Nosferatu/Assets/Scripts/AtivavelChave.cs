@@ -6,6 +6,9 @@ public class AtivavelChave : Ativavel
 {
     Jogador jogador;
 
+    public bool chave;
+    public bool chave2;
+
     // Start is called before the first frame update
     void Start()
     {   
@@ -20,7 +23,16 @@ public class AtivavelChave : Ativavel
 
     public override void Ativar()
     {
-        jogador.chave = true;
-        Destroy(gameObject);
+        if(chave)
+        {
+            jogador.chave = true;
+            Destroy(gameObject);
+        }
+
+        if(chave2)
+        {
+            jogador.chave2 = true;
+            Destroy(gameObject);
+        }
     }
 }

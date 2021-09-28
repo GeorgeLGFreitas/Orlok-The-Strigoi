@@ -45,6 +45,9 @@ public class Stats : MonoBehaviour
     [SerializeField]
     Jogador jogador;
 
+    [SerializeField]
+    public RawImage derrota;
+
     [Header("GameObjects")]
 
     [SerializeField]
@@ -123,9 +126,9 @@ public class Stats : MonoBehaviour
             }
         }
 
-        if (atualSanidade == 0)
+        if (atualSanidade == 0) //GAMEOVER
         {
-            SceneManager.LoadScene("GameOver");
+            derrota.gameObject.SetActive(true);
         }
 
         if (jogador.tocha == true)

@@ -5,4 +5,6 @@ using UnityEngine;
 abstract public class Ativavel : MonoBehaviour
 {
     abstract public void Ativar();
+
+     
 }
