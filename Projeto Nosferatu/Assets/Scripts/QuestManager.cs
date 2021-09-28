@@ -60,7 +60,7 @@ public class QuestManager : MonoBehaviour
     }
     public IEnumerator tempoTutorial()
     {
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(10);
         Destroy(tutorialJ1.gameObject);
         
         yield return null;

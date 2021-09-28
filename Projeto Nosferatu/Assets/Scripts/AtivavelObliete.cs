@@ -24,7 +24,7 @@ public class AtivavelObliete : Ativavel
     public IEnumerator Dialogo()
     {
         textoC.text = texto[0];
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(5);
         textoC.text = "";
         
     }
