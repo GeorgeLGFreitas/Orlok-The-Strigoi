@@ -11,6 +11,10 @@ public class AtivavelObliete : Ativavel
 
     float tempo = 0;
 
+    void Start()
+    {
+        StartCoroutine(Dialogo());
+    }
     public override void Ativar()
     {
         StartCoroutine(Dialogo());
