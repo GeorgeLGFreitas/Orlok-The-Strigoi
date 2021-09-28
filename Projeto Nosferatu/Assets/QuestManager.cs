@@ -7,14 +7,25 @@ public class QuestManager : MonoBehaviour
 {
     Jogador jogador;
     public Text text;
+    public Image tutorialJ1;
+    bool tutorial = true;
 
     public string[] quests;
 
    
     void Start()
     {
+        //tutorialJ1 = GetComponent<Image>();
         jogador = GetComponent<Jogador>();
         text.text = quests[0];
+        
+        //if(tutorial == false) ;
+
+
+    }
+    void Awake() 
+    {
+        StartCoroutine(tempoTutorial());
     }
 
     void Update()
@@ -35,6 +46,20 @@ public class QuestManager : MonoBehaviour
             text.text = quests[3];
             
         }
+
         
+
+
+
+
+        
+    }
+    public IEnumerator tempoTutorial()
+    {
+        yield return new WaitForSeconds(2f);
+        Destroy(tutorialJ1.gameObject);
+        
+        yield return null;
+            
     }
 }

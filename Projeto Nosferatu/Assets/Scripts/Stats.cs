@@ -57,9 +57,9 @@ public class Stats : MonoBehaviour
 
     private void Start()
     {
-        atualStamina = maxStamina;
+        atualStamina = maxStamina/3;
         atualSanidade = maxSanidade;
-        atualCantil = 0;
+        atualCantil = 100;
 
         staminaSlider.maxValue = maxStamina;
         staminaSlider.value = atualStamina;
