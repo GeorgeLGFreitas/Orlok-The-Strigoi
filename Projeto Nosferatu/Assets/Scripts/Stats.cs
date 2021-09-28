@@ -259,7 +259,7 @@ public class Stats : MonoBehaviour
     public IEnumerator Dialogo()
     {
         textoC.text = texto[0];
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(3);
         textoC.text = "";
         
     }
