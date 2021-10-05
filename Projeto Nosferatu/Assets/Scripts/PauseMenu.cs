@@ -15,9 +15,12 @@ public class PauseMenu : MonoBehaviour
     [SerializeField]
     GameObject settingsGroup;
 
+    public bool pausado;
+
     void Start()
     {
         pause = Pause.UNPAUSED;
+        Cursor.lockState = CursorLockMode.None;  
     }
 
     void Update()
@@ -47,24 +50,29 @@ public class PauseMenu : MonoBehaviour
         {
             if (pause == Pause.PAUSED)
             {
+               
                 pause = Pause.UNPAUSED;
             }
             else
             {
+                
                 pause = Pause.PAUSED;
             }
         }
-        Debug.Log(Time.deltaTime);
     }
 
     void UnPaused()
     {
+        Cursor.lockState = CursorLockMode.Locked;  
+        pausado = false;
         Time.timeScale = 1;
         pausedGroup.SetActive(false);
         settingsGroup.SetActive(false);
     }
     void Paused()
     {
+        Cursor.lockState = CursorLockMode.None;   
+        pausado = true;
         Time.timeScale = 0;
         pausedGroup.SetActive(true);
         settingsGroup.SetActive(false);
