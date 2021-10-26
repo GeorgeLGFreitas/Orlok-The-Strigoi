@@ -1,9 +1,30 @@
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using UnityEngine;
+using UnityEngine.Rendering;
+using UnityEngine.Rendering.Universal;
+using System.Collections;
+using System.Collections.Generic;
 
 public class Stats : MonoBehaviour
 {
+    public string[] texto ;
+    public Text textoC;
+    bool unica = true;
+
+
+
+
+
+    public GameObject efeitoSanidade;
+    public GameObject efeitoStamina;
+    Volume volumeStamina;
+    Volume volumeSanidade;
+    Vignette vignette;
+
+
+
+
     [Header("Stats")]
 
     [SerializeField]
@@ -26,6 +47,8 @@ public class Stats : MonoBehaviour
     float timer;
     [SerializeField]
     float sanidadeDecaimento;
+    [SerializeField]
+    float efeitosanidadeDecaimento;
 
     [Header("Sliders")]
 
@@ -45,6 +68,9 @@ public class Stats : MonoBehaviour
     [SerializeField]
     Jogador jogador;
 
+    [SerializeField]
+    public RawImage derrota;
+
     [Header("GameObjects")]
 
     [SerializeField]
@@ -54,9 +80,10 @@ public class Stats : MonoBehaviour
 
     private void Start()
     {
-        atualStamina = maxStamina;
+        maxStamina = 100;
+        atualStamina = 20;
         atualSanidade = maxSanidade;
-        atualCantil = 0;
+        atualCantil = 100;
 
         staminaSlider.maxValue = maxStamina;
         staminaSlider.value = atualStamina;
@@ -73,6 +100,21 @@ public class Stats : MonoBehaviour
 
         tochaSlider.gameObject.SetActive(false);
     }
+
+    void Awake()
+    {
+        efeitoSanidade = GameObject.Find("Sanidade Volume");
+        volumeSanidade = efeitoSanidade.GetComponent<Volume>();
+        volumeSanidade.profile.TryGet<Vignette>(out vignette);
+    }
+
+    public void Ativar()
+    {
+        StartCoroutine(Dialogo());
+        
+    }
+
+   
 
     private void FixedUpdate()
     {
@@ -92,6 +134,22 @@ public class Stats : MonoBehaviour
         {
             atualStamina = 0;
         }
+
+        if (atualStamina <=30)
+        {
+            if(unica)
+            {
+                Ativar();
+                unica = false;
+
+            }
+            
+            
+            efeitoStamina.SetActive(true);
+        }
+        else efeitoStamina.SetActive(false);
+
+
 
         if (atualCantil == 0)
         {
@@ -123,9 +181,10 @@ public class Stats : MonoBehaviour
             }
         }
 
-        if (atualSanidade == 0)
+        if (atualSanidade == 0) //GAMEOVER
         {
-            SceneManager.LoadScene("GameOver");
+            vignette.intensity.value = 1f;
+            derrota.gameObject.SetActive(true);
         }
 
         if (jogador.tocha == true)
@@ -147,7 +206,7 @@ public class Stats : MonoBehaviour
                 
                 if (atualSanidade == 70)
                 {
-                    //Efeitos
+                    vignette.intensity.value = 0.3f;
                 }
                 else
                 {
@@ -160,7 +219,7 @@ public class Stats : MonoBehaviour
 
                 if (atualSanidade == 40)
                 {
-                    //Efeitos
+                    vignette.intensity.value = 0.6f;
                 }
                 else
                 {
@@ -173,7 +232,7 @@ public class Stats : MonoBehaviour
 
                 if (atualSanidade == 10)
                 {
-                    //Efeitos
+                    vignette.intensity.value = 0.9f;
                 }
                 else
                 {
@@ -187,7 +246,26 @@ public class Stats : MonoBehaviour
             if (timer < 0)
             {
                 atualSanidade -= sanidadeDecaimento;
+                if(atualSanidade >= 70) vignette.intensity.value -= efeitosanidadeDecaimento;
+                else if(atualSanidade < 70 & atualSanidade >= 40 ) vignette.intensity.value -= efeitosanidadeDecaimento * 2;
+                else if(atualSanidade < 40) vignette.intensity.value -= efeitosanidadeDecaimento * 3;
+
+
+
             }
         }
     }
+    
+    public IEnumerator Dialogo()
+    {
+        textoC.text = texto[0];
+        yield return new WaitForSeconds(3);
+        textoC.text = "";
+        
+    }
+  
+
+
+
+
 }

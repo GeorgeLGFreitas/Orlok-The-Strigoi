@@ -10,8 +10,9 @@ public class Jogador : MonoBehaviour
     public GameObject tochaGO;
     public Text areaDeTexto;
     public bool chave;
-
+    public bool chave2;
     public bool tocha;
+    public bool porta;
 
     // Start is called before the first frame update
     void Start()
