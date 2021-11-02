@@ -11,10 +11,7 @@ public class Stats : MonoBehaviour
     public string[] texto ;
     public Text textoC;
     bool unica = true;
-
-
-
-
+    bool endPrimeiroDialogo = false;
 
     public GameObject efeitoSanidade;
     public GameObject efeitoStamina;
@@ -22,14 +19,12 @@ public class Stats : MonoBehaviour
     Volume volumeSanidade;
     Vignette vignette;
 
-
-
-
     [Header("Stats")]
 
     [SerializeField]
     float maxStamina;
     public float atualStamina;
+    bool canRun;
 
     [SerializeField]
     float maxSanidade;
@@ -49,6 +44,10 @@ public class Stats : MonoBehaviour
     float sanidadeDecaimento;
     [SerializeField]
     float efeitosanidadeDecaimento;
+    [SerializeField]
+    float tochaDecaimento;
+    [SerializeField]
+    float staminaDecaimento;
 
     [Header("Sliders")]
 
@@ -108,14 +107,6 @@ public class Stats : MonoBehaviour
         volumeSanidade.profile.TryGet<Vignette>(out vignette);
     }
 
-    public void Ativar()
-    {
-        StartCoroutine(Dialogo());
-        
-    }
-
-   
-
     private void FixedUpdate()
     {
         #region Sliders
@@ -125,31 +116,43 @@ public class Stats : MonoBehaviour
         tochaSlider.value = atualTocha;
         #endregion
 
-        if (movimento.velocity > 3)
-        {
-            atualStamina -= 0.1f;
-        }
+        
 
-        if (atualStamina < 0)
+        if (canRun)
+        {
+            if (movimento.velocity > 3)
+            {
+                atualStamina -= staminaDecaimento;
+            }
+        }
+        
+        if (atualStamina <= 0)
         {
             atualStamina = 0;
+            canRun = false;
+        }
+
+        else
+        {
+            canRun = true;
         }
 
         if (atualStamina <=30)
         {
             if(unica)
             {
-                Ativar();
+                gameObject.GetComponent<DialogueTrigger>().TriggerDialogue();
                 unica = false;
-
             }
             
             
             efeitoStamina.SetActive(true);
         }
-        else efeitoStamina.SetActive(false);
 
-
+        else
+        {
+            efeitoStamina.SetActive(false);
+        }
 
         if (atualCantil == 0)
         {
@@ -178,6 +181,12 @@ public class Stats : MonoBehaviour
 
                     atualStamina += consumido;
                 }
+
+                if (!endPrimeiroDialogo)
+                {
+                    FindObjectOfType<DialogueManager>().DisplayNextSentence();
+                    endPrimeiroDialogo = true;
+                }
             }
         }
 
@@ -192,7 +201,6 @@ public class Stats : MonoBehaviour
             
             tochaSlider.gameObject.SetActive(true);
 
-            float tochaDecaimento = 0.05f;
             atualTocha -= tochaDecaimento * Time.deltaTime;
             atualSanidade = maxSanidade;
 
@@ -256,16 +264,4 @@ public class Stats : MonoBehaviour
         }
     }
     
-    public IEnumerator Dialogo()
-    {
-        textoC.text = texto[0];
-        yield return new WaitForSeconds(3);
-        textoC.text = "";
-        
-    }
-  
-
-
-
-
 }

@@ -31,7 +31,7 @@ public class Movimento : MonoBehaviour
        {
            velocity = vel / 3;
        }
-       else if (Input.GetKey(KeyCode.LeftShift) & cannonC.mirando == false & stats.atualStamina >= 0)
+       else if (Input.GetKey(KeyCode.LeftShift) & cannonC.mirando == false & stats.atualStamina > 0)
        {
             velocity = vel * 2;
        }
