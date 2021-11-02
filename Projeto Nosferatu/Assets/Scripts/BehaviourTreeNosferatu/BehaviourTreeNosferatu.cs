@@ -2,10 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BehaviourTree : MonoBehaviour
+public class BehaviourTreeNosferatu : MonoBehaviour
 {
     public BTNode root;
-
 
     public IEnumerator Begin()
     {

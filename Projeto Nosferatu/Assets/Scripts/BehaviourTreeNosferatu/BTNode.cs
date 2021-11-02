@@ -6,9 +6,9 @@ public abstract class BTNode
    public enum Status { RUNNING, SUCCESS, FAILURE }
    public Status status;
 
-   public abstract IEnumerator Run(BehaviourTree bt);
+   public abstract IEnumerator Run(BehaviourTreeNosferatu bt);
 
-   public void Print(BehaviourTree bt)
+   public void Print(BehaviourTreeNosferatu bt)
    {
       string cor = "cyan";
       if (status == Status.SUCCESS) cor = "green";

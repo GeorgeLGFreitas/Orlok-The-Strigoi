@@ -14,6 +14,8 @@ public class Jogador : MonoBehaviour
     public bool tocha;
     public bool porta;
 
+    public bool seguro;
+
     // Start is called before the first frame update
     void Start()
     {

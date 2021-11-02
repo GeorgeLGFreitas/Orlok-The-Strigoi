@@ -1,20 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public class BTSequence : BTNode
+public class BTSelector : BTNode
 {
     public List<BTNode> children = new List<BTNode>();
 
-    public override IEnumerator Run(BehaviourTree bt)
+    public override IEnumerator Run(BehaviourTreeNosferatu bt)
     {
         status = Status.RUNNING;
 
         foreach (BTNode node in children)
         {
             yield return bt.StartCoroutine(node.Run(bt));
-            if (node.status == Status.FAILURE)
+            if (node.status == Status.SUCCESS)
             {
-                status = Status.FAILURE;
+                status = Status.SUCCESS;
                 break;
             }
             
@@ -22,7 +22,7 @@ public class BTSequence : BTNode
 
         if (status == Status.RUNNING)
         {
-            status = Status.SUCCESS;
+            status = Status.FAILURE;
         }
     }
 }
