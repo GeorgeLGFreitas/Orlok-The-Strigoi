@@ -10,6 +10,8 @@ public class AtivavelPorta : Ativavel
     public RawImage vitoria;
     public bool porta1;
     public bool porta2;
+
+    public GameObject p1, p2;  // portas pra rotacionar
    
 
     void Start()
@@ -29,7 +31,10 @@ public class AtivavelPorta : Ativavel
         {
             jogador.chave = false;
             jogador.porta = true;
-            Destroy(gameObject);
+            // -105 rotation Y
+
+            p1.transform.Rotate(0, -52 , 0);
+            //Destroy(gameObject);
         
         }
 

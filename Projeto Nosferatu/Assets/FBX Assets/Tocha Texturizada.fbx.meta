@@ -3,7 +3,27 @@ guid: 1a9b7878ee4ec4d41ac6258a0c37beeb
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Tocha_lambert1_BaseColor
+    second: {fileID: 2800000, guid: 7207b4d88303d184f908436b20cf557d, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Tocha_lambert1_Metallic
+    second: {fileID: 2800000, guid: f8638c5238b864b409b52f9bb8b174a3, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Tocha_lambert1_Normal
+    second: {fileID: 2800000, guid: ad03feb62f59eb24e96f3a60a2aad123, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Tocha_lambert1_Roughness
+    second: {fileID: 2800000, guid: c0e926016fad9c44cba819173e6e2467, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0

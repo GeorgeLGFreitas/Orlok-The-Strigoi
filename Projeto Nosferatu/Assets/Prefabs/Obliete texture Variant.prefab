@@ -13,15 +13,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d2cd072a3a8316d4b9d6a6f3a18b359a, type: 3}
       propertyPath: m_LocalScale.x
-      value: 10
+      value: 8.058599
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d2cd072a3a8316d4b9d6a6f3a18b359a, type: 3}
       propertyPath: m_LocalScale.y
-      value: 10
+      value: 8.058599
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d2cd072a3a8316d4b9d6a6f3a18b359a, type: 3}
       propertyPath: m_LocalScale.z
-      value: 10
+      value: 8.058599
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d2cd072a3a8316d4b9d6a6f3a18b359a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -63,9 +63,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: d2cd072a3a8316d4b9d6a6f3a18b359a, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: d0e2b796646b0b24193182c272baf4a3, type: 2}
     - target: {fileID: 919132149155446097, guid: d2cd072a3a8316d4b9d6a6f3a18b359a, type: 3}
       propertyPath: m_Name
-      value: Obliete texture
+      value: Obliete texture Variant
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d2cd072a3a8316d4b9d6a6f3a18b359a, type: 3}
