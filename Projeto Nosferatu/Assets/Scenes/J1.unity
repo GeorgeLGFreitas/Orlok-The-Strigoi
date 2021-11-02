@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.12731713, g: 0.13414736, b: 0.12107852, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -493,6 +493,7 @@ MonoBehaviour:
   chave2: 0
   tocha: 0
   porta: 0
+  seguro: 0
 --- !u!114 &124014653
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -544,8 +545,10 @@ MonoBehaviour:
   maxCantil: 100
   maxTocha: 100
   timer: 0
-  sanidadeDecaimento: 0.025
+  sanidadeDecaimento: 0.015
   efeitosanidadeDecaimento: 0.98
+  tochaDecaimento: 0.45
+  staminaDecaimento: 0.03
   staminaSlider: {fileID: 52334602}
   sanidadeSlider: {fileID: 1814040686}
   cantilSlider: {fileID: 684263682}
