@@ -12,6 +12,7 @@ public class AtivavelPorta : Ativavel
     public bool porta2;
 
     public GameObject p1, p2;  // portas pra rotacionar
+    GameObject porta;
    
 
     void Start()
@@ -21,7 +22,7 @@ public class AtivavelPorta : Ativavel
 
     void Update()
     {
-        
+        //p1.transform.Rotate(Vector3.up, Time.deltaTime * -25);
     }
     
     public override void Ativar()
@@ -33,8 +34,10 @@ public class AtivavelPorta : Ativavel
             jogador.porta = true;
             // -105 rotation Y
 
-            p1.transform.Rotate(0, -52 , 0);
-            //Destroy(gameObject);
+            porta = p1;
+            StartCoroutine(AbrePorta());
+            //p1.transform.Rotate(0, -105 , 0);
+            Destroy(gameObject);
         
         }
 
@@ -43,5 +46,15 @@ public class AtivavelPorta : Ativavel
             vitoria.gameObject.SetActive(true);
         
         }
+    }
+
+    IEnumerator AbrePorta()
+    {   
+        //Debug.Log("abre porta");        
+        
+        gameObject.transform.Rotate(Vector3.up, Time.deltaTime * -25);       
+        yield return new WaitForSeconds(4.5f);
+        
+        
     }
 }
