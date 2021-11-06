@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5151811435647959348}
   - component: {fileID: 8129334472900906641}
   - component: {fileID: 6284146455951735387}
+  - component: {fileID: 406896288953620225}
   m_Layer: 0
   m_Name: Cama de palha
   m_TagString: Untagged
@@ -81,3 +82,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &406896288953620225
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5491358645933824910}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.010623206, y: 0.0016953939, z: 0.010604431}
+  m_Center: {x: -0.00017403786, y: 0.00038770033, z: -0.000012095787}
