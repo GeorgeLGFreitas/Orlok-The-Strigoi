@@ -8,66 +8,79 @@ public class VariacaoFogo : MonoBehaviour
     float timer;
     public float Timer;
 
-    float minLuz1, maxLuz1, minLuz2, maxLuz2, alvo;
+    int minLuz1, maxLuz1, minLuz2, maxLuz2, alvo;
     public bool luz1, luz2;
-    
+
+    float luzIntensidade;
 
     private void Start() 
     {
-        minLuz1 = 8;
-        maxLuz1 = 11;
-        minLuz2 = 25;
-        minLuz2 = 30;
+        minLuz1 = 5;
+        maxLuz1 = 15;
+        minLuz2 = 10;
+        maxLuz2 = 30;
 
-
+        luz.intensity = 0;
         
         if(luz1)
         {            
-            alvo = 0;
+            alvo = (int)Random.Range(minLuz1, maxLuz1);
         }
         if(luz2)
         {            
-            alvo = 0;
+            alvo = (int)Random.Range(minLuz2,maxLuz2);
         }
     }
 
-    void FixedUpdate()
-    {      
-        
-        if(luz1)
+    void Update()
+    {
+
+        if (luz1)
         {
-            do
+            if (luz.intensity != alvo)
             {
-                if(alvo > luz.intensity)
-                luz.intensity += 0.1f; 
+                if (alvo > luzIntensidade)
+                {
+                    luzIntensidade += 20 * Time.deltaTime;
+                    if (luzIntensidade > alvo)
+                    {
+                        alvo = (int)Random.Range(minLuz1, maxLuz1);
+                    }
+                }
                 else
-                luz.intensity -= 0.1f;           
-
+                {
+                    luzIntensidade -= 20 * Time.deltaTime;
+                    if (luzIntensidade < alvo)
+                    {
+                        alvo = (int)Random.Range(minLuz1, maxLuz1);
+                    }
+                }
             }
-            while(luz.intensity != alvo); 
-
-            if(luz.intensity == alvo)
-            {
-                alvo = Random.Range(minLuz1, maxLuz1);
-            }   
         }
 
         if(luz2)
         {
-            do
+            if (luz.intensity != alvo)
             {
-                if(alvo > luz.intensity)
-                luz.intensity += 0.1f; 
+                if (alvo > luzIntensidade)
+                {
+                    luzIntensidade += 20 * Time.deltaTime;
+                    if (luzIntensidade > alvo)
+                    {
+                        alvo = (int)Random.Range(minLuz2, maxLuz2);
+                    }
+                }
                 else
-                luz.intensity -= 0.1f;           
-
+                {
+                    luzIntensidade -= 20 * Time.deltaTime;
+                    if (luzIntensidade < alvo)
+                    {
+                        alvo = (int)Random.Range(minLuz2, maxLuz2);
+                    }
+                }
             }
-            while(luz.intensity != alvo); 
+        }
 
-            if(luz.intensity == alvo)
-            {
-                alvo = Random.Range(minLuz2, maxLuz2);
-            }   
-        }        
+        luz.intensity = luzIntensidade;
     }  
 }
