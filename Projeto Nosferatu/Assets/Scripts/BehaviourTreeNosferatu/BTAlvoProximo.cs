@@ -8,7 +8,7 @@ public class BTAlvoProximo : BTNode
         status = Status.FAILURE;
         GameObject alvo = GameObject.FindGameObjectWithTag("Player");
         
-        if (Vector3.Distance(bt.transform.position, alvo.transform.position) < 20)
+        if (Vector3.Distance(bt.transform.position, alvo.transform.position) < 10)
         {
             status = Status.SUCCESS;
             

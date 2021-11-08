@@ -7,6 +7,7 @@ TagManager:
   - Coletavel
   - NPC
   - Tocha
+  - Atencao
   layers:
   - Default
   - TransparentFX
