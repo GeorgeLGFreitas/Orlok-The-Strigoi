@@ -14,12 +14,12 @@ public class BTAlvoCampoDeVisao : BTNode
 
 
         Ray raio = new Ray(bt.transform.position, alvo.transform.position - bt.transform.position);
-        Debug.DrawRay(raio.origin, raio.direction * 20, Color.red);
+        
 
-        if (Vector3.Angle(bt.transform.forward, raio.direction) < 20)
+        if (Vector3.Angle(bt.transform.forward, raio.direction) < 50)
         {
             RaycastHit hit;
-
+            
 
             if (Physics.Raycast(raio, out hit, 50))
             {

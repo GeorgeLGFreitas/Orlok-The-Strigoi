@@ -21,6 +21,7 @@ public class NosferatuAI : MonoBehaviour
         persegue.children.Add(new BTPerseguirAlvo());
 
         BTSequence perseguePerto = new BTSequence();
+        perseguePerto.children.Add(naoCampoDeVisao);
         perseguePerto.children.Add(new BTAlvoProximo());
         perseguePerto.children.Add(new BTTemBarulho());
         perseguePerto.children.Add(new BTPerseguirAlvo());
@@ -31,6 +32,7 @@ public class NosferatuAI : MonoBehaviour
         //vagar.children.Add(new BTPerseguirAlvo());
 
         BTSequence fiscalizar = new BTSequence();
+        fiscalizar.children.Add(naoAlvoProximo);
         fiscalizar.children.Add(new BTTemBarulho());
         fiscalizar.children.Add(new BTFiscalizar());
 
