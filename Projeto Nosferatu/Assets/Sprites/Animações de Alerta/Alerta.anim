@@ -20,22 +20,14 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: -873745794717246871, guid: f9c6e0d3542540c41a97eabaa2cad0c0, type: 3}
-    - time: 0.16666667
-      value: {fileID: 179563848379502643, guid: ac0794bd63bce494da4036e56701efa3, type: 3}
-    - time: 0.33333334
-      value: {fileID: 4281411916279414927, guid: 3e450cd9f05c053458dbb470c0c9cbee, type: 3}
-    - time: 0.5
-      value: {fileID: -873745794717246871, guid: f9c6e0d3542540c41a97eabaa2cad0c0, type: 3}
+      value: {fileID: -5719322665641402737, guid: b9e90465e58d95345a1e5d45cc4177a8, type: 3}
     attribute: m_Sprite
     path: Olho
     classID: 114
     script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   - curve:
     - time: 0
-      value: {fileID: 8489225061831072054, guid: 0707aaf19bd79a945b7ba1634ab599d7, type: 3}
-    - time: 0.5
-      value: {fileID: 8489225061831072054, guid: 0707aaf19bd79a945b7ba1634ab599d7, type: 3}
+      value: {fileID: -7916973384850819150, guid: e19b4581f052a204db117b8c42c73c6c, type: 3}
     attribute: m_Sprite
     path: bordaOlho
     classID: 114
@@ -62,18 +54,14 @@ AnimationClip:
       customType: 0
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: -873745794717246871, guid: f9c6e0d3542540c41a97eabaa2cad0c0, type: 3}
-    - {fileID: 179563848379502643, guid: ac0794bd63bce494da4036e56701efa3, type: 3}
-    - {fileID: 4281411916279414927, guid: 3e450cd9f05c053458dbb470c0c9cbee, type: 3}
-    - {fileID: -873745794717246871, guid: f9c6e0d3542540c41a97eabaa2cad0c0, type: 3}
-    - {fileID: 8489225061831072054, guid: 0707aaf19bd79a945b7ba1634ab599d7, type: 3}
-    - {fileID: 8489225061831072054, guid: 0707aaf19bd79a945b7ba1634ab599d7, type: 3}
+    - {fileID: -5719322665641402737, guid: b9e90465e58d95345a1e5d45cc4177a8, type: 3}
+    - {fileID: -7916973384850819150, guid: e19b4581f052a204db117b8c42c73c6c, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.51666665
+    m_StopTime: 0.016666668
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0

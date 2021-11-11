@@ -21,21 +21,13 @@ AnimationClip:
   - curve:
     - time: 0
       value: {fileID: -7916973384850819150, guid: e19b4581f052a204db117b8c42c73c6c, type: 3}
-    - time: 0.5
-      value: {fileID: -7916973384850819150, guid: e19b4581f052a204db117b8c42c73c6c, type: 3}
     attribute: m_Sprite
     path: bordaOlho
     classID: 114
     script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   - curve:
     - time: 0
-      value: {fileID: 1635630000740538049, guid: 48ab20dd3baba384aaedb15ab2f2f186, type: 3}
-    - time: 0.16666667
-      value: {fileID: -5719322665641402737, guid: b9e90465e58d95345a1e5d45cc4177a8, type: 3}
-    - time: 0.33333334
-      value: {fileID: -8092297267278354007, guid: 2db0ded9f652bcd4ab4a13e27b38d5ba, type: 3}
-    - time: 0.5
-      value: {fileID: 1635630000740538049, guid: 48ab20dd3baba384aaedb15ab2f2f186, type: 3}
+      value: {fileID: 724543395162794651, guid: 1cc6ca50e5ba72641b1722e8982ef07b, type: 3}
     attribute: m_Sprite
     path: Olho
     classID: 114
@@ -63,17 +55,13 @@ AnimationClip:
       isPPtrCurve: 1
     pptrCurveMapping:
     - {fileID: -7916973384850819150, guid: e19b4581f052a204db117b8c42c73c6c, type: 3}
-    - {fileID: -7916973384850819150, guid: e19b4581f052a204db117b8c42c73c6c, type: 3}
-    - {fileID: 1635630000740538049, guid: 48ab20dd3baba384aaedb15ab2f2f186, type: 3}
-    - {fileID: -5719322665641402737, guid: b9e90465e58d95345a1e5d45cc4177a8, type: 3}
-    - {fileID: -8092297267278354007, guid: 2db0ded9f652bcd4ab4a13e27b38d5ba, type: 3}
-    - {fileID: 1635630000740538049, guid: 48ab20dd3baba384aaedb15ab2f2f186, type: 3}
+    - {fileID: 724543395162794651, guid: 1cc6ca50e5ba72641b1722e8982ef07b, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.51666665
+    m_StopTime: 0.016666668
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
