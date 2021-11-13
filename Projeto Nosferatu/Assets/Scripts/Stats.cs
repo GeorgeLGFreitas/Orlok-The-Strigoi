@@ -74,8 +74,6 @@ public class Stats : MonoBehaviour
 
     [SerializeField]
     Light tochaLight;
-    [SerializeField]
-
 
     private void Start()
     {
@@ -114,9 +112,17 @@ public class Stats : MonoBehaviour
         sanidadeSlider.value = atualSanidade;
         cantilSlider.value = atualCantil;
         tochaSlider.value = atualTocha;
+
+        if (!jogador.cantil)
+        {
+            cantilSlider.gameObject.SetActive(false);
+        }
+        else
+        {
+            cantilSlider.gameObject.SetActive(true);
+        }
         #endregion
 
-        
 
         if (canRun)
         {
@@ -154,38 +160,35 @@ public class Stats : MonoBehaviour
             efeitoStamina.SetActive(false);
         }
 
-        if (atualCantil == 0)
+        if (jogador.cantil)
         {
-            
-        }
-        else
-        {
-            if (Input.GetKeyDown(KeyCode.F))
+            if (atualCantil == 0)
             {
-                float consumido;
 
-                consumido = atualCantil;
-
-
-                if (atualCantil + atualStamina > maxStamina)
+            }
+            else
+            {
+                if (Input.GetKey(KeyCode.F))
                 {
-                    consumido = maxStamina - atualStamina;
+                    float consumido;
 
-                    atualCantil -= consumido;
-                    atualStamina = maxStamina;
-                }
-                else
-                {
-                    atualCantil -= consumido;
-                    atualStamina += consumido;
+                    consumido = atualCantil;
 
-                    atualStamina += consumido;
-                }
 
-                if (!endPrimeiroDialogo)
-                {
-                    FindObjectOfType<DialogueManager>().DisplayNextSentence();
-                    endPrimeiroDialogo = true;
+                    if (atualCantil + atualStamina > maxStamina)
+                    {
+                        consumido = maxStamina - atualStamina;
+
+                        atualCantil -= consumido;
+                        atualStamina = maxStamina;
+                    }
+                    else
+                    {
+                        atualCantil -= consumido;
+                        atualStamina += consumido;
+
+                        atualStamina += consumido;
+                    }
                 }
             }
         }
