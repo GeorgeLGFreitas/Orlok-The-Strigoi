@@ -34,33 +34,35 @@ public class QuestManager : MonoBehaviour
         if (firtsQuest)
         {
             text.text = quests[0];
+
+            if (jogador.cantil)
+            {
+                text.text = quests[1];
+
+                if (jogador.tocha)
+                {
+                    text.text = quests[2];
+
+                    if (jogador.chave)
+                    {
+                        text.text = quests[3];
+
+                        if (jogador.porta)
+                        {
+                            text.text = quests[4];
+
+                            if (jogador.chave2)
+                            {
+                                text.text = quests[5];
+                            }
+                        }
+
+                    }
+                }
+            }
         }
 
-        if (jogador.cantil)
-        {
-            text.text = quests[1];
-        }
-
-        if (jogador.tocha)
-        {
-            text.text = quests[2];
-        }
-
-        if (jogador.chave)
-        {
-            text.text = quests[3];
-        }
-
-        if (jogador.porta)
-        {
-            text.text = quests[4];
-            
-        }
-
-        if (jogador.chave2)
-        {
-            text.text = quests[5];
-        }
+        
 
 
 

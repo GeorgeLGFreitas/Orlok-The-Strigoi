@@ -3,6 +3,8 @@ using UnityEngine;
 public class AtivavelCantil : Ativavel
 {
     Jogador jogador;
+    [SerializeField]
+    GameObject parentGameObject;
 
     private void Start()
     {
@@ -13,6 +15,6 @@ public class AtivavelCantil : Ativavel
     {
         jogador.cantil = true;
         gameObject.GetComponent<DialogueTrigger>().TriggerDialogue();
-        Destroy(gameObject);
+        Destroy(parentGameObject);
     }
 }

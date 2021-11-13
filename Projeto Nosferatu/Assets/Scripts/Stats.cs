@@ -74,6 +74,8 @@ public class Stats : MonoBehaviour
 
     [SerializeField]
     Light tochaLight;
+    [SerializeField]
+    GameObject cantilGameObject;
 
     private void Start()
     {
@@ -116,10 +118,12 @@ public class Stats : MonoBehaviour
         if (!jogador.cantil)
         {
             cantilSlider.gameObject.SetActive(false);
+            cantilGameObject.SetActive(false);
         }
         else
         {
             cantilSlider.gameObject.SetActive(true);
+            cantilGameObject.SetActive(true);
         }
         #endregion
 
