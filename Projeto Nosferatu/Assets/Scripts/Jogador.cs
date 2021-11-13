@@ -16,6 +16,8 @@ public class Jogador : MonoBehaviour
 
     public bool seguro;
 
+    public bool cantil;
+
     // Start is called before the first frame update
     void Start()
     {

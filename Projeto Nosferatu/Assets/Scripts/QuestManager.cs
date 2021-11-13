@@ -30,28 +30,31 @@ public class QuestManager : MonoBehaviour
 
     void Update()
     {
-        if(jogador.tocha)
+        if(jogador.cantil)
         {
             text.text = quests[1];
         }
 
-        if(jogador.chave)
+        if(jogador.tocha)
         {
             text.text = quests[2];
         }
 
-        if(jogador.porta)
+        if(jogador.chave)
         {
             text.text = quests[3];
         }
 
-        if(jogador.chave2)
+        if(jogador.porta)
         {
             text.text = quests[4];
             
         }
 
-        
+        if (jogador.chave2)
+        {
+            text.text = quests[5];
+        }
 
 
 
