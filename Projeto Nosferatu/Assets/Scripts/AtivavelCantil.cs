@@ -12,6 +12,7 @@ public class AtivavelCantil : Ativavel
     public override void Ativar()
     {
         jogador.cantil = true;
+        gameObject.GetComponent<DialogueTrigger>().TriggerDialogue();
         Destroy(gameObject);
     }
 }

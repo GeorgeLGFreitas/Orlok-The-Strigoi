@@ -12,6 +12,8 @@ public class DialogueManager : MonoBehaviour
 
     private Queue<string> sentences;
 
+    bool firstQuest = false;
+
     private void Start()
     {
         sentences = new Queue<string>();
@@ -61,6 +63,12 @@ public class DialogueManager : MonoBehaviour
     void EndDialogue()
     {
         animator.SetBool("IsOpen", false);
+        if (!firstQuest)
+        {
+            QuestManager questManager = FindObjectOfType<QuestManager>();
+            questManager.firtsQuest = true;
+            firstQuest = true;
+        }
     }
 
     private void Update()

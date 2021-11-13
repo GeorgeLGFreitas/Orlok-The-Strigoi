@@ -9,6 +9,7 @@ public class QuestManager : MonoBehaviour
     public Text text;
     public Image tutorialJ1;
     bool tutorial = true;
+    public bool firtsQuest = false;
 
     public string[] quests;
 
@@ -17,7 +18,7 @@ public class QuestManager : MonoBehaviour
     {
         //tutorialJ1 = GetComponent<Image>();
         jogador = GetComponent<Jogador>();
-        text.text = quests[0];
+        text.text = "";
         
         //if(tutorial == false) ;
 
@@ -30,22 +31,27 @@ public class QuestManager : MonoBehaviour
 
     void Update()
     {
-        if(jogador.cantil)
+        if (firtsQuest)
+        {
+            text.text = quests[0];
+        }
+
+        if (jogador.cantil)
         {
             text.text = quests[1];
         }
 
-        if(jogador.tocha)
+        if (jogador.tocha)
         {
             text.text = quests[2];
         }
 
-        if(jogador.chave)
+        if (jogador.chave)
         {
             text.text = quests[3];
         }
 
-        if(jogador.porta)
+        if (jogador.porta)
         {
             text.text = quests[4];
             
