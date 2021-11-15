@@ -33,6 +33,7 @@ public class Stats : MonoBehaviour
     [SerializeField]
     float maxCantil;
     float atualCantil;
+    bool restoreInitialStamina = true;
 
     [SerializeField]
     float maxTocha;
@@ -76,6 +77,8 @@ public class Stats : MonoBehaviour
     Light tochaLight;
     [SerializeField]
     GameObject cantilGameObject;
+    [SerializeField]
+    DialogueTrigger drunkCantilDialogo;
 
     private void Start()
     {
@@ -178,13 +181,18 @@ public class Stats : MonoBehaviour
 
                     consumido = atualCantil;
 
-
                     if (atualCantil + atualStamina > maxStamina)
                     {
                         consumido = maxStamina - atualStamina;
 
                         atualCantil -= consumido;
                         atualStamina = maxStamina;
+
+                        if (restoreInitialStamina)
+                        {
+                            drunkCantilDialogo.TriggerDialogue();
+                            restoreInitialStamina = false;
+                        }
                     }
                     else
                     {
@@ -192,6 +200,12 @@ public class Stats : MonoBehaviour
                         atualStamina += consumido;
 
                         atualStamina += consumido;
+
+                        if (restoreInitialStamina)
+                        {
+                            drunkCantilDialogo.TriggerDialogue();
+                            restoreInitialStamina = false;
+                        }
                     }
                 }
             }

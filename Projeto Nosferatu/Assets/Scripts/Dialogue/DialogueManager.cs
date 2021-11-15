@@ -13,6 +13,10 @@ public class DialogueManager : MonoBehaviour
     private Queue<string> sentences;
 
     bool firstQuest = false;
+    bool changeCharacter = false;
+
+    string name1;
+    string name2;
 
     private void Start()
     {
@@ -23,8 +27,11 @@ public class DialogueManager : MonoBehaviour
     {
         animator.SetBool("IsOpen", true);
 
+
         nameText.text = dialogue.name;
 
+        name1 = dialogue.name;
+        name2 = dialogue.name2;
 
         sentences.Clear();
 
@@ -38,6 +45,16 @@ public class DialogueManager : MonoBehaviour
 
     public void DisplayNextSentence()
     {
+        switch (changeCharacter)
+        {
+            case true:
+                nameText.text = name2;
+                break;
+            case false:
+                nameText.text = name1;
+                break;
+        }
+
         if (sentences.Count == 0)
         {
             EndDialogue();
@@ -75,6 +92,10 @@ public class DialogueManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Return))
         {
+            if (sentences.Count == 0 || sentences.Count == 1)
+            {
+                changeCharacter = !changeCharacter;
+            }
             DisplayNextSentence();
         }
     }

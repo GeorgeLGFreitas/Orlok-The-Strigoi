@@ -13,6 +13,51 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.010114936, y: 0.011266332, z: 0.011756612}
   m_Center: {x: 0.0000081522285, y: 0.0006336422, z: -0.0008783059}
+--- !u!114 &584053748968103409
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1690616276712066332}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3a353cc9bce93346b4c1e9cfeff90a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentGameObject: {fileID: 9025849898331586259}
+--- !u!114 &8462835742800400801
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1690616276712066332}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38f49bd4dc1b7e541b1940ea2daba890, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  corPadrao: {r: 0, g: 0, b: 0, a: 1}
+  corSelecionado: {r: 0.6, g: 0.5529412, b: 0.009411765, a: 0.6}
+  texto: Pressione E para ativar
+--- !u!114 &7960669707794653669
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1690616276712066332}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03e1062e02eaa3144a1c4de96faec7f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: Orlock
+    sentences:
+    - "Essa n\xE3o \xE9 a taberna do Cyril...\r\nOnde eu estou?"
+    - A Condessa... Aquela meretriz...
 --- !u!1001 &8179429145818792834
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -86,6 +131,11 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: d8134c65289c5a34b866c03568307118, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 67fe3cac09247b744af9f1f44ba5d168, type: 3}
+--- !u!1 &9025849898331586259 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 67fe3cac09247b744af9f1f44ba5d168, type: 3}
+  m_PrefabInstance: {fileID: 8179429145818792834}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1690616276712066332 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7418956853199703710, guid: 67fe3cac09247b744af9f1f44ba5d168, type: 3}

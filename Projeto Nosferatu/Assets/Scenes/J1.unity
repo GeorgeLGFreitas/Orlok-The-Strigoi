@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 0
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 2100000, guid: 860a66ca4259b384f9ec01b687f71c3c, type: 2}
+  m_SkyboxMaterial: {fileID: 0}
   m_HaloStrength: 0.494
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.0031041633, g: 0.0027301533, b: 0.003306631, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1013,7 +1013,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &67177213
 PrefabInstance:
@@ -2204,6 +2204,8 @@ MonoBehaviour:
   jogador: {fileID: 124014652}
   derrota: {fileID: 471046022}
   tochaLight: {fileID: 546773891}
+  cantilGameObject: {fileID: 233542463}
+  drunkCantilDialogo: {fileID: 0}
 --- !u!54 &124014656
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2234,12 +2236,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text: {fileID: 1624240237}
   tutorialJ1: {fileID: 974914110}
+  firtsQuest: 0
   quests:
   - Encontre o Cantil
   - Ache uma Tocha Utilizavel
-  - Ache a primeira chave (cubo)
+  - Ache a primeira chave
   - Abra a porta
-  - Ache a segunda chave (cubo)
+  - Ache a segunda chave
   - Volte e abra a porta para escapar
 --- !u!23 &124014658
 MeshRenderer:
@@ -2297,8 +2300,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 124014648}
-  m_LocalRotation: {x: 0, y: 0.10851986, z: 0, w: 0.9940943}
-  m_LocalPosition: {x: -3.06, y: 102.82, z: -2.41}
+  m_LocalRotation: {x: -0, y: -0.999308, z: -0, w: -0.037197728}
+  m_LocalPosition: {x: 0.02, y: 102.82, z: 9.33}
   m_LocalScale: {x: 10, y: 10, z: 10}
   m_Children:
   - {fileID: 1200618767}
@@ -2306,8 +2309,8 @@ Transform:
   - {fileID: 624807578}
   - {fileID: 2034931923}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 12.46, z: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: -184.264, z: 0}
 --- !u!114 &124014661
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2322,10 +2325,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue:
     name: Orlock
+    name2: 2
     sentences:
     - "Ai minha cabe\xE7a... Bebi demais\r\nontem..."
     - "S\xF3 um gole de palinca pra curar\r\nessa ressaca!"
     - Onde foi que eu meti o meu cantil?
+  isPlayerTrigger: 0
 --- !u!64 &128727632
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -3567,8 +3572,13 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &233542463 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9025849898331586259, guid: d14f21d4a81453e46bc3abf31b12cfb4, type: 3}
+  m_PrefabInstance: {fileID: 8179429145673400229}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &233951177
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3685,7 +3695,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &241491183
 GameObject:
@@ -5442,8 +5452,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.12909642, y: 0.08657218, z: 0.12886502}
+  m_Center: {x: -0.008431808, y: 0.01826141, z: -0.023530368}
 --- !u!23 &406259360
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5505,7 +5515,7 @@ Transform:
   m_LocalScale: {x: 2.48506, y: 2.48506, z: 2.48506}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &407459010
 GameObject:
@@ -6412,12 +6422,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 465705398}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eddcdc09b4fff5b47810f0c2750f92f7, type: 3}
+  m_Script: {fileID: 11500000, guid: 91b07b66c290e614e9d3ee1a642bfe20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  texto:
-  - "O horror! O horror se espreita na Escurid\xE3o"
-  textoC: {fileID: 311628199}
 --- !u!114 &465705401
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6447,6 +6454,25 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 369984784646500773, guid: d2cd072a3a8316d4b9d6a6f3a18b359a, type: 3}
+--- !u!114 &465705405
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 465705398}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03e1062e02eaa3144a1c4de96faec7f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: Orlock
+    name2: 
+    sentences:
+    - Uma oubliette?
+    - "Tem algu\xE9m ai?"
+  isPlayerTrigger: 0
 --- !u!1 &468245818
 GameObject:
   m_ObjectHideFlags: 0
@@ -11929,7 +11955,7 @@ Transform:
   - {fileID: 202917779}
   - {fileID: 2104204788}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &918917358
 GameObject:
@@ -14111,6 +14137,55 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8171175803867635670, guid: cc1ea0e0db6d0394a887061a590126d9, type: 3}
   m_PrefabInstance: {fileID: 1075512985}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1079646218
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1079646220}
+  - component: {fileID: 1079646219}
+  m_Layer: 0
+  m_Name: Trigger Dialogo Beber
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1079646219
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1079646218}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03e1062e02eaa3144a1c4de96faec7f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: Orlock
+    name2: 
+    sentences:
+    - "O melhor vino Rom\xEAno sem d\xFAvida!"
+  isPlayerTrigger: 0
+--- !u!4 &1079646220
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1079646218}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.073, y: 102.091, z: 3.132}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 15
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!64 &1086088549
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -14532,7 +14607,7 @@ Transform:
   m_LocalScale: {x: 2.5, y: 2.5, z: 2.5}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!64 &1114125843
 MeshCollider:
@@ -14756,7 +14831,7 @@ RectTransform:
   - {fileID: 910080058}
   - {fileID: 1562746597}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -16347,6 +16422,55 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 6418691324822738395, guid: 84525fce65c5b284c9db4db6b6d702b2, type: 3}
+--- !u!1 &1248950899 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1499542550250850883, guid: 5d0d0dca79be6b447952a626873f257f, type: 3}
+  m_PrefabInstance: {fileID: 965672635}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1248950903
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1248950899}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03e1062e02eaa3144a1c4de96faec7f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: 
+    name2: 
+    sentences: []
+  isPlayerTrigger: 0
+--- !u!114 &1248950904
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1248950899}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91b07b66c290e614e9d3ee1a642bfe20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1248950905
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1248950899}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38f49bd4dc1b7e541b1940ea2daba890, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  corPadrao: {r: 0, g: 0, b: 0, a: 1}
+  corSelecionado: {r: 0.6, g: 0.5529412, b: 0.009411765, a: 0.6}
+  texto: Pressione E para ativar
 --- !u!1001 &1249871691
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16615,7 +16739,7 @@ Transform:
   - {fileID: 1750447440}
   - {fileID: 338963474}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!64 &1263229278
 MeshCollider:
@@ -17650,6 +17774,69 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 2871625212211013612, guid: 84525fce65c5b284c9db4db6b6d702b2, type: 3}
+--- !u!1 &1354530535 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 54757405600366392, guid: fc1942975083f1242a785e22c7a6ee31, type: 3}
+  m_PrefabInstance: {fileID: 865782119495074613}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1354530536
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1354530535}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03e1062e02eaa3144a1c4de96faec7f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: Orlock
+    name2: 
+    sentences:
+    - "Meus bra\xE7os? Porque tanto sangue?"
+  isPlayerTrigger: 0
+--- !u!114 &1354530537
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1354530535}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91b07b66c290e614e9d3ee1a642bfe20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1354530538
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1354530535}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38f49bd4dc1b7e541b1940ea2daba890, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  corPadrao: {r: 0, g: 0, b: 0, a: 1}
+  corSelecionado: {r: 0.6, g: 0.5529412, b: 0.009411765, a: 0.6}
+  texto: Pressione E para ativar
+--- !u!65 &1354530541
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1354530535}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.05261691, y: 0.01369739, z: 0.010000008}
+  m_Center: {x: -0.0000004786998, y: 0.00000023841858, z: 0.00000023841858}
 --- !u!64 &1355743833
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -17930,6 +18117,71 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1384598852}
   m_Mesh: {fileID: 5618144639247903480, guid: 986981b1469f56644a4fef85b0a4336c, type: 3}
+--- !u!1 &1394335806
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1394335809}
+  - component: {fileID: 1394335808}
+  - component: {fileID: 1394335807}
+  m_Layer: 0
+  m_Name: Trigger Dialogo Porta
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1394335807
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1394335806}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03e1062e02eaa3144a1c4de96faec7f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: Orlock
+    name2: 
+    sentences:
+    - "Um calabou\xE7o? Sou um est\xFApido!"
+    - Cai numa armadilha de aristocratas!
+    - "Matarei todos, ou n\xE3o me chamo\r Orlok Schreck."
+  isPlayerTrigger: 1
+--- !u!65 &1394335808
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1394335806}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.3625352, y: 3.2772522, z: 0.64692235}
+  m_Center: {x: -0.057816148, y: 1.1386261, z: -0.17653883}
+--- !u!4 &1394335809
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1394335806}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.073, y: 102.091, z: 3.132}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 14
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1397541182
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19500,6 +19752,71 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9cca77c4babc1f245a1d7725346b172b, type: 3}
+--- !u!1001 &1522574301
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7960669707794653669, guid: d14f21d4a81453e46bc3abf31b12cfb4, type: 3}
+      propertyPath: dialogue.sentences.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7960669707794653669, guid: d14f21d4a81453e46bc3abf31b12cfb4, type: 3}
+      propertyPath: dialogue.sentences.Array.data[0]
+      value: "Meu bom e velho ainda est\xE1 cheio!\nSorte a minha!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 8505489924671988841, guid: d14f21d4a81453e46bc3abf31b12cfb4, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8505489924671988841, guid: d14f21d4a81453e46bc3abf31b12cfb4, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 5.4745736
+      objectReference: {fileID: 0}
+    - target: {fileID: 8505489924671988841, guid: d14f21d4a81453e46bc3abf31b12cfb4, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 102.514
+      objectReference: {fileID: 0}
+    - target: {fileID: 8505489924671988841, guid: d14f21d4a81453e46bc3abf31b12cfb4, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 8505489924671988841, guid: d14f21d4a81453e46bc3abf31b12cfb4, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8505489924671988841, guid: d14f21d4a81453e46bc3abf31b12cfb4, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8505489924671988841, guid: d14f21d4a81453e46bc3abf31b12cfb4, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8505489924671988841, guid: d14f21d4a81453e46bc3abf31b12cfb4, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8505489924671988841, guid: d14f21d4a81453e46bc3abf31b12cfb4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8505489924671988841, guid: d14f21d4a81453e46bc3abf31b12cfb4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8505489924671988841, guid: d14f21d4a81453e46bc3abf31b12cfb4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9025849898331586259, guid: d14f21d4a81453e46bc3abf31b12cfb4, type: 3}
+      propertyPath: m_Name
+      value: cantil texturizado Variant
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d14f21d4a81453e46bc3abf31b12cfb4, type: 3}
 --- !u!64 &1527105316
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -24048,130 +24365,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8957860262109488985, guid: 35818333e408a164d9efad83ddba7f2f, type: 3}
   m_PrefabInstance: {fileID: 1452121662}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1890156400
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1890156406}
-  - component: {fileID: 1890156405}
-  - component: {fileID: 1890156404}
-  - component: {fileID: 1890156403}
-  - component: {fileID: 1890156402}
-  - component: {fileID: 1890156401}
-  m_Layer: 0
-  m_Name: Cantil
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1890156401
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1890156400}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e3a353cc9bce93346b4c1e9cfeff90a0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1890156402
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1890156400}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 38f49bd4dc1b7e541b1940ea2daba890, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  corPadrao: {r: 0, g: 0, b: 0, a: 1}
-  corSelecionado: {r: 0.6, g: 0.5529412, b: 0.009411765, a: 0.6}
-  texto: Pressione E para Coletar Chave
---- !u!65 &1890156403
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1890156400}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!23 &1890156404
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1890156400}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &1890156405
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1890156400}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!4 &1890156406
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1890156400}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.521, y: 102.726, z: -2.846}
-  m_LocalScale: {x: 0.45142, y: 0.45142, z: 0.45142}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 13
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1890661528
 GameObject:
   m_ObjectHideFlags: 0
@@ -24368,7 +24561,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!64 &1914294501
 MeshCollider:
@@ -26740,7 +26933,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2086285487
 PrefabInstance:
@@ -28581,7 +28774,7 @@ Transform:
   - {fileID: 1890661529}
   - {fileID: 1273195201}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &550567946040828916
 MeshFilter:
@@ -43266,6 +43459,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 584053748968103409, guid: d14f21d4a81453e46bc3abf31b12cfb4, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1690616276712066332, guid: d14f21d4a81453e46bc3abf31b12cfb4, type: 3}
       propertyPath: m_Layer
       value: 7
@@ -43342,7 +43539,9 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Untagged
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7960669707794653669, guid: d14f21d4a81453e46bc3abf31b12cfb4, type: 3}
+    - {fileID: 8462835742800400801, guid: d14f21d4a81453e46bc3abf31b12cfb4, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: d14f21d4a81453e46bc3abf31b12cfb4, type: 3}
 --- !u!64 &8183383460019989418
 MeshCollider:
