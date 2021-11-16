@@ -19,7 +19,7 @@ public class BTAlvoCampoDeVisao : BTNode
         if (Vector3.Angle(bt.transform.forward, raio.direction) < 50)
         {
             RaycastHit hit;
-            
+            Debug.Log("aa");
 
             if (Physics.Raycast(raio, out hit, 50))
             {
