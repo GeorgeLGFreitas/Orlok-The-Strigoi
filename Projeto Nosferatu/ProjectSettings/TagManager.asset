@@ -8,6 +8,7 @@ TagManager:
   - NPC
   - Tocha
   - Atencao
+  - coletar
   layers:
   - Default
   - TransparentFX
