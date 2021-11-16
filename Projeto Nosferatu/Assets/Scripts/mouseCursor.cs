@@ -5,7 +5,7 @@ using UnityEngine;
 public class mouseCursor : MonoBehaviour
 {
     public GameObject maoabt, maofecha, lupa, balao;
-    public bool coletar, inspecionar, falar;
+    /*public bool coletar, inspecionar, falar;
 
     void Start()
     {
@@ -14,37 +14,42 @@ public class mouseCursor : MonoBehaviour
         falar = false;
         
 
-    }
+    }*/
 
-    private void OnMouseEnter() 
+    public void Mao() 
     {
-        if(coletar)
+        lupa.SetActive(false);
+        balao.SetActive(false);
+        maoabt.SetActive(true);
+        if (Input.GetMouseButtonDown(0))
         {
-            maoabt.SetActive(true);
-            if (Input.GetMouseButtonDown(0))
-            {
-                maofecha.SetActive(true);
-                maoabt.SetActive(false);
-            }
-        } 
-        if(inspecionar)
-        {
+            maofecha.SetActive(true);
             maoabt.SetActive(false);
-            maofecha.SetActive(false);
-            balao.SetActive(false);
-            lupa.SetActive(true);
+        }
+        
+    }
+    public void Lupa()
+    {
 
-        }
-        if(falar)
-        {
-            maoabt.SetActive(false);
-            maofecha.SetActive(false);
-            balao.SetActive(true);
-            lupa.SetActive(false);
-        }
+        maoabt.SetActive(false);
+        maofecha.SetActive(false);
+        balao.SetActive(false);
+        lupa.SetActive(true);
+        
+    }
+    public void Balao()
+    {
+
+        maoabt.SetActive(false);
+        maofecha.SetActive(false);
+        balao.SetActive(true);
+        lupa.SetActive(false);
+        
+
     }
 
-    
+        
+
 
 
 

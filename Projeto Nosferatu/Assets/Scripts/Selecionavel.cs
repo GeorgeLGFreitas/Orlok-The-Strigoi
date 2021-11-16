@@ -7,7 +7,7 @@ public class Selecionavel : MonoBehaviour
     public Color corPadrao = Color.black;
     public Color corSelecionado = Color.yellow * 0.6f;
 
-    public string texto = "Pressione E para ativar"; 
+    public string texto = "Click"; 
 
     MeshRenderer render;
 

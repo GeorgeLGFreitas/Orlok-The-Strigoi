@@ -56,7 +56,7 @@ public class Jogador : MonoBehaviour
             Ativavel atual = novaSelecao.GetComponent<Ativavel>();
             if(atual)
             {
-                if(Input.GetKeyDown(KeyCode.E))
+                if(Input.GetKeyDown(KeyCode.E)||Input.GetKeyDown(KeyCode.Mouse0))
                 {
                     atual.Ativar();             
                 }

@@ -5,7 +5,7 @@ using UnityEngine;
 public class AtivavelChave : Ativavel
 {
     Jogador jogador;
-    mouseCursor cursor;
+    
 
     public bool chave;
     public bool chave2;
@@ -14,7 +14,7 @@ public class AtivavelChave : Ativavel
     void Start()
     {   
         jogador = FindObjectOfType<Jogador>();
-        cursor = FindObjectOfType<mouseCursor>();
+       
     }
 
 
@@ -22,14 +22,14 @@ public class AtivavelChave : Ativavel
     {
         if(chave)
         {
-            cursor.coletar = true;
+            
             jogador.chave = true;
             Destroy(gameObject);
         }
 
         if(chave2)
         {
-            cursor.coletar = true;
+            
             jogador.chave2 = true;
             Destroy(gameObject);
         }
