@@ -8,7 +8,7 @@ public class Visao : MonoBehaviour
   public float sensibility = 0f;
 
   PauseMenu pause;
-  Transform braco;
+  public Transform braco;
   
   Vector3 bracoRotation = Vector3.zero;
   Vector3 point;
@@ -16,7 +16,7 @@ public class Visao : MonoBehaviour
     void Start()
     {
     
-        braco = transform.Find("Braco");
+        //braco = transform.Find("Braco");
         //Cursor.lockState = CursorLockMode.Locked;
         pause = FindObjectOfType<PauseMenu>();
            
