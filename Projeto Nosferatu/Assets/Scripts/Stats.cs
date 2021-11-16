@@ -28,7 +28,7 @@ public class Stats : MonoBehaviour
 
     [SerializeField]
     float maxSanidade;
-    float atualSanidade;
+    public float atualSanidade;
 
     [SerializeField]
     float maxCantil;
@@ -67,9 +67,6 @@ public class Stats : MonoBehaviour
     Movimento movimento;
     [SerializeField]
     Jogador jogador;
-
-    [SerializeField]
-    public RawImage derrota;
 
     [Header("GameObjects")]
 
@@ -214,7 +211,6 @@ public class Stats : MonoBehaviour
         if (atualSanidade == 0) //GAMEOVER
         {
             vignette.intensity.value = 1f;
-            derrota.gameObject.SetActive(true);
         }
 
         if (jogador.tocha == true)

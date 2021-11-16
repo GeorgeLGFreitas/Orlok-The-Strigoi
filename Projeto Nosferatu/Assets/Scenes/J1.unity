@@ -2062,6 +2062,9 @@ GameObject:
   - component: {fileID: 124014655}
   - component: {fileID: 124014657}
   - component: {fileID: 124014661}
+  - component: {fileID: 124014664}
+  - component: {fileID: 124014663}
+  - component: {fileID: 124014662}
   m_Layer: 7
   m_Name: Player
   m_TagString: Player
@@ -2189,6 +2192,7 @@ MonoBehaviour:
   maxStamina: 100
   atualStamina: 0
   maxSanidade: 100
+  atualSanidade: 0
   maxCantil: 100
   maxTocha: 100
   timer: 0
@@ -2202,10 +2206,9 @@ MonoBehaviour:
   tochaSlider: {fileID: 75928359}
   movimento: {fileID: 124014654}
   jogador: {fileID: 124014652}
-  derrota: {fileID: 471046022}
   tochaLight: {fileID: 546773891}
   cantilGameObject: {fileID: 233542463}
-  drunkCantilDialogo: {fileID: 0}
+  drunkCantilDialogo: {fileID: 298655401}
 --- !u!54 &124014656
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2325,12 +2328,74 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue:
     name: Orlock
-    name2: 2
+    name2: Orlock
     sentences:
     - "Ai minha cabe\xE7a... Bebi demais\r\nontem..."
     - "S\xF3 um gole de palinca pra curar\r\nessa ressaca!"
     - Onde foi que eu meti o meu cantil?
   isPlayerTrigger: 0
+  mudancaPersonagem: 0
+--- !u!114 &124014662
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 124014648}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a747a1efcf0c3df4ebade3559552863d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: Orlock
+    name2: Criatura
+    sentences:
+    - Vou morrer! Me ajude!
+    - "Voc\xEA \xE9 meu... Precioso Orlok!"
+  nivelSanidadeTrigger: 0
+  mudancaPersonagem: 1
+--- !u!114 &124014663
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 124014648}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a747a1efcf0c3df4ebade3559552863d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: Orlock
+    name2: Orlock
+    sentences:
+    - "Al\xF4?"
+    - "Quem \xE9!?"
+    - Deixe-me sozinho!
+  nivelSanidadeTrigger: 40
+  mudancaPersonagem: 0
+--- !u!114 &124014664
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 124014648}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a747a1efcf0c3df4ebade3559552863d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: Orlock
+    name2: Orlock
+    sentences:
+    - "O que \xE9 isso?"
+    - "Quem est\xE1 ai?"
+  nivelSanidadeTrigger: 70
+  mudancaPersonagem: 0
 --- !u!64 &128727632
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -3560,6 +3625,8 @@ MonoBehaviour:
   nameText: {fileID: 1963557714}
   dialogueText: {fileID: 311628199}
   animator: {fileID: 1250777637}
+  mudancaDePersonagem: 0
+  stats: {fileID: 124014655}
 --- !u!4 &225386473
 Transform:
   m_ObjectHideFlags: 0
@@ -4292,6 +4359,58 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 296375017}
   m_Mesh: {fileID: -7954324201095618592, guid: 1e0943c52e0c6e744808281bce079944, type: 3}
+--- !u!1 &298655400
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 298655402}
+  - component: {fileID: 298655401}
+  m_Layer: 0
+  m_Name: Trigger Dialogo Cantil
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &298655401
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 298655400}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03e1062e02eaa3144a1c4de96faec7f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: Orlock
+    name2: Orlock
+    sentences:
+    - Que sede!
+    - Vinho?
+    - "Vin de Sang\xEA?"
+  isPlayerTrigger: 0
+  mudancaPersonagem: 0
+--- !u!4 &298655402
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 298655400}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.073, y: 102.091, z: -1.76}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 16
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!64 &304125090
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -6108,6 +6227,70 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2679978517020989562, guid: 5d0d0dca79be6b447952a626873f257f, type: 3}
   m_PrefabInstance: {fileID: 233951177}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &445614970
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 445614973}
+  - component: {fileID: 445614972}
+  - component: {fileID: 445614971}
+  m_Layer: 0
+  m_Name: Trigger Dialogo Escuro
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &445614971
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 445614970}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e946da20ea258c84681813ae9fb03680, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: Orlock
+    name2: Orlock
+    sentences:
+    - "Bafo de bunda!\nN\xE3o vejo nada!"
+  jogador: {fileID: 124014652}
+  mudancaPersonagem: 0
+--- !u!65 &445614972
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 445614970}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.3625352, y: 5.199394, z: 7.431117}
+  m_Center: {x: -0.057816148, y: 0.17755508, z: 0.22742176}
+--- !u!4 &445614973
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 445614970}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -17.15, y: 102.091, z: -0.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 15
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &446285739 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6618271774239910188, guid: 9cca77c4babc1f245a1d7725346b172b, type: 3}
@@ -6473,6 +6656,7 @@ MonoBehaviour:
     - Uma oubliette?
     - "Tem algu\xE9m ai?"
   isPlayerTrigger: 0
+  mudancaPersonagem: 0
 --- !u!1 &468245818
 GameObject:
   m_ObjectHideFlags: 0
@@ -14137,55 +14321,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8171175803867635670, guid: cc1ea0e0db6d0394a887061a590126d9, type: 3}
   m_PrefabInstance: {fileID: 1075512985}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1079646218
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1079646220}
-  - component: {fileID: 1079646219}
-  m_Layer: 0
-  m_Name: Trigger Dialogo Beber
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1079646219
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1079646218}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03e1062e02eaa3144a1c4de96faec7f6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogue:
-    name: Orlock
-    name2: 
-    sentences:
-    - "O melhor vino Rom\xEAno sem d\xFAvida!"
-  isPlayerTrigger: 0
---- !u!4 &1079646220
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1079646218}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.073, y: 102.091, z: 3.132}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 15
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!64 &1086088549
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -16444,6 +16579,7 @@ MonoBehaviour:
     name2: 
     sentences: []
   isPlayerTrigger: 0
+  mudancaPersonagem: 0
 --- !u!114 &1248950904
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17797,6 +17933,7 @@ MonoBehaviour:
     sentences:
     - "Meus bra\xE7os? Porque tanto sangue?"
   isPlayerTrigger: 0
+  mudancaPersonagem: 0
 --- !u!114 &1354530537
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18155,6 +18292,7 @@ MonoBehaviour:
     - Cai numa armadilha de aristocratas!
     - "Matarei todos, ou n\xE3o me chamo\r Orlok Schreck."
   isPlayerTrigger: 1
+  mudancaPersonagem: 0
 --- !u!65 &1394335808
 BoxCollider:
   m_ObjectHideFlags: 0

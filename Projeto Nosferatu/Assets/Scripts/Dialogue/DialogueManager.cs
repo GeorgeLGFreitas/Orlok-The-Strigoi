@@ -1,3 +1,4 @@
+using UnityEngine.SceneManagement;
 using System.Collections.Generic;
 using System.Collections;
 using UnityEngine.UI;
@@ -15,9 +16,13 @@ public class DialogueManager : MonoBehaviour
     bool firstQuest = false;
     bool changeCharacter = false;
 
+    public int mudancaDePersonagem;
+
     string name1;
     string name2;
 
+    [SerializeField]
+    Stats stats;
     private void Start()
     {
         sentences = new Queue<string>();
@@ -48,10 +53,10 @@ public class DialogueManager : MonoBehaviour
         switch (changeCharacter)
         {
             case true:
-                nameText.text = name2;
+                nameText.text = name1;
                 break;
             case false:
-                nameText.text = name1;
+                nameText.text = name2;
                 break;
         }
 
@@ -86,13 +91,17 @@ public class DialogueManager : MonoBehaviour
             questManager.firtsQuest = true;
             firstQuest = true;
         }
+        if (stats.atualSanidade <= 0)
+        {
+            SceneManager.LoadScene("GameOver");
+        }
     }
 
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Return))
         {
-            if (sentences.Count == 0 || sentences.Count == 1)
+            if (sentences.Count == mudancaDePersonagem)
             {
                 changeCharacter = !changeCharacter;
             }

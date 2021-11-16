@@ -1,11 +1,11 @@
 using UnityEngine;
 
-public class DialogueTrigger : MonoBehaviour
+public class DialogueTriggerSemTocha : MonoBehaviour
 {
     public Dialogue dialogue;
 
     [SerializeField]
-    bool isPlayerTrigger = false;
+    Jogador jogador;
 
     [SerializeField]
     int mudancaPersonagem;
@@ -19,9 +19,13 @@ public class DialogueTrigger : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            if (isPlayerTrigger)
+            if (jogador.tocha == false)
             {
                 TriggerDialogue();
+                Destroy(gameObject);
+            }
+            else
+            {
                 Destroy(gameObject);
             }
         }
