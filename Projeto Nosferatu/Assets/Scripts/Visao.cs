@@ -9,6 +9,7 @@ public class Visao : MonoBehaviour
 
   PauseMenu pause;
   Transform braco;
+  
   Vector3 bracoRotation = Vector3.zero;
   Vector3 point;
   
