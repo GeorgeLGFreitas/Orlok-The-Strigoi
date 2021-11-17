@@ -17,15 +17,36 @@ public class MainMenu : MonoBehaviour
     [SerializeField]
     GameObject creditsGroup;
 
+    bool firstWindow;
+
+    [SerializeField]
+    GameObject firstImage;
+
     void Start()
     {
-        menuGroup.SetActive(true);
+        firstWindow = true;
+
+        menuGroup.SetActive(false);
         settingsGroup.SetActive(false);
         creditsGroup.SetActive(false);
     }
 
     void Update()
     {
+        if (firstWindow)
+        {
+            firstImage.SetActive(true);
+
+            if (Input.GetKey(KeyCode.Return))
+            {
+                firstWindow = false;
+            }
+        }
+        else
+        {
+            firstImage.SetActive(false);
+        }
+
         switch (activeScene)
         {
             case ActiveScene.MENU:
