@@ -11,10 +11,13 @@ public class Selecionavel : MonoBehaviour
 
     MeshRenderer render;
 
+    mouseCursor mouseCursor;
+
     void Start()
     {
         render = GetComponent<MeshRenderer>();
         render.material.EnableKeyword("_EMISSION");
+        mouseCursor = GetComponent<mouseCursor>();
     }
 
     void Update()
@@ -25,10 +28,12 @@ public class Selecionavel : MonoBehaviour
     public void Liga()
     {
         render.material.SetColor("_EmissionColor", corSelecionado);
+        mouseCursor.ChangeImage();
     }
 
      public void Desliga()
     {
         render.material.SetColor("_EmissionColor", corPadrao);
+        mouseCursor.OriginalImage();
     }
 }

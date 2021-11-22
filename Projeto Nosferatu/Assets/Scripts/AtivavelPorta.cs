@@ -1,5 +1,6 @@
-using System.Collections;
+using UnityEngine.SceneManagement;
 using System.Collections.Generic;
+using System.Collections;
 using UnityEngine.UI;
 using UnityEngine;
 
@@ -55,7 +56,7 @@ public class AtivavelPorta : Ativavel
 
         if(jogador.chave2 && porta2)
         {
-            vitoria.gameObject.SetActive(true);
+            SceneManager.LoadScene("Mapa 2");
         
         }
     }
