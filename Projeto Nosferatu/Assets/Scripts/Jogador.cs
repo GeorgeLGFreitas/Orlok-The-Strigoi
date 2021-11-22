@@ -50,7 +50,7 @@ public class Jogador : MonoBehaviour
         if(novaSelecao)
         {
             novaSelecao.Liga();
-            areaDeTexto.text = novaSelecao.texto;
+            areaDeTexto.text = novaSelecao.texto;         
             selecionado = novaSelecao;
 
             Ativavel atual = novaSelecao.GetComponent<Ativavel>();
@@ -70,7 +70,4 @@ public class Jogador : MonoBehaviour
         }
         else tochaGO.SetActive(false);
     }
- 
-    
-    
 }

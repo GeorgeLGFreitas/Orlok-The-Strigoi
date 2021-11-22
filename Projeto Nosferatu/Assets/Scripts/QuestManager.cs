@@ -13,7 +13,11 @@ public class QuestManager : MonoBehaviour
 
     public string[] quests;
 
-   
+    [SerializeField]
+    DialogueTrigger dialogueTrigger;
+
+    float timer = 1.75f;
+    bool dialogueTriggerBool = false;
     void Start()
     {
         //tutorialJ1 = GetComponent<Image>();
@@ -35,6 +39,15 @@ public class QuestManager : MonoBehaviour
         {
             text.text = quests[0];
 
+            if (timer < Time.deltaTime)
+            {
+                if (!dialogueTriggerBool)
+                {
+                    dialogueTrigger.TriggerDialogue();
+                    dialogueTriggerBool = true;
+                }
+            }
+            timer -= Time.deltaTime;
             if (jogador.cantil)
             {
                 text.text = quests[1];

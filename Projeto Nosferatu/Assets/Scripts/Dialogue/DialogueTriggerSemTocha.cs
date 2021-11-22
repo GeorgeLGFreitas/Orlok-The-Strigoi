@@ -7,12 +7,9 @@ public class DialogueTriggerSemTocha : MonoBehaviour
     [SerializeField]
     Jogador jogador;
 
-    [SerializeField]
-    int mudancaPersonagem;
     public void TriggerDialogue()
     {
         FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
-        FindObjectOfType<DialogueManager>().mudancaDePersonagem = mudancaPersonagem;
     }
 
     private void OnTriggerEnter(Collider other)

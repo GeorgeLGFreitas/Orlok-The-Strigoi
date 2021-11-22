@@ -123,6 +123,57 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 23800000, guid: 70836ba6f5c251442952ba1dc95035f5, type: 2}
+--- !u!1 &650826
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 650828}
+  - component: {fileID: 650827}
+  m_Layer: 0
+  m_Name: TriggerAposQuest
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &650827
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 650826}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03e1062e02eaa3144a1c4de96faec7f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: Orlock
+    name2: Orlock
+    sentences:
+    - "Essa n\xE3o \xE9 a taberna do Cyril... Onde eu estou?"
+    - A Condessa... Aquela meretriz...
+  isPlayerTrigger: 0
+  mudancaPersonagem: 
+--- !u!4 &650828
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 650826}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 530.66187, y: -81.12585, z: 22.28637}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 20
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2213619
 GameObject:
   m_ObjectHideFlags: 0
@@ -3356,7 +3407,7 @@ MonoBehaviour:
   nameText: {fileID: 1963557714}
   dialogueText: {fileID: 311628199}
   animator: {fileID: 1250777637}
-  mudancaDePersonagem: 0
+  mudancaDePersonagem: 
   stats: {fileID: 4617931776517371127}
 --- !u!4 &225386473
 Transform:
@@ -3978,7 +4029,7 @@ MonoBehaviour:
     - Vinho?
     - "Vin de Sang\xEA?"
   isPlayerTrigger: 0
-  mudancaPersonagem: 0
+  mudancaPersonagem: 
 --- !u!4 &298655402
 Transform:
   m_ObjectHideFlags: 0
@@ -5014,7 +5065,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   corPadrao: {r: 0, g: 0, b: 0, a: 1}
   corSelecionado: {r: 0.6, g: 0.5529412, b: 0.009411765, a: 0.6}
-  texto: 
+  texto: '"E" para coletar'
 --- !u!65 &406259359
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5027,7 +5078,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.12909642, y: 0.08657218, z: 0.12886502}
-  m_Center: {x: -0.008431808, y: 0.01826141, z: -0.023530368}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &406259360
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5084,13 +5135,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 406259356}
-  m_LocalRotation: {x: -0.10089114, y: -0.5960545, z: 0.73262465, w: 0.31273192}
-  m_LocalPosition: {x: 4.358, y: 102.576, z: -3.055}
+  m_LocalRotation: {x: -0.039020106, y: -0.62020814, z: 0.7385089, w: 0.26157984}
+  m_LocalPosition: {x: 3.2676, y: 101.5699, z: -10.0492}
   m_LocalScale: {x: 2.48506, y: 2.48506, z: 2.48506}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 63.591, y: -59.215, z: 102.18}
 --- !u!114 &406259363
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5718,7 +5769,6 @@ MonoBehaviour:
     sentences:
     - "Bafo de bunda!\nN\xE3o vejo nada!"
   jogador: {fileID: 4617931776517371124}
-  mudancaPersonagem: 0
 --- !u!65 &445614972
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6110,7 +6160,7 @@ MonoBehaviour:
     - Uma oubliette?
     - "Tem algu\xE9m ai?"
   isPlayerTrigger: 0
-  mudancaPersonagem: 0
+  mudancaPersonagem: 
 --- !u!1 &468245818
 GameObject:
   m_ObjectHideFlags: 0
@@ -8278,7 +8328,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   corPadrao: {r: 0, g: 0, b: 0, a: 1}
   corSelecionado: {r: 0.6, g: 0.5529412, b: 0.009411765, a: 0.6}
-  texto: 
+  texto: '"E" para coletar'
 --- !u!114 &613814154
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8783,6 +8833,84 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 689738937}
   m_Mesh: {fileID: -7819067894438799148, guid: 67f8e73030cf96243881ed909d42db3a, type: 3}
+--- !u!1 &692163515 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1499542550250850883, guid: 5d0d0dca79be6b447952a626873f257f, type: 3}
+  m_PrefabInstance: {fileID: 965672635}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &692163519
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 692163515}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38f49bd4dc1b7e541b1940ea2daba890, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  corPadrao: {r: 0, g: 0, b: 0, a: 1}
+  corSelecionado: {r: 0.6, g: 0.5529412, b: 0.009411765, a: 0.6}
+  texto: '"E" para inspecionar'
+--- !u!114 &692163520
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 692163515}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03e1062e02eaa3144a1c4de96faec7f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: Orlock
+    name2: Orlock
+    sentences:
+    - "O que \xE9 isso? Vinho?"
+  isPlayerTrigger: 0
+  mudancaPersonagem: 
+--- !u!114 &692163521
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 692163515}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91b07b66c290e614e9d3ee1a642bfe20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &692163522
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 692163515}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1767997c56b55b44b9f27c84397f5ebf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  newCursor: {fileID: 4421436994050687871, guid: 6f8e536161039e348ab27b8dab9a16e2, type: 3}
+  scalaIcone: {x: 0.4, y: 0.5, z: 0.5}
+--- !u!65 &692163523
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 692163515}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.04, y: 0.7, z: 0.04}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!64 &692451968
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -8912,6 +9040,42 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1133996877}
     m_Modifications:
+    - target: {fileID: 761976165956615481, guid: 70bc9bfb99ce5e34799a3bb53246d102, type: 3}
+      propertyPath: m_RootOrder
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 761976165956615481, guid: 70bc9bfb99ce5e34799a3bb53246d102, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 761976165956615481, guid: 70bc9bfb99ce5e34799a3bb53246d102, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 761976165956615481, guid: 70bc9bfb99ce5e34799a3bb53246d102, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 761976165956615481, guid: 70bc9bfb99ce5e34799a3bb53246d102, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 761976165956615481, guid: 70bc9bfb99ce5e34799a3bb53246d102, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 761976165956615481, guid: 70bc9bfb99ce5e34799a3bb53246d102, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 761976165956615481, guid: 70bc9bfb99ce5e34799a3bb53246d102, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 761976165956615481, guid: 70bc9bfb99ce5e34799a3bb53246d102, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1606536436584982128, guid: 70bc9bfb99ce5e34799a3bb53246d102, type: 3}
       propertyPath: m_RootOrder
       value: 11
@@ -8959,6 +9123,10 @@ PrefabInstance:
     - target: {fileID: 1606536436584982129, guid: 70bc9bfb99ce5e34799a3bb53246d102, type: 3}
       propertyPath: m_Name
       value: PauseMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 1606536436584982129, guid: 70bc9bfb99ce5e34799a3bb53246d102, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 70bc9bfb99ce5e34799a3bb53246d102, type: 3}
@@ -10789,6 +10957,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9cca77c4babc1f245a1d7725346b172b, type: 3}
+--- !u!224 &905972860 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 761976165956615481, guid: 70bc9bfb99ce5e34799a3bb53246d102, type: 3}
+  m_PrefabInstance: {fileID: 725458552}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &906396286
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13839,11 +14012,11 @@ RectTransform:
   - {fileID: 1540804581}
   - {fileID: 471046021}
   - {fileID: 974914109}
-  - {fileID: 1211414963}
   - {fileID: 1250777638}
   - {fileID: 2025256188}
   - {fileID: 910080058}
   - {fileID: 1562746597}
+  - {fileID: 905972860}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -13930,11 +14103,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4359317453081298925, guid: e2f05562ad7bd13448393385451aac7e, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -11
+      value: -11.200012
       objectReference: {fileID: 0}
     - target: {fileID: 4359317453081298925, guid: e2f05562ad7bd13448393385451aac7e, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -3.2000122
+      value: -7.5
       objectReference: {fileID: 0}
     - target: {fileID: 4359317453081298925, guid: e2f05562ad7bd13448393385451aac7e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -15017,11 +15190,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9cca77c4babc1f245a1d7725346b172b, type: 3}
---- !u!4 &1211414963 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1606536436584982128, guid: 70bc9bfb99ce5e34799a3bb53246d102, type: 3}
-  m_PrefabInstance: {fileID: 725458552}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1220495810 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8957860262109488985, guid: 35818333e408a164d9efad83ddba7f2f, type: 3}
@@ -16128,7 +16296,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1414183125268157641, guid: 7e10306bc1f89a64a90e39e8bd36f981, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 160
+      value: 135
       objectReference: {fileID: 0}
     - target: {fileID: 1414183125268157641, guid: 7e10306bc1f89a64a90e39e8bd36f981, type: 3}
       propertyPath: m_LocalPosition.x
@@ -16529,11 +16697,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue:
     name: Orlock
-    name2: 
+    name2: Orlock
     sentences:
     - "Meus bra\xE7os? Porque tanto sangue?"
   isPlayerTrigger: 0
-  mudancaPersonagem: 0
+  mudancaPersonagem: 
 --- !u!114 &1354530537
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16560,7 +16728,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   corPadrao: {r: 0, g: 0, b: 0, a: 1}
   corSelecionado: {r: 0.6, g: 0.5529412, b: 0.009411765, a: 0.6}
-  texto: 
+  texto: '"E" para inspecionar'
 --- !u!65 &1354530541
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16906,7 +17074,7 @@ MonoBehaviour:
     - Cai numa armadilha de aristocratas!
     - "Matarei todos, ou n\xE3o me chamo\r Orlok Schreck."
   isPlayerTrigger: 1
-  mudancaPersonagem: 0
+  mudancaPersonagem: 
 --- !u!65 &1394335808
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18408,6 +18576,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 7960669707794653669, guid: d14f21d4a81453e46bc3abf31b12cfb4, type: 3}
+      propertyPath: dialogue.name2
+      value: Orlock
+      objectReference: {fileID: 0}
+    - target: {fileID: 7960669707794653669, guid: d14f21d4a81453e46bc3abf31b12cfb4, type: 3}
       propertyPath: dialogue.sentences.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -18417,7 +18589,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8462835742800400801, guid: d14f21d4a81453e46bc3abf31b12cfb4, type: 3}
       propertyPath: texto
-      value: 
+      value: '"E" para coletar'
       objectReference: {fileID: 0}
     - target: {fileID: 8505489924671988841, guid: d14f21d4a81453e46bc3abf31b12cfb4, type: 3}
       propertyPath: m_RootOrder
@@ -18425,15 +18597,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8505489924671988841, guid: d14f21d4a81453e46bc3abf31b12cfb4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.4745736
+      value: 8.852
       objectReference: {fileID: 0}
     - target: {fileID: 8505489924671988841, guid: d14f21d4a81453e46bc3abf31b12cfb4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 102.514
+      value: 101.973
       objectReference: {fileID: 0}
     - target: {fileID: 8505489924671988841, guid: d14f21d4a81453e46bc3abf31b12cfb4, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -2.75
+      value: -4.676
       objectReference: {fileID: 0}
     - target: {fileID: 8505489924671988841, guid: d14f21d4a81453e46bc3abf31b12cfb4, type: 3}
       propertyPath: m_LocalRotation.w
@@ -25980,7 +26152,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 183681786049670618, guid: de2558f94ed0ada4aa62ce4740593ea7, type: 3}
       propertyPath: m_RootOrder
-      value: 12
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 183681786049670618, guid: de2558f94ed0ada4aa62ce4740593ea7, type: 3}
       propertyPath: m_AnchorMax.x
@@ -26157,7 +26329,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 267006759181826504, guid: a8ab4270bbbe0cc46a2baa031498a634, type: 3}
       propertyPath: m_RootOrder
-      value: 14
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 267006759181826504, guid: a8ab4270bbbe0cc46a2baa031498a634, type: 3}
       propertyPath: m_AnchorMax.x
@@ -26803,7 +26975,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 495438762204974483, guid: 47ae8f85203bb7d4aae924abc1650f7d, type: 3}
       propertyPath: m_RootOrder
-      value: 13
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 495438762204974483, guid: 47ae8f85203bb7d4aae924abc1650f7d, type: 3}
       propertyPath: m_AnchorMax.x
@@ -38431,6 +38603,7 @@ MonoBehaviour:
   - Abra a porta
   - Ache a segunda chave
   - Volte e abra a porta para escapar
+  dialogueTrigger: {fileID: 650827}
 --- !u!114 &4617931776517371121
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38451,7 +38624,7 @@ MonoBehaviour:
     - "S\xF3 um gole de palinca pra curar\r\nessa ressaca!"
     - Onde foi que eu meti o meu cantil?
   isPlayerTrigger: 0
-  mudancaPersonagem: 0
+  mudancaPersonagem: 
 --- !u!114 &4617931776517371124
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41261,7 +41434,7 @@ MonoBehaviour:
     - Vou morrer! Me ajude!
     - "Voc\xEA \xE9 meu... Precioso Orlok!"
   nivelSanidadeTrigger: 0
-  mudancaPersonagem: 1
+  mudancaPersonagem: 01000000
 --- !u!114 &5536992853720097931
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41282,7 +41455,7 @@ MonoBehaviour:
     - "Quem \xE9!?"
     - Deixe-me sozinho!
   nivelSanidadeTrigger: 40
-  mudancaPersonagem: 0
+  mudancaPersonagem: 
 --- !u!114 &5536992853720097932
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41302,7 +41475,7 @@ MonoBehaviour:
     - "O que \xE9 isso?"
     - "Quem est\xE1 ai?"
   nivelSanidadeTrigger: 70
-  mudancaPersonagem: 0
+  mudancaPersonagem: 
 --- !u!1 &5536992855617508936
 GameObject:
   m_ObjectHideFlags: 0
@@ -67197,7 +67370,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6299438417851040116, guid: 037029ad4a63ec44ab574ee72b0d127c, type: 3}
       propertyPath: m_RootOrder
-      value: 15
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 6299438417851040116, guid: 037029ad4a63ec44ab574ee72b0d127c, type: 3}
       propertyPath: m_AnchorMax.x

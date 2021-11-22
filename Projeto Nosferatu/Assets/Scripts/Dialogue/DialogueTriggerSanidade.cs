@@ -10,7 +10,7 @@ public class DialogueTriggerSanidade : MonoBehaviour
     float nivelSanidadeTrigger;
 
     [SerializeField]
-    int mudancaPersonagem;
+    int[] mudancaPersonagem;
 
     public void TriggerDialogue()
     {

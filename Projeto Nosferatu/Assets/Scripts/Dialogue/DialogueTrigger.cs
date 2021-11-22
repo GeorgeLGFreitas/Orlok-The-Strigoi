@@ -8,7 +8,7 @@ public class DialogueTrigger : MonoBehaviour
     bool isPlayerTrigger = false;
 
     [SerializeField]
-    int mudancaPersonagem;
+    int[] mudancaPersonagem;
     public void TriggerDialogue()
     {
         FindObjectOfType<DialogueManager>().StartDialogue(dialogue);

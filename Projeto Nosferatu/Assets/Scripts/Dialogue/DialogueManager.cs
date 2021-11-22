@@ -16,7 +16,7 @@ public class DialogueManager : MonoBehaviour
     bool firstQuest = false;
     bool changeCharacter = false;
 
-    public int mudancaDePersonagem;
+    public int[] mudancaDePersonagem;
 
     string name1;
     string name2;
@@ -101,10 +101,14 @@ public class DialogueManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Return))
         {
-            if (sentences.Count == mudancaDePersonagem)
+            for (int i = 0; i < mudancaDePersonagem.Length; i++)
             {
-                changeCharacter = !changeCharacter;
+                if (sentences.Count == mudancaDePersonagem[i])
+                {
+                    changeCharacter = !changeCharacter;
+                }
             }
+            
             DisplayNextSentence();
         }
     }

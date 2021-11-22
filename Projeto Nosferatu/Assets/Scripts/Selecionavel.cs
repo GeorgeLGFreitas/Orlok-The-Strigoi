@@ -20,15 +20,10 @@ public class Selecionavel : MonoBehaviour
         mouseCursor = GetComponent<mouseCursor>();
     }
 
-    void Update()
-    {
-        
-    }
-
     public void Liga()
     {
         render.material.SetColor("_EmissionColor", corSelecionado);
-        mouseCursor.ChangeImage();
+        mouseCursor.ChangeImage(); 
     }
 
      public void Desliga()
