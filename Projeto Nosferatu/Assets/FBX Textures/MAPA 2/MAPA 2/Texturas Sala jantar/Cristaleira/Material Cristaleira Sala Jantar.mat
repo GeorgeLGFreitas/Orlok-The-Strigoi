@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Poltrona Jantar Material
+  m_Name: Material Cristaleira Sala Jantar
   m_Shader: {fileID: 4800000, guid: 933532a4fcc9baf4fa0491de14d08ed7, type: 3}
   m_ShaderKeywords: _METALLICSPECGLOSSMAP _NORMALMAP _OCCLUSIONMAP _PARALLAXMAP
   m_LightmapFlags: 4
@@ -21,11 +21,11 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _BaseMap:
-        m_Texture: {fileID: 2800000, guid: 030ce02652cb0ff459b33c5e3f83829c, type: 3}
+        m_Texture: {fileID: 2800000, guid: ec9881897d9a2254a9376e33669e69b7, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BumpMap:
-        m_Texture: {fileID: 2800000, guid: eac23cd78239248478e3da4a901895dc, type: 3}
+        m_Texture: {fileID: 2800000, guid: 245787e09ee6aea438403597a5f602b3, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DetailAlbedoMap:
@@ -45,19 +45,19 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 030ce02652cb0ff459b33c5e3f83829c, type: 3}
+        m_Texture: {fileID: 2800000, guid: ec9881897d9a2254a9376e33669e69b7, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
-        m_Texture: {fileID: 2800000, guid: 47a8c52d9bcf4004eaf29f2cdda4c434, type: 3}
+        m_Texture: {fileID: 2800000, guid: 31966e0977fc547439ca26346bd405c9, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
-        m_Texture: {fileID: 2800000, guid: 73b71aee69c34884ebfc650e7b069b66, type: 3}
+        m_Texture: {fileID: 2800000, guid: d4ec3aba4c5d8c54daadcb84809b8329, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ParallaxMap:
-        m_Texture: {fileID: 2800000, guid: 0fbaf0a5a5449d3428d51a87c4327283, type: 3}
+        m_Texture: {fileID: 2800000, guid: db3fe7abb849870499ce669fa97f6688, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SpecGlossMap:
@@ -109,7 +109,7 @@ Material:
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
   m_BuildTextureStacks: []
---- !u!114 &3149994908502586407
+--- !u!114 &7029739337294522539
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
