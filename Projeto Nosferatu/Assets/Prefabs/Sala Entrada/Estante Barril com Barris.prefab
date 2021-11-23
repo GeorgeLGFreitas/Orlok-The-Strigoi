@@ -295,6 +295,7 @@ GameObject:
   - component: {fileID: 2508142248969570253}
   - component: {fileID: 6494367148650612006}
   - component: {fileID: 7247910018949700524}
+  - component: {fileID: 7374926529328070500}
   m_Layer: 0
   m_Name: Estante_Barril
   m_TagString: Untagged
@@ -365,6 +366,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &7374926529328070500
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1854794112820043414}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.17288764, y: 0.5409827, z: 0.16801342}
+  m_Center: {x: 0.000000018626451, y: 0.000000014901161, z: 0}
 --- !u!1 &2605237107066177819
 GameObject:
   m_ObjectHideFlags: 0
