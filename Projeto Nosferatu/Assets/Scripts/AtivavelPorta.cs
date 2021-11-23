@@ -17,12 +17,15 @@ public class AtivavelPorta : Ativavel
 
     public GameObject p1, p2;  // portas pra rotacionar
     GameObject porta;
-    
 
+    [SerializeField]
+    QuestManager questManager;
+    DialogueTrigger dialogueTrigger;
 
     void Start()
     {
         jogador = FindObjectOfType<Jogador>();
+        dialogueTrigger = GetComponent<DialogueTrigger>();
     }
 
     void Update()
@@ -49,9 +52,13 @@ public class AtivavelPorta : Ativavel
             jogador.porta = true;
             // -105 rotation Y
 
-            abrePorta = true;            
-            //Destroy(gameObject);
-        
+            abrePorta = true;
+
+            dialogueTrigger.TriggerDialogue();
+        }
+        else
+        {
+            questManager.interagiuPorta = true;
         }
 
         if(jogador.chave2 && porta2)

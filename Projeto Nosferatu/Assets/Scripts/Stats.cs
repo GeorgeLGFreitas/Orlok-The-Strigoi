@@ -8,7 +8,6 @@ using System.Collections.Generic;
 
 public class Stats : MonoBehaviour
 {
-    public string[] texto ;
     public Text textoC;
     bool unica = true;
     bool endPrimeiroDialogo = false;
@@ -36,8 +35,8 @@ public class Stats : MonoBehaviour
     bool restoreInitialStamina = true;
 
     [SerializeField]
-    float maxTocha;
-    float atualTocha;
+    public float maxTocha;
+    public float atualTocha;
 
     [SerializeField]
     float timer;
@@ -49,6 +48,10 @@ public class Stats : MonoBehaviour
     float tochaDecaimento;
     [SerializeField]
     float staminaDecaimento;
+
+    public int atualPedra;
+    public bool primeiraMira = false;
+    public bool primeiroTiro = false;
 
     [Header("Sliders")]
 
@@ -67,22 +70,26 @@ public class Stats : MonoBehaviour
     Movimento movimento;
     [SerializeField]
     Jogador jogador;
+    QuestManager questManager;
 
     [Header("GameObjects")]
 
     [SerializeField]
-    Light tochaLight;
-    [SerializeField]
     GameObject cantilGameObject;
     [SerializeField]
     DialogueTrigger drunkCantilDialogo;
+    [SerializeField]
+    DialogueTrigger tochaEsgotadaDialogo;
 
     private void Start()
     {
         maxStamina = 100;
         atualStamina = 20;
         atualSanidade = maxSanidade;
-        atualCantil = 100;
+        atualCantil = maxCantil;
+        atualTocha = maxTocha;
+
+        #region Sliders
 
         staminaSlider.maxValue = maxStamina;
         staminaSlider.value = atualStamina;
@@ -95,9 +102,16 @@ public class Stats : MonoBehaviour
 
         tochaSlider.maxValue = maxTocha;
         tochaSlider.value = atualTocha;
-        atualTocha = 100;
+
+        #endregion
 
         tochaSlider.gameObject.SetActive(false);
+
+        questManager = GetComponent<QuestManager>();
+
+        textoC.text = "";
+
+        atualPedra = 0;
     }
 
     void Awake()
@@ -127,6 +141,7 @@ public class Stats : MonoBehaviour
         }
         #endregion
 
+        #region Stamina
 
         if (canRun)
         {
@@ -155,7 +170,6 @@ public class Stats : MonoBehaviour
                 unica = false;
             }
             
-            
             efeitoStamina.SetActive(true);
         }
 
@@ -164,8 +178,17 @@ public class Stats : MonoBehaviour
             efeitoStamina.SetActive(false);
         }
 
+        #endregion
+
+        #region Cantil
+
         if (jogador.cantil)
         {
+            if (restoreInitialStamina)
+            {
+                textoC.text = "'F' para beber";
+            }
+
             if (atualCantil == 0)
             {
 
@@ -174,6 +197,10 @@ public class Stats : MonoBehaviour
             {
                 if (Input.GetKey(KeyCode.F))
                 {
+                    textoC.text = "";
+
+                    questManager.bebeuVinho = true;
+
                     float consumido;
 
                     consumido = atualCantil;
@@ -208,10 +235,14 @@ public class Stats : MonoBehaviour
             }
         }
 
+        #endregion
+
         if (atualSanidade == 0) //GAMEOVER
         {
             vignette.intensity.value = 1f;
         }
+
+        #region Tocha
 
         if (jogador.tocha == true)
         {
@@ -221,64 +252,45 @@ public class Stats : MonoBehaviour
             atualTocha -= tochaDecaimento * Time.deltaTime;
             atualSanidade = maxSanidade;
 
-            if (atualTocha > 70)
+            if (atualTocha <= 0)
             {
-                tochaLight.intensity = 4.1f;
-            }
-            else if (atualTocha < 70)
-            {
-                tochaLight.intensity = 3.5f;
-                
-                if (atualSanidade == 70)
-                {
-                    vignette.intensity.value = 0.3f;
-                }
-                else
-                {
-                    atualSanidade -= 0.05f;
-                }
-            }
-            else if (atualTocha < 40)
-            {
-                tochaLight.intensity = 3.0f;
-
-                if (atualSanidade == 40)
-                {
-                    vignette.intensity.value = 0.6f;
-                }
-                else
-                {
-                    atualSanidade -= 0.075f;
-                }
-            }
-            else if (atualTocha < 10)
-            {
-                tochaLight.intensity = 2.5f;
-
-                if (atualSanidade == 10)
-                {
-                    vignette.intensity.value = 0.9f;
-                }
-                else
-                {
-                    atualSanidade -= 0.1f;
-                }
+                atualTocha = 0;
+                tochaEsgotadaDialogo.TriggerDialogue();
             }
         }
+
         else
         {
             timer -= Time.deltaTime;
             if (timer < 0)
             {
                 atualSanidade -= sanidadeDecaimento;
-                if(atualSanidade >= 70) vignette.intensity.value -= efeitosanidadeDecaimento;
-                else if(atualSanidade < 70 & atualSanidade >= 40 ) vignette.intensity.value -= efeitosanidadeDecaimento * 2;
-                else if(atualSanidade < 40) vignette.intensity.value -= efeitosanidadeDecaimento * 3;
+                if (atualSanidade >= 70)
+                {
+                    vignette.intensity.value -= efeitosanidadeDecaimento;
+                }
+                else if (atualSanidade < 70 & atualSanidade >= 40)
+                {
+                    vignette.intensity.value -= efeitosanidadeDecaimento * 2;
+                }
+                else if (atualSanidade < 40)
+                {
+                    vignette.intensity.value -= efeitosanidadeDecaimento * 3;
+                }
+            }
+        }
 
+        #endregion
 
+        if (primeiraMira)
+        {
+            textoC.text = "Segure o botão direito para mirar.";
 
+            if (primeiroTiro)
+            {
+                textoC.text = "Aperte o botão esquerdo para atirar.";
+                questManager.arremessou = true;
             }
         }
     }
-    
 }
