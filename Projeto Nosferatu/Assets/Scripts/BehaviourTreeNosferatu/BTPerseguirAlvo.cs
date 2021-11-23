@@ -10,10 +10,10 @@ public class BTPerseguirAlvo : BTNode
 
         status = Status.RUNNING;
         Print(bt);
-        NavMeshAgent agente = GameObject.FindObjectOfType<NavMeshAgent>();
         GameObject alvo = GameObject.FindGameObjectWithTag("Player");
 
-        agente.SetDestination(alvo.transform.position);
+        bt.agente.SetDestination(alvo.transform.position);
+        
         if (Vector3.Distance(bt.transform.position, alvo.transform.position) < 1)
         {
             status = Status.SUCCESS;

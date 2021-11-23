@@ -12,9 +12,11 @@ public class BTTemBarulho : BTNode
         if (Vector3.Distance(bt.transform.position, alvo.transform.position) < 20)
         {
             status = Status.SUCCESS;
-            
         }
-        
+        else if(alvo == null)
+        {
+            status = Status.FAILURE;
+        }
         Print(bt);
         yield break;
     }

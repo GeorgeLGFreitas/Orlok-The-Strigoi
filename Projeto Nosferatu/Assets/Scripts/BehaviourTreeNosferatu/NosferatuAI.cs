@@ -14,10 +14,14 @@ public class NosferatuAI : MonoBehaviour
 
         BTInversor naoCampoDeVisao = new BTInversor();
         naoCampoDeVisao.child = new BTAlvoCampoDeVisao();
+
+        BTInversor naoSeguro = new BTInversor();
+        naoSeguro.child = new BTAlvoSeguro();
         
         BTSequence persegue = new BTSequence();
+        persegue.children.Add(new BTAlvoProximo());
         persegue.children.Add(new BTAlvoCampoDeVisao());
-        persegue.children.Add(new BTAlvoSeguro());
+        persegue.children.Add(naoSeguro);
         persegue.children.Add(new BTPerseguirAlvo());
 
         BTSequence perseguePerto = new BTSequence();
@@ -32,7 +36,7 @@ public class NosferatuAI : MonoBehaviour
         //vagar.children.Add(new BTPerseguirAlvo());
 
         BTSequence fiscalizar = new BTSequence();
-        fiscalizar.children.Add(naoAlvoProximo);
+        fiscalizar.children.Add(naoCampoDeVisao);
         fiscalizar.children.Add(new BTTemBarulho());
         fiscalizar.children.Add(new BTFiscalizar());
 
@@ -40,7 +44,7 @@ public class NosferatuAI : MonoBehaviour
 
         BTSelector selecao = new BTSelector();
         selecao.children.Add(persegue);
-        selecao.children.Add(perseguePerto);
+        //selecao.children.Add(perseguePerto);
         selecao.children.Add(fiscalizar);
         //selecao.children.Add(vagar);
 

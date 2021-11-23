@@ -10,17 +10,18 @@ public class BTFiscalizar : BTNode
 
         status = Status.RUNNING;
         Print(bt);
-        NavMeshAgent agente = GameObject.FindObjectOfType<NavMeshAgent>();
+        
         GameObject alvo = GameObject.FindGameObjectWithTag("Atencao");
 
-        agente.SetDestination(alvo.transform.position);
-        if (Vector3.Distance(bt.transform.position, alvo.transform.position) < 5)
+        bt.agente.SetDestination(alvo.transform.position);
+        if (Vector3.Distance(bt.transform.position, alvo.transform.position) < 2)
         {
+            bt.agente.ResetPath();
             status = Status.SUCCESS;
             yield break;
 
         }
-
+      
         else if (status == Status.RUNNING) status = Status.FAILURE;
         Print(bt);
         
