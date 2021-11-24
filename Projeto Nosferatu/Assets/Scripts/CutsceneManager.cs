@@ -16,5 +16,9 @@ public class CutsceneManager : MonoBehaviour
     {
         jogador = FindObjectOfType<Jogador>();
         movimento = FindObjectOfType<Movimento>();
+        animator = GetComponent<Animator>();
+        jogadorCamera = Camera.main;
+
+        cutsceneCamera.gameObject.SetActive(false);
     }
 }
