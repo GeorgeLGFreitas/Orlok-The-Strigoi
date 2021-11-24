@@ -20,23 +20,62 @@ public class Stats : MonoBehaviour
 
     [Header("Stats")]
 
+    [Header("Stamina")]
+
     [SerializeField]
     float maxStamina;
     public float atualStamina;
     bool canRun;
 
+    [Header("Sanidade")]
+
     [SerializeField]
     float maxSanidade;
     public float atualSanidade;
+
+    [Header("Cantil")]
 
     [SerializeField]
     float maxCantil;
     float atualCantil;
     bool restoreInitialStamina = true;
 
+    [Header("Tocha")]
+
     [SerializeField]
     public float maxTocha;
     public float atualTocha;
+
+    [Header("Pedra")]
+
+    public int atualPedra;
+    public bool primeiraMira = false;
+    public bool primeiroTiro = false;
+    public bool arremessouPrimeiraVez = false;
+    [SerializeField]
+    Text countPedraText;
+    [SerializeField]
+    Image pedraImage;
+    public bool pedraSelected;
+
+    [Header("Garrafa")]
+
+    public int atualGarrafa;
+    [SerializeField]
+    Text countGarrafaText;
+    [SerializeField]
+    Image garrafaImage;
+    public bool garrafaSelected;
+
+    [Header("Inventario")]
+
+    [SerializeField]
+    int sizeIndex = 8;
+    int selectedSlot;
+    [SerializeField]
+    GameObject[] itemsGroup;
+
+    [Header("Decaimentos + Timer")]
 
     [SerializeField]
     float timer;
@@ -49,9 +88,6 @@ public class Stats : MonoBehaviour
     [SerializeField]
     float staminaDecaimento;
 
-    public int atualPedra;
-    public bool primeiraMira = false;
-    public bool primeiroTiro = false;
 
     [Header("Sliders")]
 
@@ -111,7 +147,12 @@ public class Stats : MonoBehaviour
 
         textoC.text = "";
 
+        pedraSelected = true;
+        garrafaSelected = false;
+
         atualPedra = 0;
+
+        selectedSlot = 0;
     }
 
     void Awake()
@@ -145,7 +186,7 @@ public class Stats : MonoBehaviour
 
         if (canRun)
         {
-            if (movimento.velocity > 3)
+            if (movimento.velocity > 3 & movimento.movi != Vector3.zero)
             {
                 atualStamina -= staminaDecaimento;
             }
@@ -223,7 +264,6 @@ public class Stats : MonoBehaviour
                         atualCantil -= consumido;
                         atualStamina += consumido;
 
-                        atualStamina += consumido;
 
                         if (restoreInitialStamina)
                         {
@@ -236,6 +276,8 @@ public class Stats : MonoBehaviour
         }
 
         #endregion
+
+        countPedraText.text = "" + atualPedra;
 
         if (atualSanidade == 0) //GAMEOVER
         {
@@ -282,15 +324,69 @@ public class Stats : MonoBehaviour
 
         #endregion
 
-        if (primeiraMira)
+        if (questManager.interagiuPedra)
         {
             textoC.text = "Segure o botão direito para mirar.";
 
             if (primeiroTiro)
             {
                 textoC.text = "Aperte o botão esquerdo para atirar.";
-                questManager.arremessou = true;
+
+                if (arremessouPrimeiraVez)
+                {
+                    textoC.text = "";
+
+                    questManager.arremessou = true;
+                }
             }
+        }
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            selectedSlot++;
+            if (selectedSlot > sizeIndex)
+            {
+                selectedSlot = 0;
+            }
+
+            for (int i = 0; i < itemsGroup.Length; i++)
+            {
+                if (itemsGroup[i] == itemsGroup[selectedSlot])
+                {
+                    itemsGroup[i].SetActive(true);
+                }
+                else
+                {
+                    itemsGroup[i].SetActive(false);
+                }
+            }
+
+
+
+            /*
+            pedraSelected = !pedraSelected;
+            garrafaSelected = !garrafaSelected;
+
+            if (pedraSelected)
+            {
+                garrafaImage.gameObject.SetActive(false);
+                countGarrafaText.gameObject.SetActive(false);
+
+                pedraImage.gameObject.SetActive(true);
+                countPedraText.gameObject.SetActive(true);
+            }
+            if (garrafaSelected)
+            {
+                pedraImage.gameObject.SetActive(false);
+                countPedraText.gameObject.SetActive(false);
+
+                garrafaImage.gameObject.SetActive(true);
+                countGarrafaText.gameObject.SetActive(true);
+            }
+            */
         }
     }
 }

@@ -22,8 +22,9 @@ public class AtivavelChave : Ativavel
     {
         if(chave)
         {
-            //cursor.coletar = true;
+            cursor.OriginalImage();
             jogador.chave = true;
+            jogador.areaDeTexto.text = "";
             Destroy(gameObject);
         }
 

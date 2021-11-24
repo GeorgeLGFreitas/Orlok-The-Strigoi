@@ -12,7 +12,7 @@ public class Movimento : MonoBehaviour
 
     float vel;
     float crouch;
-    Vector3 movi = Vector3.zero;
+    public Vector3 movi = Vector3.zero;
 
     Stats stats;
 

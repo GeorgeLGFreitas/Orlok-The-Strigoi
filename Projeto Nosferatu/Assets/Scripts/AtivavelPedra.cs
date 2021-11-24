@@ -5,11 +5,13 @@ using UnityEngine;
 public class AtivavelPedra : Ativavel
 {
     Stats stats;
+    mouseCursor cursor;
     QuestManager questManager;
 
     private void Start()
     {
         stats = FindObjectOfType<Stats>();
+        cursor = GetComponent<mouseCursor>();
         questManager = FindObjectOfType<QuestManager>();
     }
     public override void Ativar()
@@ -18,6 +20,8 @@ public class AtivavelPedra : Ativavel
 
         stats.atualPedra++;
         stats.primeiraMira = true;
+
+        cursor.OriginalImage();
 
         Destroy(gameObject);
     }

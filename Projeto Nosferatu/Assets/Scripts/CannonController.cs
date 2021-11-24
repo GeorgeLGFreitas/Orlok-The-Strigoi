@@ -24,7 +24,7 @@ public class CannonController : MonoBehaviour
     }
     private void LateUpdate()
     {
-        if (stats.atualPedra != 0)
+        if (stats.atualPedra != 0 & stats.pedraSelected)
         {
             if (Input.GetKey(KeyCode.Mouse1))
             {
@@ -41,7 +41,8 @@ public class CannonController : MonoBehaviour
                     GameObject CreatedCannonball = Instantiate(Cannonball, ShotPoint.position, ShotPoint.rotation);
                     CreatedCannonball.GetComponent<Rigidbody>().velocity = ShotPoint.transform.up * BlastPower;
 
-                    stats.primeiraMira = stats.primeiroTiro = false;
+                    stats.arremessouPrimeiraVez = true;
+                    stats.atualPedra--;
                 }
             
             }
