@@ -22,10 +22,13 @@ public class AtivavelPorta : Ativavel
     QuestManager questManager;
     DialogueTrigger dialogueTrigger;
 
+    Stats stats;
+
     void Start()
     {
         jogador = FindObjectOfType<Jogador>();
         dialogueTrigger = GetComponent<DialogueTrigger>();
+        stats = FindObjectOfType<Stats>();
     }
 
     void Update()
@@ -55,6 +58,8 @@ public class AtivavelPorta : Ativavel
             abrePorta = true;
 
             dialogueTrigger.TriggerDialogue();
+
+            stats.numeroChave--;
         }
         else
         {

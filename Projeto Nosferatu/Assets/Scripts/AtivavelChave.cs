@@ -6,6 +6,7 @@ public class AtivavelChave : Ativavel
 {
     Jogador jogador;
     mouseCursor cursor;
+    Stats stats;
 
     public bool chave;
     public bool chave2;
@@ -15,6 +16,7 @@ public class AtivavelChave : Ativavel
     {   
         jogador = FindObjectOfType<Jogador>();
         cursor = FindObjectOfType<mouseCursor>();
+        stats = FindObjectOfType<Stats>();
     }
 
 
@@ -25,6 +27,7 @@ public class AtivavelChave : Ativavel
             cursor.OriginalImage();
             jogador.chave = true;
             jogador.areaDeTexto.text = "";
+            stats.numeroChave++;
             Destroy(gameObject);
         }
 

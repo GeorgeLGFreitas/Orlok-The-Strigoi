@@ -54,8 +54,6 @@ public class Stats : MonoBehaviour
     public bool arremessouPrimeiraVez = false;
     [SerializeField]
     Text countPedraText;
-    [SerializeField]
-    Image pedraImage;
     public bool pedraSelected;
 
     [Header("Garrafa")]
@@ -63,8 +61,6 @@ public class Stats : MonoBehaviour
     public int atualGarrafa;
     [SerializeField]
     Text countGarrafaText;
-    [SerializeField]
-    Image garrafaImage;
     public bool garrafaSelected;
 
     [Header("Inventario")]
@@ -74,6 +70,31 @@ public class Stats : MonoBehaviour
     int selectedSlot;
     [SerializeField]
     GameObject[] itemsGroup;
+    public bool[] itemsGroupBool;
+
+    public int numeroChave;
+    [SerializeField]
+    Text numeroChaveText;
+
+    public int numeroAlimento;
+    [SerializeField]
+    Text numeorAlimentoText;
+
+    public int numeroDiscoPrato;
+    [SerializeField]
+    Text numeroDiscoPratoText;
+
+    public int numeroLivroI;
+    [SerializeField]
+    Text numeroLivroIText;
+
+    public int numeroLivroIII;
+    [SerializeField]
+    Text numeroLivroIIIText;
+
+    public int numeroLivroXIII;
+    [SerializeField]
+    Text numeroLivroXIIIText;
 
     [Header("Decaimentos + Timer")]
 
@@ -153,6 +174,15 @@ public class Stats : MonoBehaviour
         atualPedra = 0;
 
         selectedSlot = 0;
+
+        for (int i = 0; i < itemsGroup.Length; i++)
+        {
+            itemsGroup[i].SetActive(false);
+            itemsGroupBool[i] = false;
+        }
+
+        itemsGroup[0].SetActive(true);
+        itemsGroupBool[0] = true;
     }
 
     void Awake()
@@ -357,36 +387,37 @@ public class Stats : MonoBehaviour
                 if (itemsGroup[i] == itemsGroup[selectedSlot])
                 {
                     itemsGroup[i].SetActive(true);
+
+                    itemsGroupBool[i] = true;
                 }
                 else
                 {
                     itemsGroup[i].SetActive(false);
+
+                    itemsGroupBool[i] = false;
                 }
             }
 
-
-
             /*
-            pedraSelected = !pedraSelected;
-            garrafaSelected = !garrafaSelected;
-
-            if (pedraSelected)
-            {
-                garrafaImage.gameObject.SetActive(false);
-                countGarrafaText.gameObject.SetActive(false);
-
-                pedraImage.gameObject.SetActive(true);
-                countPedraText.gameObject.SetActive(true);
-            }
-            if (garrafaSelected)
-            {
-                pedraImage.gameObject.SetActive(false);
-                countPedraText.gameObject.SetActive(false);
-
-                garrafaImage.gameObject.SetActive(true);
-                countGarrafaText.gameObject.SetActive(true);
-            }
+            0 - Pedra
+            1 - Garrafa
+            2 - Livro I
+            3 - Livro III
+            4 - Livro XIII
+            5 - Alimento
+            6 - Chave
+            7 - Disco/Prato
             */
         }
+
+        numeroChaveText.text = "" + numeroChave;
+        countPedraText.text = "" + atualPedra;
+        countGarrafaText.text = "" + atualGarrafa;
+        numeorAlimentoText.text = "" + numeroAlimento;
+        numeroChaveText.text = "" + numeroChave;
+        numeroDiscoPratoText.text = "" + numeroDiscoPrato;
+        numeroLivroIText.text = "" + numeroLivroI;
+        numeroLivroIIIText.text = "" + numeroLivroIII;
+        numeroLivroXIIIText.text = "" + numeroLivroXIII;
     }
 }
