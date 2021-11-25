@@ -31940,6 +31940,7 @@ GameObject:
   - component: {fileID: 8680495018136715925}
   - component: {fileID: 7956973085672825721}
   - component: {fileID: 7649123728264692548}
+  - component: {fileID: 55069522528576875}
   m_Layer: 0
   m_Name: pCube26
   m_TagString: Untagged
@@ -31947,6 +31948,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!64 &55069522528576875
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 55069522528576874}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 8906563331131944060, guid: e1afbe6eb760c2f47b25a4a608074b82, type: 3}
 --- !u!4 &61271828338748219
 Transform:
   m_ObjectHideFlags: 0
@@ -35137,6 +35152,7 @@ GameObject:
   - component: {fileID: 4551308767834975336}
   - component: {fileID: 7205452952597437256}
   - component: {fileID: 2955973589512833572}
+  - component: {fileID: 625385326298581652}
   m_Layer: 0
   m_Name: pCube5
   m_TagString: Untagged
@@ -35144,6 +35160,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!64 &625385326298581652
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 625385326298581651}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -3758573805739257388, guid: e1afbe6eb760c2f47b25a4a608074b82, type: 3}
 --- !u!1 &626388463666553856
 GameObject:
   m_ObjectHideFlags: 0
@@ -36603,8 +36633,10 @@ MonoBehaviour:
     - "Aquela bruxa! Se eu te soltar, voc\xEA\r\nme conta o que sabe?"
     - "N\xE3o rapaz, por favor, estou mais\r\nseguro aqui dentro... Mas posso te\r\ncontar
       tudo o que sei, se me fizer\r\num favor..."
+    - "A sua esquerda, subindo as escadas,\r\n\xE9 o sal\xE3o de banquetes, traga-me\r\nalgo
+      para comer meu bom rapaz..."
   isPlayerTrigger: 0
-  mudancaPersonagem: 
+  mudancaPersonagem: 01000000030000000400000006000000
 --- !u!114 &906806358133390754
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -44745,6 +44777,7 @@ GameObject:
   - component: {fileID: 2604801284291143918}
   - component: {fileID: 7865433884175932157}
   - component: {fileID: 1063488609526501939}
+  - component: {fileID: 1934080365821123917}
   m_Layer: 0
   m_Name: pCube27
   m_TagString: Untagged
@@ -44752,6 +44785,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!64 &1934080365821123917
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1934080365821123916}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -1501624878150026706, guid: e1afbe6eb760c2f47b25a4a608074b82, type: 3}
 --- !u!23 &1937089293574968142
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -46163,6 +46210,7 @@ GameObject:
   - component: {fileID: 164111703415546709}
   - component: {fileID: 8975706255108010286}
   - component: {fileID: 4876917848547896268}
+  - component: {fileID: 2253268332858153688}
   m_Layer: 0
   m_Name: pCube22
   m_TagString: Untagged
@@ -46170,6 +46218,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!64 &2253268332858153688
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2253268332858153687}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 3628990442929905983, guid: e1afbe6eb760c2f47b25a4a608074b82, type: 3}
 --- !u!23 &2253925789373722973
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -46857,6 +46919,7 @@ GameObject:
   - component: {fileID: 2064104487133974339}
   - component: {fileID: 1550552656684821921}
   - component: {fileID: 4707708829502277199}
+  - component: {fileID: 2409916762257981204}
   m_Layer: 0
   m_Name: pCube28
   m_TagString: Untagged
@@ -46864,6 +46927,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!64 &2409916762257981204
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2409916762257981203}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -5786352474729385974, guid: e1afbe6eb760c2f47b25a4a608074b82, type: 3}
 --- !u!1 &2420511555485737939
 GameObject:
   m_ObjectHideFlags: 0
@@ -58359,6 +58436,7 @@ GameObject:
   - component: {fileID: 1640498485662392933}
   - component: {fileID: 5528180315226772199}
   - component: {fileID: 8228104409008768861}
+  - component: {fileID: 4721658317082850521}
   m_Layer: 0
   m_Name: pCube23
   m_TagString: Untagged
@@ -58366,6 +58444,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!64 &4721658317082850521
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4721658317082850520}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 1013006867569979, guid: e1afbe6eb760c2f47b25a4a608074b82, type: 3}
 --- !u!4 &4732933470507220763
 Transform:
   m_ObjectHideFlags: 0
@@ -61305,6 +61397,7 @@ GameObject:
   - component: {fileID: 8985876427201932814}
   - component: {fileID: 7377700139967496900}
   - component: {fileID: 1433435024040650844}
+  - component: {fileID: 5370368957977714671}
   m_Layer: 0
   m_Name: pCube4
   m_TagString: Untagged
@@ -61312,6 +61405,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!64 &5370368957977714671
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5370368957977714670}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 3861478300804232965, guid: 4c9fe891e2eb87347bbed80d5d4eb95f, type: 3}
 --- !u!1 &5392224917771578565
 GameObject:
   m_ObjectHideFlags: 0
@@ -62233,6 +62340,7 @@ GameObject:
   - component: {fileID: 7186608602868920496}
   - component: {fileID: 6384528310879408366}
   - component: {fileID: 8821903612183913984}
+  - component: {fileID: 5463749628572733027}
   m_Layer: 0
   m_Name: pCube6
   m_TagString: Untagged
@@ -62240,6 +62348,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!64 &5463749628572733027
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5463749628572733026}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 6606501483488557099, guid: e1afbe6eb760c2f47b25a4a608074b82, type: 3}
 --- !u!4 &5463818298633104667
 Transform:
   m_ObjectHideFlags: 0
