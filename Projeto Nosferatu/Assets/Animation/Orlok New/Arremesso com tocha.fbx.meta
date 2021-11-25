@@ -32,8 +32,24 @@ ModelImporter:
       has translation animation that will be discarded.\n\t'Elbow_r' has translation
       animation that will be discarded.\n\t'Femur_l' has translation animation that
       will be discarded.\n\t'Femur_r' has translation animation that will be discarded.\n"
-    animationRetargetingWarnings: 
-    animationDoRetargetingWarnings: 0
+    animationRetargetingWarnings: "\nRetargeting quality report for clip 'Take 001':\n\tLeftLowerLeg
+      average position error 30.6 mm and maximum position error 66.9 mm at time 0:25
+      (38.5%) Frame 25\n\tLeftFoot average position error 24.1 mm and maximum position
+      error 63.9 mm at time 1: 4 (52.3%) Frame 34\n\tRightLowerLeg average position
+      error 30.4 mm and maximum position error 72.4 mm at time 0:15 (23.1%) Frame
+      15\n\tRightFoot average position error 15.6 mm and maximum position error 59.8
+      mm at time 1: 4 (52.3%) Frame 34\n\tLeftUpperArm average position error 50.9
+      mm and maximum position error 131.8 mm at time 1: 3 (50.8%) Frame 33\n\tLeftLowerArm
+      average position error 45.9 mm and maximum position error 114.9 mm at time
+      1: 4 (52.3%) Frame 34\n\tLeftHand average position error 40.6 mm and maximum
+      position error 98.1 mm at time 1: 4 (52.3%) Frame 34\n\tRightUpperArm average
+      position error 45.4 mm and maximum position error 124.4 mm at time 1: 4 (52.3%)
+      Frame 34\n\tRightLowerArm average position error 44.7 mm and maximum position
+      error 127.8 mm at time 1: 4 (52.3%) Frame 34\n\tRightHand average position
+      error 42.2 mm and maximum position error 127.1 mm at time 1: 4 (52.3%) Frame
+      34\n\tHead average position error 45.8 mm and maximum position error 124.8
+      mm at time 1: 4 (52.3%) Frame 34\n"
+    animationDoRetargetingWarnings: 1
     importAnimatedCustomProperties: 0
     importConstraints: 0
     animationCompression: 3
@@ -65,10 +81,38 @@ ModelImporter:
       keepOriginalPositionY: 1
       keepOriginalPositionXZ: 0
       heightFromFeet: 0
-      mirror: 0
+      mirror: 1
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
-      events: []
+      events:
+      - time: 0
+        functionName: Libera
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 0.39901477
+        functionName: Throw
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 1
+        functionName: Idle
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 1
+        functionName: Libera
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
       transformMask: []
       maskType: 3
       maskSource: {instanceID: 0}

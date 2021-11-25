@@ -11,7 +11,7 @@ public class Stats : MonoBehaviour
     public Text textoC;
     bool unica = true;
     bool endPrimeiroDialogo = false;
-
+    public AnimationManager animator;
     public GameObject efeitoSanidade;
     public GameObject efeitoStamina;
     Volume volumeStamina;
@@ -221,7 +221,7 @@ public class Stats : MonoBehaviour
                 atualStamina -= staminaDecaimento;
             }
         }
-        
+
         if (atualStamina <= 0)
         {
             atualStamina = 0;
@@ -233,14 +233,14 @@ public class Stats : MonoBehaviour
             canRun = true;
         }
 
-        if (atualStamina <=30)
+        if (atualStamina <= 30)
         {
-            if(unica)
+            if (unica)
             {
                 gameObject.GetComponent<DialogueTrigger>().TriggerDialogue();
                 unica = false;
             }
-            
+
             efeitoStamina.SetActive(true);
         }
 
@@ -268,39 +268,7 @@ public class Stats : MonoBehaviour
             {
                 if (Input.GetKey(KeyCode.F))
                 {
-                    textoC.text = "";
-
-                    questManager.bebeuVinho = true;
-
-                    float consumido;
-
-                    consumido = atualCantil;
-
-                    if (atualCantil + atualStamina > maxStamina)
-                    {
-                        consumido = maxStamina - atualStamina;
-
-                        atualCantil -= consumido;
-                        atualStamina = maxStamina;
-
-                        if (restoreInitialStamina)
-                        {
-                            drunkCantilDialogo.TriggerDialogue();
-                            restoreInitialStamina = false;
-                        }
-                    }
-                    else
-                    {
-                        atualCantil -= consumido;
-                        atualStamina += consumido;
-
-
-                        if (restoreInitialStamina)
-                        {
-                            drunkCantilDialogo.TriggerDialogue();
-                            restoreInitialStamina = false;
-                        }
-                    }
+                    animator.bebendo();
                 }
             }
         }
@@ -318,7 +286,7 @@ public class Stats : MonoBehaviour
 
         if (jogador.tocha == true)
         {
-            
+
             tochaSlider.gameObject.SetActive(true);
 
             atualTocha -= tochaDecaimento * Time.deltaTime;
@@ -356,11 +324,11 @@ public class Stats : MonoBehaviour
 
         if (questManager.interagiuPedra)
         {
-            textoC.text = "Segure o botão direito para mirar.";
+            textoC.text = "Segure o botï¿½o direito para mirar.";
 
             if (primeiroTiro)
             {
-                textoC.text = "Aperte o botão esquerdo para atirar.";
+                textoC.text = "Aperte o botï¿½o esquerdo para atirar.";
 
                 if (arremessouPrimeiraVez)
                 {
@@ -419,5 +387,42 @@ public class Stats : MonoBehaviour
         numeroLivroIText.text = "" + numeroLivroI;
         numeroLivroIIIText.text = "" + numeroLivroIII;
         numeroLivroXIIIText.text = "" + numeroLivroXIII;
+    }
+
+    public void Bebeu()
+    {
+        textoC.text = "";
+
+        questManager.bebeuVinho = true;
+
+        float consumido;
+
+        consumido = atualCantil;
+
+        if (atualCantil + atualStamina > maxStamina)
+        {
+            consumido = maxStamina - atualStamina;
+
+            atualCantil -= consumido;
+            atualStamina = maxStamina;
+
+            if (restoreInitialStamina)
+            {
+                drunkCantilDialogo.TriggerDialogue();
+                restoreInitialStamina = false;
+            }
+        }
+        else
+        {
+            atualCantil -= consumido;
+            atualStamina += consumido;
+
+
+            if (restoreInitialStamina)
+            {
+                drunkCantilDialogo.TriggerDialogue();
+                restoreInitialStamina = false;
+            }
+        }
     }
 }

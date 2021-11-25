@@ -6,15 +6,17 @@ public class AtivavelCantil : Ativavel
     mouseCursor cursor;
     [SerializeField]
     GameObject parentGameObject;
-
+    
     private void Start()
     {
         jogador = FindObjectOfType<Jogador>();
         cursor = GetComponent<mouseCursor>();
+       
     }
 
     public override void Ativar()
     {
+        
         cursor.OriginalImage();
         jogador.cantil = true;
         gameObject.GetComponent<DialogueTrigger>().TriggerDialogue();

@@ -32,8 +32,24 @@ ModelImporter:
       has translation animation that will be discarded.\n\t'Wrist_r' has translation
       animation that will be discarded.\n\t'Femur_l' has translation animation that
       will be discarded.\n\t'Femur_r' has translation animation that will be discarded.\n"
-    animationRetargetingWarnings: 
-    animationDoRetargetingWarnings: 0
+    animationRetargetingWarnings: "\nRetargeting quality report for clip 'Take 001':\n\tLeftLowerLeg
+      average position error 30.6 mm and maximum position error 66.9 mm at time 0:25
+      (38.5%) Frame 25\n\tLeftFoot average position error 24.1 mm and maximum position
+      error 63.9 mm at time 1: 4 (52.3%) Frame 34\n\tRightLowerLeg average position
+      error 30.4 mm and maximum position error 72.4 mm at time 0:15 (23.1%) Frame
+      15\n\tRightFoot average position error 15.6 mm and maximum position error 59.8
+      mm at time 1: 4 (52.3%) Frame 34\n\tLeftUpperArm average position error 50.9
+      mm and maximum position error 131.8 mm at time 1: 3 (50.8%) Frame 33\n\tLeftLowerArm
+      average position error 45.9 mm and maximum position error 115.0 mm at time
+      1: 4 (52.3%) Frame 34\n\tLeftHand average position error 40.4 mm and maximum
+      position error 98.1 mm at time 1: 4 (52.3%) Frame 34\n\tRightUpperArm average
+      position error 45.4 mm and maximum position error 124.4 mm at time 1: 4 (52.3%)
+      Frame 34\n\tRightLowerArm average position error 41.3 mm and maximum position
+      error 119.4 mm at time 1: 4 (52.3%) Frame 34\n\tRightHand average position
+      error 35.5 mm and maximum position error 102.8 mm at time 1: 4 (52.3%) Frame
+      34\n\tHead average position error 45.8 mm and maximum position error 124.8
+      mm at time 1: 4 (52.3%) Frame 34\n"
+    animationDoRetargetingWarnings: 1
     importAnimatedCustomProperties: 0
     importConstraints: 0
     animationCompression: 3
@@ -43,7 +59,64 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Take 001
+      takeName: Take 001
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 65
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 1
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events:
+      - time: 0
+        functionName: Libera
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 0.41871917
+        functionName: Throw
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 1
+        functionName: Idle
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 1
+        functionName: Libera
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     isReadable: 0
   meshes:
     lODScreenPercentages: []
