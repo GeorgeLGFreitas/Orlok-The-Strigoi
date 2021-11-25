@@ -8,7 +8,6 @@ using System.Collections.Generic;
 
 public class Stats : MonoBehaviour
 {
-    public string[] texto ;
     public Text textoC;
     bool unica = true;
     bool endPrimeiroDialogo = false;
@@ -21,23 +20,83 @@ public class Stats : MonoBehaviour
 
     [Header("Stats")]
 
+    [Header("Stamina")]
+
     [SerializeField]
     float maxStamina;
     public float atualStamina;
     bool canRun;
 
+    [Header("Sanidade")]
+
     [SerializeField]
     float maxSanidade;
     public float atualSanidade;
+
+    [Header("Cantil")]
 
     [SerializeField]
     float maxCantil;
     float atualCantil;
     bool restoreInitialStamina = true;
 
+    [Header("Tocha")]
+
     [SerializeField]
-    float maxTocha;
-    float atualTocha;
+    public float maxTocha;
+    public float atualTocha;
+
+    [Header("Pedra")]
+
+    public int atualPedra;
+    public bool primeiraMira = false;
+    public bool primeiroTiro = false;
+    public bool arremessouPrimeiraVez = false;
+    [SerializeField]
+    Text countPedraText;
+    public bool pedraSelected;
+
+    [Header("Garrafa")]
+
+    public int atualGarrafa;
+    [SerializeField]
+    Text countGarrafaText;
+    public bool garrafaSelected;
+
+    [Header("Inventario")]
+
+    [SerializeField]
+    int sizeIndex = 8;
+    int selectedSlot;
+    [SerializeField]
+    GameObject[] itemsGroup;
+    public bool[] itemsGroupBool;
+
+    public int numeroChave;
+    [SerializeField]
+    Text numeroChaveText;
+
+    public int numeroAlimento;
+    [SerializeField]
+    Text numeorAlimentoText;
+
+    public int numeroDiscoPrato;
+    [SerializeField]
+    Text numeroDiscoPratoText;
+
+    public int numeroLivroI;
+    [SerializeField]
+    Text numeroLivroIText;
+
+    public int numeroLivroIII;
+    [SerializeField]
+    Text numeroLivroIIIText;
+
+    public int numeroLivroXIII;
+    [SerializeField]
+    Text numeroLivroXIIIText;
+
+    [Header("Decaimentos + Timer")]
 
     [SerializeField]
     float timer;
@@ -49,6 +108,7 @@ public class Stats : MonoBehaviour
     float tochaDecaimento;
     [SerializeField]
     float staminaDecaimento;
+
 
     [Header("Sliders")]
 
@@ -67,22 +127,26 @@ public class Stats : MonoBehaviour
     Movimento movimento;
     [SerializeField]
     Jogador jogador;
+    QuestManager questManager;
 
     [Header("GameObjects")]
 
     [SerializeField]
-    Light tochaLight;
-    [SerializeField]
     GameObject cantilGameObject;
     [SerializeField]
     DialogueTrigger drunkCantilDialogo;
+    [SerializeField]
+    DialogueTrigger tochaEsgotadaDialogo;
 
     private void Start()
     {
         maxStamina = 100;
         atualStamina = 20;
         atualSanidade = maxSanidade;
-        atualCantil = 100;
+        atualCantil = maxCantil;
+        atualTocha = maxTocha;
+
+        #region Sliders
 
         staminaSlider.maxValue = maxStamina;
         staminaSlider.value = atualStamina;
@@ -95,9 +159,30 @@ public class Stats : MonoBehaviour
 
         tochaSlider.maxValue = maxTocha;
         tochaSlider.value = atualTocha;
-        atualTocha = 100;
+
+        #endregion
 
         tochaSlider.gameObject.SetActive(false);
+
+        questManager = GetComponent<QuestManager>();
+
+        textoC.text = "";
+
+        pedraSelected = true;
+        garrafaSelected = false;
+
+        atualPedra = 0;
+
+        selectedSlot = 0;
+
+        for (int i = 0; i < itemsGroup.Length; i++)
+        {
+            itemsGroup[i].SetActive(false);
+            itemsGroupBool[i] = false;
+        }
+
+        itemsGroup[0].SetActive(true);
+        itemsGroupBool[0] = true;
     }
 
     void Awake()
@@ -127,10 +212,11 @@ public class Stats : MonoBehaviour
         }
         #endregion
 
+        #region Stamina
 
         if (canRun)
         {
-            if (movimento.velocity > 3)
+            if (movimento.velocity > 3 & movimento.movi != Vector3.zero)
             {
                 atualStamina -= staminaDecaimento;
             }
@@ -155,7 +241,6 @@ public class Stats : MonoBehaviour
                 unica = false;
             }
             
-            
             efeitoStamina.SetActive(true);
         }
 
@@ -164,8 +249,17 @@ public class Stats : MonoBehaviour
             efeitoStamina.SetActive(false);
         }
 
+        #endregion
+
+        #region Cantil
+
         if (jogador.cantil)
         {
+            if (restoreInitialStamina)
+            {
+                textoC.text = "'F' para beber";
+            }
+
             if (atualCantil == 0)
             {
 
@@ -174,6 +268,10 @@ public class Stats : MonoBehaviour
             {
                 if (Input.GetKey(KeyCode.F))
                 {
+                    textoC.text = "";
+
+                    questManager.bebeuVinho = true;
+
                     float consumido;
 
                     consumido = atualCantil;
@@ -196,7 +294,6 @@ public class Stats : MonoBehaviour
                         atualCantil -= consumido;
                         atualStamina += consumido;
 
-                        atualStamina += consumido;
 
                         if (restoreInitialStamina)
                         {
@@ -208,10 +305,16 @@ public class Stats : MonoBehaviour
             }
         }
 
+        #endregion
+
+        countPedraText.text = "" + atualPedra;
+
         if (atualSanidade == 0) //GAMEOVER
         {
             vignette.intensity.value = 1f;
         }
+
+        #region Tocha
 
         if (jogador.tocha == true)
         {
@@ -221,64 +324,100 @@ public class Stats : MonoBehaviour
             atualTocha -= tochaDecaimento * Time.deltaTime;
             atualSanidade = maxSanidade;
 
-            if (atualTocha > 70)
+            if (atualTocha <= 0)
             {
-                tochaLight.intensity = 4.1f;
-            }
-            else if (atualTocha < 70)
-            {
-                tochaLight.intensity = 3.5f;
-                
-                if (atualSanidade == 70)
-                {
-                    vignette.intensity.value = 0.3f;
-                }
-                else
-                {
-                    atualSanidade -= 0.05f;
-                }
-            }
-            else if (atualTocha < 40)
-            {
-                tochaLight.intensity = 3.0f;
-
-                if (atualSanidade == 40)
-                {
-                    vignette.intensity.value = 0.6f;
-                }
-                else
-                {
-                    atualSanidade -= 0.075f;
-                }
-            }
-            else if (atualTocha < 10)
-            {
-                tochaLight.intensity = 2.5f;
-
-                if (atualSanidade == 10)
-                {
-                    vignette.intensity.value = 0.9f;
-                }
-                else
-                {
-                    atualSanidade -= 0.1f;
-                }
+                atualTocha = 0;
+                tochaEsgotadaDialogo.TriggerDialogue();
             }
         }
+
         else
         {
             timer -= Time.deltaTime;
             if (timer < 0)
             {
                 atualSanidade -= sanidadeDecaimento;
-                if(atualSanidade >= 70) vignette.intensity.value -= efeitosanidadeDecaimento;
-                else if(atualSanidade < 70 & atualSanidade >= 40 ) vignette.intensity.value -= efeitosanidadeDecaimento * 2;
-                else if(atualSanidade < 40) vignette.intensity.value -= efeitosanidadeDecaimento * 3;
+                if (atualSanidade >= 70)
+                {
+                    vignette.intensity.value -= efeitosanidadeDecaimento;
+                }
+                else if (atualSanidade < 70 & atualSanidade >= 40)
+                {
+                    vignette.intensity.value -= efeitosanidadeDecaimento * 2;
+                }
+                else if (atualSanidade < 40)
+                {
+                    vignette.intensity.value -= efeitosanidadeDecaimento * 3;
+                }
+            }
+        }
 
+        #endregion
 
+        if (questManager.interagiuPedra)
+        {
+            textoC.text = "Segure o botão direito para mirar.";
 
+            if (primeiroTiro)
+            {
+                textoC.text = "Aperte o botão esquerdo para atirar.";
+
+                if (arremessouPrimeiraVez)
+                {
+                    textoC.text = "";
+
+                    questManager.arremessou = true;
+                }
             }
         }
     }
-    
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            selectedSlot++;
+            if (selectedSlot > sizeIndex)
+            {
+                selectedSlot = 0;
+            }
+
+            for (int i = 0; i < itemsGroup.Length; i++)
+            {
+                if (itemsGroup[i] == itemsGroup[selectedSlot])
+                {
+                    itemsGroup[i].SetActive(true);
+
+                    itemsGroupBool[i] = true;
+                }
+                else
+                {
+                    itemsGroup[i].SetActive(false);
+
+                    itemsGroupBool[i] = false;
+                }
+            }
+
+            /*
+            0 - Pedra
+            1 - Garrafa
+            2 - Livro I
+            3 - Livro III
+            4 - Livro XIII
+            5 - Alimento
+            6 - Chave
+            7 - Disco/Prato
+            */
+        }
+
+        numeroChaveText.text = "" + numeroChave;
+        countPedraText.text = "" + atualPedra;
+        countGarrafaText.text = "" + atualGarrafa;
+        numeorAlimentoText.text = "" + numeroAlimento;
+        numeroChaveText.text = "" + numeroChave;
+        numeroDiscoPratoText.text = "" + numeroDiscoPrato;
+        numeroLivroIText.text = "" + numeroLivroI;
+        numeroLivroIIIText.text = "" + numeroLivroIII;
+        numeroLivroXIIIText.text = "" + numeroLivroXIII;
+    }
 }

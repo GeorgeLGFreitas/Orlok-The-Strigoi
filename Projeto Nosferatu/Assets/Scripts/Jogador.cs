@@ -62,7 +62,10 @@ public class Jogador : MonoBehaviour
                 }
             }
         }
-        else{areaDeTexto.text = "";}
+        else
+        {
+            //areaDeTexto.text = "";
+        }
 
         if(tocha == true)
         {

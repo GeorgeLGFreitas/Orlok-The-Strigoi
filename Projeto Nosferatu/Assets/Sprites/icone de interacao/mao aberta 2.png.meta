@@ -133,12 +133,12 @@ TextureImporter:
       name: mao aberta 2_0
       rect:
         serializedVersion: 2
-        x: 1105
-        y: 1326
+        x: 686
+        y: 1317
         width: 1089
         height: 1136
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

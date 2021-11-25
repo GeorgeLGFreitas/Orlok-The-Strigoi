@@ -12,27 +12,55 @@ public class CannonController : MonoBehaviour
 
     public bool mirando;
     public GameObject Cannonball;
+    public GameObject Cannongarrafa;
     public Transform ShotPoint;
+
+
+    Stats stats;
 
     void Start()
     {
         bPower = BlastPower;
+
+        stats = GetComponent<Stats>();
     }
     private void LateUpdate()
     {
-
-        if (Input.GetKey(KeyCode.Mouse1))
-        {   
-            mirando = true;
-            bPowerT += Input.mouseScrollDelta.y * 0.3f;
-            bPowerTC = Mathf.Clamp(bPowerT,5,10);
-            bPowerT = bPowerTC;
-            BlastPower = bPowerT;
-
-            if (Input.GetKeyDown(KeyCode.Mouse0))
+        if (stats.atualPedra != 0 || stats.atualGarrafa != 0)
+        {
+            if (Input.GetKey(KeyCode.Mouse1))
             {
-                GameObject CreatedCannonball = Instantiate(Cannonball, ShotPoint.position, ShotPoint.rotation);
-                CreatedCannonball.GetComponent<Rigidbody>().velocity = ShotPoint.transform.up * BlastPower;
+                stats.primeiroTiro = true;
+
+                mirando = true;
+                bPowerT += Input.mouseScrollDelta.y * 0.3f;
+                bPowerTC = Mathf.Clamp(bPowerT,5,10);
+                bPowerT = bPowerTC;
+                BlastPower = bPowerT;
+
+                if (Input.GetKeyDown(KeyCode.Mouse0))
+                {
+                    if (stats.itemsGroupBool[0] == true)
+                    {
+                        GameObject CreatedCannonball = Instantiate(Cannonball, ShotPoint.position, ShotPoint.rotation);
+                        CreatedCannonball.GetComponent<Rigidbody>().velocity = ShotPoint.transform.up * BlastPower;
+
+                        stats.arremessouPrimeiraVez = true;
+                        stats.atualPedra--;
+                    }
+                    if (stats.itemsGroupBool[1] == true)
+                    {
+                        GameObject CreatedCannonGarrafa = Instantiate(Cannongarrafa, ShotPoint.position, ShotPoint.rotation);
+                        CreatedCannonGarrafa.GetComponent<Rigidbody>().velocity = ShotPoint.transform.up * BlastPower;
+
+                        stats.atualGarrafa--;
+                    }
+                }
+            }
+            else
+            {
+                BlastPower = bPower;
+                mirando = false;
             }
         }
         else
@@ -40,8 +68,5 @@ public class CannonController : MonoBehaviour
             BlastPower = bPower;
             mirando = false;
         }
-      
     }
-
-
 }
