@@ -37,9 +37,15 @@ public class QuestManager : MonoBehaviour
 
     public bool vinhoEntregue = false;
 
+    public bool acharDisco = false;
+
     public bool achouDisco = false;
 
     public bool discoPeloLivro = false;
+
+    public bool naArea3 = false;
+
+    public bool falta2Livros = false;
 
     #endregion
 
@@ -146,19 +152,35 @@ public class QuestManager : MonoBehaviour
                     if (vinhoEntregue)
                     {
                         questsFase2[1] = "<color=red>Vinho para o Prisioneiro</color>";
-                        text.text = questsFase2[0] + "\n" + questsFase2[1] + "\n" + questsFase2[2];
+                        text.text = questsFase2[0] + "\n" + questsFase2[1];
 
-                        if (achouDisco)
+                        if (acharDisco)
                         {
-                            questsFase2[2] = "<color=red>Encontre o Disco</color>";
                             text.text = questsFase2[0] + "\n" + questsFase2[1] + "\n" + questsFase2[2] + "\n" + questsFase2[3];
 
-                            if (discoPeloLivro)
+                            if (achouDisco)
                             {
-                                questsFase2[3] = "<color=red>Disco pelo Livro</color>";
+                                questsFase2[2] = "<color=red>Encontre o Disco</color>";
                                 text.text = questsFase2[0] + "\n" + questsFase2[1] + "\n" + questsFase2[2] + "\n" + questsFase2[3];
+
+                                if (discoPeloLivro)
+                                {
+                                    questsFase2[3] = "<color=red>Disco pelo Livro</color>";
+                                    text.text = questsFase2[0] + "\n" + questsFase2[1] + "\n" + questsFase2[2] + "\n" + questsFase2[3];
+
+                                    if (naArea3)
+                                    {
+                                        //Missao 11
+                                        text.text = questsFase2[4];
+
+                                        if (falta2Livros)
+                                        {
+                                            text.text = questsFase2[4] + "\n" + questsFase2[5];
+                                        }
+                                    }
+                                }
                             }
-                        }
+                        }                        
                     }
                 }
             }

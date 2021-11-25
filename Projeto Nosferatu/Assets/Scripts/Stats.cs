@@ -37,7 +37,7 @@ public class Stats : MonoBehaviour
 
     [SerializeField]
     float maxCantil;
-    float atualCantil;
+    public float atualCantil;
     bool restoreInitialStamina = true;
 
     [Header("Tocha")]

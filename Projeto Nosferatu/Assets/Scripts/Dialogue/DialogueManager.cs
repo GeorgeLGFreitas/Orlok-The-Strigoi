@@ -16,6 +16,8 @@ public class DialogueManager : MonoBehaviour
     bool firstQuest = false;
     bool changeCharacter = false;
 
+    public bool triggerQuest = false;
+
     public int[] mudancaDePersonagem;
 
     string name1;
@@ -94,6 +96,11 @@ public class DialogueManager : MonoBehaviour
         if (stats.atualSanidade <= 0)
         {
             SceneManager.LoadScene("GameOver");
+        }
+
+        if (triggerQuest == true)
+        {
+            FindObjectOfType<QuestManager>().acharDisco = true;
         }
     }
 
