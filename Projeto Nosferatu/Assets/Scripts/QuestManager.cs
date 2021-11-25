@@ -20,6 +20,8 @@ public class QuestManager : MonoBehaviour
 
     public bool arremessou = false;
 
+    public bool acharChave2 = false;
+
     public string[] quests;
 
     [SerializeField]
@@ -30,14 +32,14 @@ public class QuestManager : MonoBehaviour
     void Start()
     {
         jogador = GetComponent<Jogador>();
-        text.text = quests[7];
+        text.text = quests[6];
     }
 
     void Update()
     {
         if (firtsQuest)
         {
-            text.text = quests[7] + "\n" + quests[0];
+            text.text = quests[6] + "\n" + quests[0];
 
             if (timer < Time.deltaTime)
             {
@@ -51,45 +53,50 @@ public class QuestManager : MonoBehaviour
             if (jogador.cantil)
             {
                 quests[0] = "<color=red>Encontre o Cantil</color>";
-                text.text = quests[7] + "\n" + quests[0] + "\n" + quests[1];
+                text.text = quests[6] + "\n" + quests[0] + "\n" + quests[1];
 
                 if (bebeuVinho)
                 {
                     quests[1] = "<color=red>Mate sua sede</color>";
-                    text.text = quests[7] + "\n" + quests[0] + "\n" + quests[1];
+                    text.text = quests[6] + "\n" + quests[0] + "\n" + quests[1];
 
                     if (interagiuPorta)
                     {
-                        text.text = quests[7] + "\n" + quests[0] + "\n" + quests[1] + "\n" + quests[2];
+                        text.text = quests[6] + "\n" + quests[0] + "\n" + quests[1] + "\n" + quests[2];
                     }
 
                     if (jogador.chave)
                     {
                         quests[2] = "<color=red>Encontre a chave</color>";
-                        text.text = quests[7] + "\n" + quests[0] + "\n" + quests[1] + "\n" + quests[2] + "\n" + quests[3];
+                        text.text = quests[6] + "\n" + quests[0] + "\n" + quests[1] + "\n" + quests[2] + "\n" + quests[3];
                     }
                     else
                     {
                         if (jogador.porta)
                         {
                             quests[3] = "<color=red>Abra a porta</color>";
-                            text.text = quests[7] + "\n" + quests[0] + "\n" + quests[1] + "\n" + quests[2] + "\n" + quests[3];
+                            text.text = quests[6] + "\n" + quests[0] + "\n" + quests[1] + "\n" + quests[2] + "\n" + quests[3];
 
                             if (interagiuPedra)
                             {
-                                text.text = quests[7] + "\n" + quests[0] + "\n" + quests[1] + "\n" + quests[2] + "\n" + quests[3] + "\n" + quests[4];
+                                text.text = quests[6] + "\n" + quests[0] + "\n" + quests[1] + "\n" + quests[2] + "\n" + quests[3] + "\n" + quests[4];
 
                                 if (arremessou)
                                 {
                                     quests[4] = "<color=red>Arremesse</color>";
-                                    text.text = quests[7] + "\n" + quests[0] + "\n" + quests[1] + "\n" + quests[2] + "\n" + quests[3] + "\n" + quests[4];
-                                }
-                            }
+                                    text.text = quests[6] + "\n" + quests[0] + "\n" + quests[1] + "\n" + quests[2] + "\n" + quests[3] + "\n" + quests[4];
 
-                            if (jogador.chave2)
-                            {
-                                quests[5] = "<color=red>Ache a segunda chave</color>";
-                                text.text = quests[7] + "\n" + quests[0] + "\n" + quests[1] + "\n" + quests[2] + "\n" + quests[3] + "\n" + quests[4] + "\n" + quests[5];
+                                    if (acharChave2)
+                                    {
+                                        text.text = quests[6] + "\n" + quests[0] + "\n" + quests[1] + "\n" + quests[2] + "\n" + quests[3] + "\n" + quests[4] + "\n" + quests[5];
+
+                                        if (jogador.chave2)
+                                        {
+                                            quests[5] = "<color=red>Encontre a chave</color>";
+                                            text.text = quests[6] + "\n" + quests[0] + "\n" + quests[1] + "\n" + quests[2] + "\n" + quests[3] + "\n" + quests[4] + "\n" + quests[5];
+                                        }
+                                    }
+                                }
                             }
                         }
                     }
