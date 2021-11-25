@@ -7,11 +7,13 @@ public class Movimento : MonoBehaviour
     CharacterController ctrl;
     CannonController cannonC;
 
-    
-    public float gravity, velocity, jump  = 0f;
+
+    public float gravity, velocity, jump = 0f;
 
     float vel;
     float crouch;
+
+    public bool liberado;
     public Vector3 movi = Vector3.zero;
 
     Stats stats;
@@ -23,58 +25,64 @@ public class Movimento : MonoBehaviour
         stats = GetComponent<Stats>();
         vel = velocity;
         crouch = ctrl.height;
+        liberado = true;
 
     }
-    void Update() 
-   {
-       if(cannonC.mirando == true)
-       {
-           velocity = vel / 3;
-       }
-       else if (Input.GetKey(KeyCode.LeftShift) & cannonC.mirando == false & stats.atualStamina > 0)
-       {
+    void Update()
+    {
+        if (movi.x > 0)
+        {
+
+        }
+
+        if (cannonC.mirando == true)
+        {
+            velocity = vel / 3;
+        }
+        else if (Input.GetKey(KeyCode.LeftShift) & cannonC.mirando == false & stats.atualStamina > 0)
+        {
             velocity = vel * 2;
-       }
-       else if(Input.GetKey(KeyCode.LeftControl))
-       {
-            ctrl.height = crouch/2;
+        }
+        else if (Input.GetKey(KeyCode.LeftControl))
+        {
+            ctrl.height = crouch / 2;
             velocity = vel / 4;
 
-            if(cannonC.mirando == true)
+            if (cannonC.mirando == true)
             {
                 velocity = vel / 5;
             }
-       }
-       else 
-       {
+        }
+        else
+        {
             ctrl.height = crouch;
-            velocity= vel;
-       }
-
-    
-       if(ctrl.isGrounded)
-       {
-           movi.y = 0;
-           //if(Input.GetButtonDown("Jump"))
-           //{
-               //movi.y = jump;
-           //}
-       }
-
-       
-       
-       
-           
-       
+            velocity = vel;
+        }
 
 
-       movi.x = 0;
-       movi.z = 0;
+        if (ctrl.isGrounded)
+        {
+            movi.y = 0;
+            //if(Input.GetButtonDown("Jump"))
+            //{
+            //movi.y = jump;
+            //}
+        }
+        movi.x = 0;
+        movi.z = 0;
+
+        if (liberado)
+        {
+            movi += Input.GetAxis("Horizontal") * transform.right * velocity;
+            movi += Input.GetAxis("Vertical") * transform.forward * velocity;
+            movi.y -= gravity * Time.deltaTime;
+            ctrl.Move(movi * Time.deltaTime);
+        }
         
-       movi += Input.GetAxis("Horizontal") * transform.right * velocity;
-       movi += Input.GetAxis("Vertical") * transform.forward * velocity; 
-       movi.y -= gravity * Time.deltaTime;
+    }
 
-       ctrl.Move(movi * Time.deltaTime);
-   }
+    public void Libera()
+    {
+        liberado = !liberado;
+    }
 }

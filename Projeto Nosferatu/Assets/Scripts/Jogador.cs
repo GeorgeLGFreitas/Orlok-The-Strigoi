@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class Jogador : MonoBehaviour
 {
     Selecionavel selecionado;
+    public AnimationManager animator;
     public GameObject tochaGO;
     public Text areaDeTexto;
     public bool chave;
@@ -58,6 +59,7 @@ public class Jogador : MonoBehaviour
             {
                 if(Input.GetKeyDown(KeyCode.E)||Input.GetKeyDown(KeyCode.Mouse0))
                 {
+                    
                     atual.Ativar();             
                 }
             }

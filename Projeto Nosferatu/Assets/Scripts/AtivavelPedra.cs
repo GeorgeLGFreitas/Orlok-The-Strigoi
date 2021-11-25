@@ -13,6 +13,7 @@ public class AtivavelPedra : Ativavel
         stats = FindObjectOfType<Stats>();
         cursor = GetComponent<mouseCursor>();
         questManager = FindObjectOfType<QuestManager>();
+     
     }
     public override void Ativar()
     {
