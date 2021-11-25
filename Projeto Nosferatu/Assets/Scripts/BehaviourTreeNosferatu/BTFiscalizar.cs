@@ -12,14 +12,17 @@ public class BTFiscalizar : BTNode
         Print(bt);
         
         GameObject alvo = GameObject.FindGameObjectWithTag("Atencao");
-
+        
         bt.agente.SetDestination(alvo.transform.position);
-        if (Vector3.Distance(bt.transform.position, alvo.transform.position) < 2)
+        bt.Andando();
+        
+        if (Vector3.Distance(bt.transform.position, alvo.transform.position) < 3)
         {
-            bt.agente.ResetPath();
             status = Status.SUCCESS;
+            //bt.agente.ResetPath();
+            bt.Olhando();
+            
             yield break;
-
         }
       
         else if (status == Status.RUNNING) status = Status.FAILURE;

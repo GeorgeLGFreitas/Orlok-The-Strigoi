@@ -41,7 +41,13 @@ ModelImporter:
     optimizeGameObjects: 0
     motionNodeName: 
     rigImportErrors: 
-    rigImportWarnings: 
+    rigImportWarnings: "Avatar Rig Configuration mis-match. Bone length in configuration
+      does not match position in animation file:\n\t'Femur_l' : position error =
+      211.162338 mm\n\t'Knee_l' : position error = 842.490051 mm\n\t'Ankle_l' : position
+      error = 832.888428 mm\n\t'Ball_l' : position error = 339.110016 mm\n\t'Femur_r'
+      : position error = 211.162811 mm\n\t'Knee_r' : position error = 842.482483
+      mm\n\t'Ankle_r' : position error = 832.889160 mm\n\t'Ball_r' : position error
+      = 339.110229 mm\n"
     animationImportErrors: 
     animationImportWarnings: 
     animationRetargetingWarnings: 
@@ -60,7 +66,7 @@ ModelImporter:
   meshes:
     lODScreenPercentages: []
     globalScale: 1
-    meshCompression: 0
+    meshCompression: 3
     addColliders: 0
     useSRGBMaterialColor: 1
     sortHierarchyByName: 1

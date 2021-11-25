@@ -10,10 +10,7 @@ public class BTAlvoCampoDeVisao : BTNode
 
         status = Status.FAILURE;
 
-        GameObject alvo = bt.player;
-
-
-        Ray raio = new Ray(bt.transform.position, alvo.transform.position - bt.transform.position);
+        Ray raio = new Ray(bt.transform.position, bt.player.transform.position - bt.transform.position);
         
 
         if (Vector3.Angle(bt.transform.forward, raio.direction) < 90)
@@ -23,11 +20,9 @@ public class BTAlvoCampoDeVisao : BTNode
             if (Physics.Raycast(raio, out hit, 300))
             {
          
-                if (hit.transform == alvo.transform)
+                if (hit.transform == bt.player.transform)
                 {
-              
                     status = Status.SUCCESS;
-
                 }
             }
         }

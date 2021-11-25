@@ -10,18 +10,21 @@ public class BTPerseguirAlvo : BTNode
 
         status = Status.RUNNING;
         Print(bt);
-        GameObject alvo = GameObject.FindGameObjectWithTag("Player");
-
-        bt.agente.SetDestination(alvo.transform.position);
         
-        if (Vector3.Distance(bt.transform.position, alvo.transform.position) < 1)
+       
+        bt.agente.SetDestination(bt.player.transform.position);
+        
+        bt.Correndo();
+        if (Vector3.Distance(bt.transform.position, bt.player.transform.position) < 1)
         {
             status = Status.SUCCESS;
+            //bt.Idle();
             yield break;
 
         }
 
         else if (status == Status.RUNNING) status = Status.FAILURE;
+        //bt.Idle();
         Print(bt);
         
     }
