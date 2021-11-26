@@ -68,14 +68,14 @@ ModelImporter:
       curves: []
       events:
       - time: 0.27836278
-        functionName: Passinho
+        functionName: Passao
         data: 
         objectReferenceParameter: {instanceID: 0}
         floatParameter: 0
         intParameter: 0
         messageOptions: 0
       - time: 0.7512692
-        functionName: Passinho
+        functionName: Passao
         data: 
         objectReferenceParameter: {instanceID: 0}
         floatParameter: 0
