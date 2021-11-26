@@ -8,6 +8,9 @@ public class AtivavelPorta : Ativavel
 
 {
     Jogador jogador;
+
+    public AudioClip abre;
+    public AudioSource audioS;
     public RawImage vitoria;
     public bool porta1;
     public bool porta2;
@@ -56,7 +59,7 @@ public class AtivavelPorta : Ativavel
             // -105 rotation Y
 
             abrePorta = true;
-
+            audioS.PlayOneShot(abre);
             dialogueTrigger.TriggerDialogue();
 
             stats.numeroChave--;

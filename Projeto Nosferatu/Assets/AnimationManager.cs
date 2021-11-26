@@ -21,7 +21,7 @@ public class AnimationManager : MonoBehaviour
     void Update()
     {
         
-        if(movimento.movi.x > 0 || movimento.movi.z > 0 )
+        if(movimento.movi.x > 0f || movimento.movi.z > 0f )
         {
             andando();
             if(movimento.corre)
@@ -30,7 +30,7 @@ public class AnimationManager : MonoBehaviour
             }
             
         }
-        else animator.SetBool("Andando",false); 
+        else Idle(); 
 
         if(tocha.active == true)
         {
