@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 017ccddfd458c6845b5710275bd89632
+guid: 6c9621635d6b48a48ac0378b739164d0
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3103341333165727867
-    second: Quadrado vazio fullscreen_0
+      213: -8690585156273852925
+    second: Barra 2_0
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -130,13 +130,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Quadrado vazio fullscreen_0
+      name: Barra 2_0
       rect:
         serializedVersion: 2
-        x: 48
-        y: 31
-        width: 57
-        height: 59
+        x: 26
+        y: 34
+        width: 10
+        height: 273
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -144,8 +144,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 58f9edbef77bee4d0800000000000000
-      internalID: -3103341333165727867
+      spriteID: 30ea30658d6d46780800000000000000
+      internalID: -8690585156273852925
       vertices: []
       indices: 
       edges: []
@@ -153,7 +153,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 2920dae3a02b6354d9c454453193e80a
     internalID: 0
     vertices: []
     indices: 

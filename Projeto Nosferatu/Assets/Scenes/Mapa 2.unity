@@ -28164,6 +28164,18 @@ MonoBehaviour:
   corPadrao: {r: 0, g: 0, b: 0, a: 1}
   corSelecionado: {r: 0.6, g: 0.5529412, b: 0.009411765, a: 0.6}
   texto: Clique
+--- !u!114 &808302743
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 808302740}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 411d844fc57b1ac478988316e251156d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!65 &808302744
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -28880,6 +28892,54 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 850387582}
   m_Mesh: {fileID: -5076798556035486163, guid: 8cd6400df36104b4aa55b430271a288e, type: 3}
+--- !u!1 &851724034
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 851724036}
+  - component: {fileID: 851724035}
+  m_Layer: 0
+  m_Name: Stamina Volume (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &851724035
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 851724034}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 172515602e62fb746b5d573b38a5fe58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isGlobal: 1
+  priority: 0
+  blendDistance: 0
+  weight: 1
+  sharedProfile: {fileID: 11400000, guid: db3e364cca3faad42ae76f4ebcdf9284, type: 2}
+--- !u!4 &851724036
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 851724034}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 17
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &852179741
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -33838,6 +33898,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 477952591}
     m_Modifications:
+    - target: {fileID: 157956728264438321, guid: 70bc9bfb99ce5e34799a3bb53246d102, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 157956728264438321, guid: 70bc9bfb99ce5e34799a3bb53246d102, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 157956728264438321, guid: 70bc9bfb99ce5e34799a3bb53246d102, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 761976165956615481, guid: 70bc9bfb99ce5e34799a3bb53246d102, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -33922,13 +33994,65 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1125533295246070936, guid: 70bc9bfb99ce5e34799a3bb53246d102, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 1606536436584982129, guid: 70bc9bfb99ce5e34799a3bb53246d102, type: 3}
       propertyPath: m_Name
       value: PauseMenu
       objectReference: {fileID: 0}
-    - target: {fileID: 1606536436584982129, guid: 70bc9bfb99ce5e34799a3bb53246d102, type: 3}
-      propertyPath: m_IsActive
-      value: 1
+    - target: {fileID: 2224486175555463363, guid: 70bc9bfb99ce5e34799a3bb53246d102, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.0000038146973
+      objectReference: {fileID: 0}
+    - target: {fileID: 3120240012750988503, guid: 70bc9bfb99ce5e34799a3bb53246d102, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3120240012750988503, guid: 70bc9bfb99ce5e34799a3bb53246d102, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4838170755930499259, guid: 70bc9bfb99ce5e34799a3bb53246d102, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4838170755930499259, guid: 70bc9bfb99ce5e34799a3bb53246d102, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4838170755930499259, guid: 70bc9bfb99ce5e34799a3bb53246d102, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5010258174993696487, guid: 70bc9bfb99ce5e34799a3bb53246d102, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5010258174993696487, guid: 70bc9bfb99ce5e34799a3bb53246d102, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5010258174993696487, guid: 70bc9bfb99ce5e34799a3bb53246d102, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5444279321480025099, guid: 70bc9bfb99ce5e34799a3bb53246d102, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5444279321480025099, guid: 70bc9bfb99ce5e34799a3bb53246d102, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8222395590764933551, guid: 70bc9bfb99ce5e34799a3bb53246d102, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8222395590764933551, guid: 70bc9bfb99ce5e34799a3bb53246d102, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 70bc9bfb99ce5e34799a3bb53246d102, type: 3}
@@ -36945,6 +37069,54 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1229341426}
   m_Mesh: {fileID: -5076798556035486163, guid: f305f9968e9b7a34ea8be3d3fb03f680, type: 3}
+--- !u!1 &1231560711
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1231560713}
+  - component: {fileID: 1231560712}
+  m_Layer: 0
+  m_Name: Sanidade Volume (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1231560712
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1231560711}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 172515602e62fb746b5d573b38a5fe58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isGlobal: 1
+  priority: 0
+  blendDistance: 0
+  weight: 1
+  sharedProfile: {fileID: 11400000, guid: ca1368914bc5f30468d7040704e1e8e7, type: 2}
+--- !u!4 &1231560713
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1231560711}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 18
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1233297366
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -38056,7 +38228,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   paredeAnimator: {fileID: 159302613909620811}
-  vinhoNecessario: 0
+  vinhoNecessario: 150
 --- !u!114 &1265695369
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -50174,17 +50346,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textoC: {fileID: 160164437}
   animator: {fileID: 1588530421}
-  efeitoSanidade: {fileID: 0}
-  efeitoStamina: {fileID: 0}
+  efeitoSanidade: {fileID: 1231560711}
+  efeitoStamina: {fileID: 851724034}
   maxStamina: 100
   atualStamina: 100
   maxSanidade: 100
-  atualSanidade: 0
+  atualSanidade: 100
   maxCantil: 100
-  atualCantil: 0
+  atualCantil: 100
   restoreInitialStamina: 0
   maxTocha: 100
-  atualTocha: 0
+  atualTocha: 100
   atualPedra: 0
   primeiraMira: 1
   primeiroTiro: 1

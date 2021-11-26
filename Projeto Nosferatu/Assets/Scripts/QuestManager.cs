@@ -190,6 +190,8 @@ public class QuestManager : MonoBehaviour
                                                 {
                                                     questsFase2[4] = "<color=red>Fuja pelo teto.</color>";
                                                     text.text = questsFase2[4] + "\n" + questsFase2[5];
+                                                    new WaitForSeconds(10);
+
                                                 }
                                             }
                                         }

@@ -5,7 +5,8 @@ using UnityEngine;
 
 public class SettingsMenu : MonoBehaviour
 {
-    public AudioMixer audioMixer;
+    public AudioMixer musicMixer;
+    public AudioMixer sfxMixer;
 
     public Dropdown resolutionDropdown;
 
@@ -49,10 +50,10 @@ public class SettingsMenu : MonoBehaviour
     }
     public void SetMusicVolume(float volume)
     {
-        audioMixer.SetFloat("", volume);
+        musicMixer.SetFloat("MyExposedParam", volume);
     }
     public void SetSoundEffectsVolume(float volume)
     {
-        audioMixer.SetFloat("", volume);
+        sfxMixer.SetFloat("MyExposedParam", volume);
     }
 }

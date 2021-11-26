@@ -20,7 +20,8 @@ public class AtivavelQuestCantilFase2 : Ativavel
     {
         if (stats.atualCantil < vinhoNecessario)
         {
-
+            vinhoNecessario -= stats.atualCantil;
+            stats.atualCantil = 0;
         }
         else
         {
