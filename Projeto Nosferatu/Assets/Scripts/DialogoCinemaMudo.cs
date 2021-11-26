@@ -62,18 +62,15 @@ public class DialogoCinemaMudo : MonoBehaviour
                 cutscene.SetActive(false);
                 two = false;
                 ligatempo=false;
-                
-
             }
         }
-       
     }
 
     public void FalasFinal()
     {
         final.SetActive(true);
         finalFala1.SetActive(true);
-        if(Input.GetKey(KeyCode.Space) || timer < 0)
+        if(Input.GetKey(KeyCode.Space) || timer <= 0)
         {
            finalFala1.SetActive(false);
            finalFala2.SetActive(true);
@@ -82,22 +79,9 @@ public class DialogoCinemaMudo : MonoBehaviour
 
     }
 
-
-    
-
-        
-    // Update is called once per frame
     void Update()
     {
         if(ligatempo) timer+=Time.deltaTime;
-
-
-       
- 
     }
-    
-         
-
-        
-    
+           
 }

@@ -84,16 +84,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 2149078696364867445}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 996ded3d3fce3dc41bd0445935f5b2fa, type: 3}
+  m_Script: {fileID: 11500000, guid: 74e633e88b3e35242bfb27578f680629, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   cutsceneFala1: {fileID: 724903891746727538}
   cutsceneFala2: {fileID: 4312633658102951813}
   finalFala1: {fileID: 2871419556225107040}
   finalFala2: {fileID: 4047291721940030100}
-  timer: 0
-  timeLimit: 10
-  on: 0
+  final: {fileID: 4710899855810913945}
+  cutscene: {fileID: 7726407947984571629}
+  timer: 5
+  timeLimit: 0
 --- !u!1 &2858026970693708854
 GameObject:
   m_ObjectHideFlags: 0

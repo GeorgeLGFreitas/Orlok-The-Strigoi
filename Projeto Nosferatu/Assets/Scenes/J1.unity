@@ -53509,9 +53509,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6aa082323a727cc49b2e73f13d795ae9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioS: {fileID: 1773135180}
-  acesso: {fileID: 0}
-  stats: {fileID: 2882008712742101856}
 --- !u!4 &1778651023 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6618271774239910188, guid: 9cca77c4babc1f245a1d7725346b172b, type: 3}
@@ -79185,7 +79182,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4617931775528398470}
   m_LocalRotation: {x: 0.000012505222, y: -0.99998003, z: 0.0020943568, w: 0.0059707947}
-  m_LocalPosition: {x: -32.095146, y: 8.521, z: 14.580613}
+  m_LocalPosition: {x: -0.2951468, y: 103.497, z: 7.520613}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1309892075}
@@ -80950,10 +80947,6 @@ PrefabInstance:
     - target: {fileID: 2149078696364867445, guid: 0480386729a016f4583f83e9a4f6f7d1, type: 3}
       propertyPath: m_Name
       value: Dialogo Cinema Mudo
-      objectReference: {fileID: 0}
-    - target: {fileID: 2149078696364867445, guid: 0480386729a016f4583f83e9a4f6f7d1, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0480386729a016f4583f83e9a4f6f7d1, type: 3}
