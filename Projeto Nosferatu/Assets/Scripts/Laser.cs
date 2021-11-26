@@ -63,10 +63,6 @@ public class Laser : MonoBehaviour
                 {
                     FindObjectOfType<MausoleuManager>().triggerAmarelo = true;
                 }
-                else
-                {
-                    FindObjectOfType<MausoleuManager>().triggerAzul = false;
-                }
             }
             else
             {
