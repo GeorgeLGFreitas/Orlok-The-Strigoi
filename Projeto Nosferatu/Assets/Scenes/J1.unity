@@ -3967,6 +3967,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: adab3c93b1cb7ba429044556b4bf305a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timer: 0
+  timeLimit: 4
   nameText: {fileID: 1963557714}
   dialogueText: {fileID: 311628199}
   animator: {fileID: 1250777637}

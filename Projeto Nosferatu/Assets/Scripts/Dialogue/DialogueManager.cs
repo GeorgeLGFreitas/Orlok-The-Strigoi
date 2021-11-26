@@ -6,6 +6,8 @@ using UnityEngine;
 
 public class DialogueManager : MonoBehaviour
 {
+    public float timer;
+    public float timeLimit;
     public Text nameText;
     public Text dialogueText;
 
@@ -28,7 +30,9 @@ public class DialogueManager : MonoBehaviour
     private void Start()
     {
         sentences = new Queue<string>();
+
     }
+    
 
     public void StartDialogue(Dialogue dialogue)
     {
@@ -47,7 +51,13 @@ public class DialogueManager : MonoBehaviour
             sentences.Enqueue(sentence);
         }
 
+        timer = 0;
+
         DisplayNextSentence();
+
+        
+
+
     }
 
     public void DisplayNextSentence()
@@ -106,8 +116,9 @@ public class DialogueManager : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Return))
+        if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Return) || timer >= timeLimit)
         {
+            timer = 0;
             for (int i = 0; i < mudancaDePersonagem.Length; i++)
             {
                 if (sentences.Count == mudancaDePersonagem[i])
@@ -118,5 +129,11 @@ public class DialogueManager : MonoBehaviour
             
             DisplayNextSentence();
         }
+    }
+
+    private void FixedUpdate() 
+    {
+        timer += Time.deltaTime;
+
     }
 }
