@@ -4890,6 +4890,17 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 286021610}
   m_Mesh: {fileID: 2101248668340936879, guid: 67fe3cac09247b744af9f1f44ba5d168, type: 3}
+--- !u!114 &287494441 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5614371887943967811, guid: bde96d980e37fbc4a9f0d04b94d6746b, type: 3}
+  m_PrefabInstance: {fileID: 598889244}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &296375017
 GameObject:
   m_ObjectHideFlags: 0
@@ -31076,8 +31087,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1011057447}
-  - component: {fileID: 1011057446}
   - component: {fileID: 1011057445}
+  - component: {fileID: 1011057446}
   - component: {fileID: 1011057444}
   - component: {fileID: 1011057443}
   - component: {fileID: 1011057442}
@@ -31256,9 +31267,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f65e230823b806b4eae6e2246200956d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 0}
+  animator: {fileID: 1011057430}
   tochaGO: {fileID: 1773135175}
-  areaDeTexto: {fileID: 0}
+  areaDeTexto: {fileID: 1611418107}
   chave: 0
   chave2: 0
   tocha: 0
@@ -31296,7 +31307,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BlastPower: 5
-  animator: {fileID: 0}
+  animator: {fileID: 1011057430}
   mirando: 0
   Cannonball: {fileID: 7775227165712630763, guid: 5afa8c75303c9bc4c84d96b14a36aceb, type: 3}
   Cannongarrafa: {fileID: 0}
@@ -31313,10 +31324,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6d9a23e17b7cec4ca4a11dd5957f684, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textoC: {fileID: 0}
+  textoC: {fileID: 1611418107}
   animator: {fileID: 1011057430}
-  efeitoSanidade: {fileID: 0}
-  efeitoStamina: {fileID: 0}
+  efeitoSanidade: {fileID: 64887830}
+  efeitoStamina: {fileID: 239180130}
   maxStamina: 100
   atualStamina: 0
   maxSanidade: 100
@@ -31362,10 +31373,10 @@ MonoBehaviour:
   efeitosanidadeDecaimento: 0.98
   tochaDecaimento: 0.35
   staminaDecaimento: 0.25
-  staminaSlider: {fileID: 0}
-  sanidadeSlider: {fileID: 0}
-  cantilSlider: {fileID: 0}
-  tochaSlider: {fileID: 0}
+  staminaSlider: {fileID: 1772598116}
+  sanidadeSlider: {fileID: 1297722081}
+  cantilSlider: {fileID: 1023977386}
+  tochaSlider: {fileID: 287494441}
   movimento: {fileID: 1011057436}
   jogador: {fileID: 1011057438}
   cantilGameObject: {fileID: 11261435}
@@ -31383,7 +31394,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7848c1088b5445947be341dd8b280df6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: {fileID: 0}
+  text: {fileID: 1624240237}
   fase1: 0
   firtsQuest: 0
   bebeuVinho: 0
@@ -31766,6 +31777,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9cca77c4babc1f245a1d7725346b172b, type: 3}
+--- !u!114 &1023977386 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7266512535288554026, guid: b7ef5abaa0f0f2344bc5d8761e5226fa, type: 3}
+  m_PrefabInstance: {fileID: 589256044}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1025344669 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3157010667477237566, guid: 5c4924c5627d1da4484138be06abf3c7, type: 3}
@@ -41271,6 +41293,17 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1295699682}
   m_Mesh: {fileID: 4950108540694825173, guid: 67f8e73030cf96243881ed909d42db3a, type: 3}
+--- !u!114 &1297722081 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1414183125268157646, guid: 7e10306bc1f89a64a90e39e8bd36f981, type: 3}
+  m_PrefabInstance: {fileID: 1315695143}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1298756586 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7775227165712630752, guid: bce3efb768187a64c9ca627e54845921, type: 3}
@@ -54179,6 +54212,17 @@ Transform:
   m_Father: {fileID: 655215411}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1772598116 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 527178577196384468, guid: 3eefea49eab7a37459f5564a5317ec5b, type: 3}
+  m_PrefabInstance: {fileID: 2128368185}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1773135175
 GameObject:
   m_ObjectHideFlags: 0
