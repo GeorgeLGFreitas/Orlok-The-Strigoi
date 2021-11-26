@@ -9,6 +9,10 @@ TagManager:
   - Tocha
   - Atencao
   - coletar
+  - TriggerVermelho
+  - TriggerAzul
+  - TriggerVerde
+  - TriggerAmarelo
   layers:
   - Default
   - TransparentFX
