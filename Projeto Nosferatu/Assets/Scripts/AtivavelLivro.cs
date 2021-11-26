@@ -8,9 +8,9 @@ public class AtivavelLivro : Ativavel
 
     Stats stats;
 
-    bool livroIEstaColocado;
-    bool livroIIIEstaColocado;
-    bool livroXIIIEstaColocado;
+    public bool livroIEstaColocado;
+    public bool livroIIIEstaColocado;
+    public bool livroXIIIEstaColocado;
 
     [SerializeField]
     GameObject livroI;

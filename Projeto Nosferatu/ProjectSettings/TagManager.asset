@@ -13,6 +13,7 @@ TagManager:
   - TriggerAzul
   - TriggerVerde
   - TriggerAmarelo
+  - Pilar
   layers:
   - Default
   - TransparentFX

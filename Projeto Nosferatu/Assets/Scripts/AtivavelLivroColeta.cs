@@ -9,11 +9,13 @@ public class AtivavelLivroColeta : Ativavel
 
     Stats stats;
     mouseCursor cursor;
+    DialogueTrigger dialogue;
 
     private void Start()
     {
         stats = FindObjectOfType<Stats>();
         cursor = GetComponent<mouseCursor>();
+        dialogue = GetComponent<DialogueTrigger>();
     }
 
     public override void Ativar()
@@ -21,6 +23,7 @@ public class AtivavelLivroColeta : Ativavel
         if (isLivroIII)
         {
             cursor.OriginalImage();
+            dialogue.TriggerDialogue();
             stats.numeroLivroIII++;
             Destroy(gameObject);
         }
