@@ -1004,7 +1004,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1372721239}
   m_HandleRect: {fileID: 1372721238}
   m_Direction: 2
-  m_Value: 1
+  m_Value: 0
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -4634,14 +4634,6 @@ PrefabInstance:
     - target: {fileID: 3390413988987625040, guid: 7762d92d75fd32f469cc2dd88a00ab55, type: 3}
       propertyPath: m_Name
       value: inicioGroup
-      objectReference: {fileID: 0}
-    - target: {fileID: 3390413988987625040, guid: 7762d92d75fd32f469cc2dd88a00ab55, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8194989939475047195, guid: 7762d92d75fd32f469cc2dd88a00ab55, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7762d92d75fd32f469cc2dd88a00ab55, type: 3}
