@@ -16,11 +16,20 @@ public class MainMenu : MonoBehaviour
     GameObject settingsGroup;
     [SerializeField]
     GameObject creditsGroup;
+    [SerializeField]
+    GameObject inicioFala1;
+    [SerializeField]
+    GameObject inicioFala2;
+    [SerializeField]
+    GameObject PainelFalas;
 
     bool firstWindow;
+    public float timer;
+    public float tempo;
 
     [SerializeField]
     GameObject firstImage;
+    
 
     void Start()
     {
@@ -29,10 +38,15 @@ public class MainMenu : MonoBehaviour
         menuGroup.SetActive(false);
         settingsGroup.SetActive(false);
         creditsGroup.SetActive(false);
+        PainelFalas.SetActive(false);
+        timer=tempo;
     }
 
     void Update()
     {
+        timer -= Time.deltaTime;
+        Debug.Log(timer);
+
         if (firstWindow)
         {
             firstImage.SetActive(true);
@@ -75,22 +89,67 @@ public class MainMenu : MonoBehaviour
         menuGroup.SetActive(true);
         settingsGroup.SetActive(false);
         creditsGroup.SetActive(false);
+        PainelFalas.SetActive(false);
     }
     void Settings()
     {
         settingsGroup.SetActive(true);
         menuGroup.SetActive(false);
         creditsGroup.SetActive(false);
+        PainelFalas.SetActive(false);
     }
     void Credits()
     {
         creditsGroup.SetActive(true);
         menuGroup.SetActive(false);
         settingsGroup.SetActive(false);
+        PainelFalas.SetActive(false);
     }
     public void Play()
     {
+        PainelFalas.SetActive(true);
+        menuGroup.SetActive(false);
+        settingsGroup.SetActive(false);
+        creditsGroup.SetActive(false);
+        
+        
+
+        bool one =true;
+        bool two = false;
+
+        if(one)
+        {
+            if (timer <= 0 || Input.GetKey(KeyCode.Space))
+            {
+                inicioFala1.SetActive(false);
+                two = true;
+                one=false;
+                timer = tempo;
+            }
+        }
+
+        if(two)
+        {
+            inicioFala2.SetActive(true);
+            
+
+            if (timer <= 0 || Input.GetKey(KeyCode.Space))
+            {
+                //inicioFala2.SetActive(false);
+                two = false;
+                timer = tempo;
+            }
+
+        } 
+        if(!one && !two) LoadJ1();
+
+        
+    }
+
+    public void LoadJ1()
+    {
         SceneManager.LoadScene("J1");
+
     }
 
 
@@ -110,5 +169,12 @@ public class MainMenu : MonoBehaviour
     {
         activeScene = ActiveScene.EXIT;
     }
+    public void PlaySelect()
+    {
+        timer=tempo;
+        activeScene = ActiveScene.PLAY;
+    }
+
+
 
 }
