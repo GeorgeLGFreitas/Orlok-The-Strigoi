@@ -14,6 +14,7 @@ public class Movimento : MonoBehaviour
     float crouch;
 
     public bool liberado;
+    public bool corre;
     public Vector3 movi = Vector3.zero;
 
     Stats stats;
@@ -42,7 +43,15 @@ public class Movimento : MonoBehaviour
         else if (Input.GetKey(KeyCode.LeftShift) & cannonC.mirando == false & stats.atualStamina > 0)
         {
             velocity = vel * 2;
+            corre = true;
         }
+        else
+        {
+            //ctrl.height = crouch;
+            corre = false;
+            velocity = vel;
+        }
+        /*
         else if (Input.GetKey(KeyCode.LeftControl))
         {
             ctrl.height = crouch / 2;
@@ -53,11 +62,8 @@ public class Movimento : MonoBehaviour
                 velocity = vel / 5;
             }
         }
-        else
-        {
-            ctrl.height = crouch;
-            velocity = vel;
-        }
+        
+        */
 
 
         if (ctrl.isGrounded)
@@ -78,7 +84,6 @@ public class Movimento : MonoBehaviour
             movi.y -= gravity * Time.deltaTime;
             ctrl.Move(movi * Time.deltaTime);
         }
-        
     }
 
     public void Libera()
