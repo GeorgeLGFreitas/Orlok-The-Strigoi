@@ -2304,6 +2304,7 @@ MonoBehaviour:
   corPadrao: {r: 0, g: 0, b: 0, a: 1}
   corSelecionado: {r: 0.6, g: 0.5529412, b: 0.009411765, a: 0.6}
   texto: Clique
+  mouseCursor: {fileID: 0}
 --- !u!65 &105475489
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4037,6 +4038,7 @@ MonoBehaviour:
   corPadrao: {r: 0, g: 0, b: 0, a: 1}
   corSelecionado: {r: 0.6, g: 0.5529412, b: 0.009411765, a: 0.6}
   texto: Clique
+  mouseCursor: {fileID: 0}
 --- !u!114 &168902168
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9995,6 +9997,7 @@ MonoBehaviour:
   corPadrao: {r: 0, g: 0, b: 0, a: 1}
   corSelecionado: {r: 0.6, g: 0.5529412, b: 0.009411765, a: 0.6}
   texto: Click
+  mouseCursor: {fileID: 0}
 --- !u!114 &220369267
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11483,6 +11486,10 @@ PrefabInstance:
     - target: {fileID: 2149078696364867445, guid: 0480386729a016f4583f83e9a4f6f7d1, type: 3}
       propertyPath: m_Name
       value: Dialogo Cinema Mudo
+      objectReference: {fileID: 0}
+    - target: {fileID: 2149078696364867445, guid: 0480386729a016f4583f83e9a4f6f7d1, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2871419556225107040, guid: 0480386729a016f4583f83e9a4f6f7d1, type: 3}
       propertyPath: m_IsActive
@@ -15838,6 +15845,7 @@ MonoBehaviour:
   corPadrao: {r: 0, g: 0, b: 0, a: 1}
   corSelecionado: {r: 0.6, g: 0.5529412, b: 0.009411765, a: 0.6}
   texto: Click
+  mouseCursor: {fileID: 0}
 --- !u!65 &449715859
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18179,6 +18187,7 @@ MonoBehaviour:
   corPadrao: {r: 0, g: 0, b: 0, a: 1}
   corSelecionado: {r: 0.6, g: 0.5529412, b: 0.009411765, a: 0.6}
   texto: Click
+  mouseCursor: {fileID: 0}
 --- !u!65 &543729892
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24864,6 +24873,7 @@ MonoBehaviour:
   corPadrao: {r: 0, g: 0, b: 0, a: 1}
   corSelecionado: {r: 0.6, g: 0.5529412, b: 0.009411765, a: 0.6}
   texto: Click
+  mouseCursor: {fileID: 0}
 --- !u!114 &638599545
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27639,6 +27649,7 @@ MonoBehaviour:
   corPadrao: {r: 0, g: 0, b: 0, a: 1}
   corSelecionado: {r: 0.6, g: 0.5529412, b: 0.009411765, a: 0.6}
   texto: Click
+  mouseCursor: {fileID: 0}
 --- !u!114 &768926909
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28326,6 +28337,7 @@ MonoBehaviour:
   corPadrao: {r: 0, g: 0, b: 0, a: 1}
   corSelecionado: {r: 0.6, g: 0.5529412, b: 0.009411765, a: 0.6}
   texto: Clique
+  mouseCursor: {fileID: 808302741}
 --- !u!114 &808302743
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29507,6 +29519,7 @@ MonoBehaviour:
   corPadrao: {r: 0, g: 0, b: 0, a: 1}
   corSelecionado: {r: 0.6, g: 0.5529412, b: 0.009411765, a: 0.6}
   texto: Click
+  mouseCursor: {fileID: 0}
 --- !u!65 &863939598
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -29891,6 +29904,7 @@ MonoBehaviour:
   corPadrao: {r: 0, g: 0, b: 0, a: 1}
   corSelecionado: {r: 0.6, g: 0.5529412, b: 0.009411765, a: 0.6}
   texto: Click
+  mouseCursor: {fileID: 0}
 --- !u!114 &886423191
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32030,6 +32044,7 @@ MonoBehaviour:
   corPadrao: {r: 0, g: 0, b: 0, a: 1}
   corSelecionado: {r: 0.6, g: 0.5529412, b: 0.009411765, a: 0.6}
   texto: Click
+  mouseCursor: {fileID: 0}
 --- !u!114 &965246388
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36033,6 +36048,7 @@ MonoBehaviour:
   corPadrao: {r: 0, g: 0, b: 0, a: 1}
   corSelecionado: {r: 0.6, g: 0.5529412, b: 0.009411765, a: 0.6}
   texto: Click
+  mouseCursor: {fileID: 0}
 --- !u!114 &1166035953
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38450,6 +38466,7 @@ MonoBehaviour:
   corPadrao: {r: 0, g: 0, b: 0, a: 1}
   corSelecionado: {r: 0.6, g: 0.5529412, b: 0.009411765, a: 0.6}
   texto: Clique
+  mouseCursor: {fileID: 0}
 --- !u!65 &1265695372
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -45287,6 +45304,7 @@ MonoBehaviour:
   corPadrao: {r: 0, g: 0, b: 0, a: 1}
   corSelecionado: {r: 0.6, g: 0.5529412, b: 0.009411765, a: 0.6}
   texto: Click
+  mouseCursor: {fileID: 0}
 --- !u!1 &1352454781
 GameObject:
   m_ObjectHideFlags: 0
@@ -46760,6 +46778,7 @@ MonoBehaviour:
   corPadrao: {r: 0, g: 0, b: 0, a: 1}
   corSelecionado: {r: 0.6, g: 0.5529412, b: 0.009411765, a: 0.6}
   texto: Click
+  mouseCursor: {fileID: 0}
 --- !u!114 &1417340776
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -46799,6 +46818,7 @@ MonoBehaviour:
   corPadrao: {r: 0, g: 0, b: 0, a: 1}
   corSelecionado: {r: 0.6, g: 0.5529412, b: 0.009411765, a: 0.6}
   texto: Click
+  mouseCursor: {fileID: 0}
 --- !u!114 &1417863546
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -46856,6 +46876,7 @@ MonoBehaviour:
   corPadrao: {r: 0, g: 0, b: 0, a: 1}
   corSelecionado: {r: 0.6, g: 0.5529412, b: 0.009411765, a: 0.6}
   texto: Click
+  mouseCursor: {fileID: 0}
 --- !u!114 &1423708618
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -47508,6 +47529,7 @@ MonoBehaviour:
   corPadrao: {r: 0, g: 0, b: 0, a: 1}
   corSelecionado: {r: 0.6, g: 0.5529412, b: 0.009411765, a: 0.6}
   texto: Clique
+  mouseCursor: {fileID: 0}
 --- !u!114 &1452880603
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -47555,7 +47577,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1457317388}
   m_LocalRotation: {x: 0.000012505222, y: -0.99998003, z: 0.0020943568, w: 0.0059707947}
-  m_LocalPosition: {x: -0.9151459, y: 0.34500027, z: -3.9093866}
+  m_LocalPosition: {x: -0.2451458, y: 0.51799965, z: -0.20938683}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 659098082}
@@ -49222,6 +49244,7 @@ MonoBehaviour:
   corPadrao: {r: 0, g: 0, b: 0, a: 1}
   corSelecionado: {r: 0.6, g: 0.5529412, b: 0.009411765, a: 0.6}
   texto: Click
+  mouseCursor: {fileID: 0}
 --- !u!114 &1546899571
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -49361,6 +49384,7 @@ MonoBehaviour:
   corPadrao: {r: 0, g: 0, b: 0, a: 1}
   corSelecionado: {r: 0.6, g: 0.5529412, b: 0.009411765, a: 0.6}
   texto: Click
+  mouseCursor: {fileID: 0}
 --- !u!65 &1554088570
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -50530,7 +50554,7 @@ MonoBehaviour:
   restoreInitialStamina: 0
   maxTocha: 1000
   atualTocha: 1000
-  atualPedra: 0
+  atualPedra: 5
   primeiraMira: 1
   primeiroTiro: 1
   arremessouPrimeiraVez: 1
@@ -50550,7 +50574,7 @@ MonoBehaviour:
   - {fileID: 104129460}
   - {fileID: 1474392252}
   itemsGroupBool: 0000000000000000
-  numeroChave: 2
+  numeroChave: 1
   numeroChaveText: {fileID: 1658165627}
   numeroAlimento: 1
   numeorAlimentoText: {fileID: 782938081}
@@ -50684,7 +50708,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1588530418}
   m_LocalRotation: {x: -0, y: -0.9955096, z: -0, w: 0.094660975}
-  m_LocalPosition: {x: -31.47, y: 6.514, z: 13.36}
+  m_LocalPosition: {x: -30.8, y: 6.687, z: 17.06}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 793524689}
@@ -51774,6 +51798,7 @@ MonoBehaviour:
   corPadrao: {r: 0, g: 0, b: 0, a: 1}
   corSelecionado: {r: 0.6, g: 0.5529412, b: 0.009411765, a: 0.6}
   texto: Click
+  mouseCursor: {fileID: 0}
 --- !u!114 &1655585978
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -52662,6 +52687,7 @@ MonoBehaviour:
   corPadrao: {r: 0, g: 0, b: 0, a: 1}
   corSelecionado: {r: 0.6, g: 0.5529412, b: 0.009411765, a: 0.6}
   texto: Click
+  mouseCursor: {fileID: 0}
 --- !u!114 &1674891725
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -54131,6 +54157,7 @@ MonoBehaviour:
   corPadrao: {r: 0, g: 0, b: 0, a: 1}
   corSelecionado: {r: 0.6, g: 0.5529412, b: 0.009411765, a: 0.6}
   texto: Click
+  mouseCursor: {fileID: 0}
 --- !u!65 &1731385434
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -59975,6 +60002,7 @@ MonoBehaviour:
   corPadrao: {r: 0, g: 0, b: 0, a: 1}
   corSelecionado: {r: 0.6, g: 0.5529412, b: 0.009411765, a: 0.6}
   texto: Click
+  mouseCursor: {fileID: 0}
 --- !u!1 &1788612868
 GameObject:
   m_ObjectHideFlags: 0
@@ -70267,7 +70295,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2036679645}
   m_LocalRotation: {x: -0, y: -0.99966735, z: -0, w: -0.025791291}
-  m_LocalPosition: {x: -0.9151459, y: 0.34500027, z: -3.9093866}
+  m_LocalPosition: {x: -0.2451458, y: 0.51799965, z: -0.20938683}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1334091901}
@@ -71595,6 +71623,7 @@ MonoBehaviour:
   corPadrao: {r: 0, g: 0, b: 0, a: 1}
   corSelecionado: {r: 0.6, g: 0.5529412, b: 0.009411765, a: 0.6}
   texto: Click
+  mouseCursor: {fileID: 0}
 --- !u!1001 &2097660837
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -72691,6 +72720,7 @@ MonoBehaviour:
   corPadrao: {r: 0, g: 0, b: 0, a: 1}
   corSelecionado: {r: 0.6, g: 0.5529412, b: 0.009411765, a: 0.6}
   texto: Click
+  mouseCursor: {fileID: 0}
 --- !u!65 &2137002639
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -78022,6 +78052,7 @@ MonoBehaviour:
   corPadrao: {r: 0, g: 0, b: 0, a: 1}
   corSelecionado: {r: 0.6, g: 0.5529412, b: 0.009411765, a: 0.6}
   texto: Clique
+  mouseCursor: {fileID: 0}
 --- !u!135 &906806358133390756
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -89261,6 +89292,7 @@ GameObject:
   - component: {fileID: 4743639058686846211}
   - component: {fileID: 3257875011274322748}
   - component: {fileID: 529970923528409783}
+  - component: {fileID: 2439722902986002952}
   m_Layer: 0
   m_Name: pPlane24
   m_TagString: Untagged
@@ -89268,6 +89300,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &2439722902986002952
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2439722902986002951}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.003, y: 0, z: 0.003}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!4 &2443158351106223447
 Transform:
   m_ObjectHideFlags: 0
@@ -103360,6 +103405,7 @@ MonoBehaviour:
   corPadrao: {r: 0, g: 0, b: 0, a: 1}
   corSelecionado: {r: 0.6, g: 0.5529412, b: 0.009411765, a: 0.6}
   texto: Click
+  mouseCursor: {fileID: 0}
 --- !u!114 &5265589512535434401
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -111471,6 +111517,7 @@ MonoBehaviour:
   corPadrao: {r: 0, g: 0, b: 0, a: 1}
   corSelecionado: {r: 0.6, g: 0.5529412, b: 0.009411765, a: 0.6}
   texto: Click
+  mouseCursor: {fileID: 0}
 --- !u!114 &6717230045795784045
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -114222,6 +114269,7 @@ MonoBehaviour:
   corPadrao: {r: 0, g: 0, b: 0, a: 1}
   corSelecionado: {r: 0.6, g: 0.5529412, b: 0.009411765, a: 0.6}
   texto: Click
+  mouseCursor: {fileID: 0}
 --- !u!4 &7619080621167074616
 Transform:
   m_ObjectHideFlags: 0
@@ -118325,6 +118373,7 @@ MonoBehaviour:
   corPadrao: {r: 0, g: 0, b: 0, a: 1}
   corSelecionado: {r: 0.6, g: 0.5529412, b: 0.009411765, a: 0.6}
   texto: Clique
+  mouseCursor: {fileID: 0}
 --- !u!65 &8563847112298886671
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -121394,7 +121443,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6227391805927629019, guid: 77e5a45fb4ad2c24fb8a10847a3bacc4, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.48989
+      value: -0.48747
       objectReference: {fileID: 0}
     - target: {fileID: 6227391805927629019, guid: 77e5a45fb4ad2c24fb8a10847a3bacc4, type: 3}
       propertyPath: m_LocalRotation.w

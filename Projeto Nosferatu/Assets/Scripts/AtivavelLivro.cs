@@ -71,7 +71,7 @@ public class AtivavelLivro : Ativavel
                 {
                     questManager.falta2Livros = true;
 
-                    GetComponent<DialogueTrigger>().TriggerDialogue();
+                    //GetComponent<DialogueTrigger>().TriggerDialogue();
                 }
 
                 stats.numeroLivroI--;

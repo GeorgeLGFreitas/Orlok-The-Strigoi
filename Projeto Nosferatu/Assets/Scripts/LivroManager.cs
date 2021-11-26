@@ -36,6 +36,8 @@ public class LivroManager : MonoBehaviour
         {
             //Vitoria
             animator.SetBool("escadaOpen", true);
+            FindObjectOfType<QuestManager>().falta2Livros = true;
+            FindObjectOfType<QuestManager>().todosLivrosNaMesa = true;
         }
     }
 }

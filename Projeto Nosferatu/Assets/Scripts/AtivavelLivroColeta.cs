@@ -23,7 +23,7 @@ public class AtivavelLivroColeta : Ativavel
         if (isLivroIII)
         {
             cursor.OriginalImage();
-            dialogue.TriggerDialogue();
+            //dialogue.TriggerDialogue();
             stats.numeroLivroIII++;
             Destroy(gameObject);
         }
