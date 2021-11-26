@@ -51,21 +51,33 @@ public class Laser : MonoBehaviour
                 {
                     FindObjectOfType<MausoleuManager>().triggerVermelho = true;
                 }
+                else if(pontoDeColisao.collider.tag == "Pilar")
+                {
+                    FindObjectOfType<MausoleuManager>().triggerVermelho = false;
+                }
                 if (pontoDeColisao.collider.tag == "TriggerAzul")
                 {
                     FindObjectOfType<MausoleuManager>().triggerAzul = true;
+                }
+                else if (pontoDeColisao.collider.tag == "Pilar")
+                {
+                    FindObjectOfType<MausoleuManager>().triggerAzul = false;
                 }
                 if (pontoDeColisao.collider.tag == "TriggerVerde")
                 {
                     FindObjectOfType<MausoleuManager>().triggerVerde = true;
                 }
+                else if (pontoDeColisao.collider.tag == "Pilar")
+                {
+                    FindObjectOfType<MausoleuManager>().triggerVerde = false;
+                }
                 if (pontoDeColisao.collider.tag == "TriggerAmarelo")
                 {
                     FindObjectOfType<MausoleuManager>().triggerAmarelo = true;
                 }
-                else
+                else if (pontoDeColisao.collider.tag == "Pilar")
                 {
-                    FindObjectOfType<MausoleuManager>().triggerAzul = false;
+                    FindObjectOfType<MausoleuManager>().triggerAmarelo = false;
                 }
             }
             else

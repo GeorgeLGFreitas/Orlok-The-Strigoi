@@ -9,5 +9,15 @@ public class MausoleuManager : MonoBehaviour
     public bool triggerAmarelo = false;
     public bool triggerAzul = false;
 
+    [SerializeField]
+    Animator animator;
 
+    private void Update()
+    {
+
+        if (triggerVermelho == true & triggerVerde == true && triggerAmarelo == true && triggerAzul == true)
+        {
+            animator.SetBool("completedQuest", true);
+        }
+    }
 }
