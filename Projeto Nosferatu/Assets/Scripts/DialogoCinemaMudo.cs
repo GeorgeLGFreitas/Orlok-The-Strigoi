@@ -23,7 +23,7 @@ public class DialogoCinemaMudo : MonoBehaviour
 
     public float timer;
     public float timeLimit;
-    bool ligatempo, one, two;
+    bool  one, two, falascutscene, finalfalas;
 
     void Start()
     {
@@ -34,7 +34,7 @@ public class DialogoCinemaMudo : MonoBehaviour
 
     public void FalasCutscene1()
     {
-        ligatempo = true;
+        falascutscene = true;
         timer = 0;
         one = true;
         two = false;
@@ -44,20 +44,18 @@ public class DialogoCinemaMudo : MonoBehaviour
 
     public void FalasFinal()
     {
+        finalfalas = true;
+        timer = 0;
+        one = true;
+        two = false;
         final.SetActive(true);
-        finalFala1.SetActive(true);
-        if (Input.GetKey(KeyCode.Space) || timer <= 0)
-        {
-            finalFala1.SetActive(false);
-            finalFala2.SetActive(true);
-        }
     }
 
     void Update()
     {
         timer += Time.deltaTime;
 
-        if (ligatempo)
+        if (falascutscene)
         {
             if (one)
             {
@@ -82,7 +80,37 @@ public class DialogoCinemaMudo : MonoBehaviour
                     cutsceneFala2.SetActive(false);
                     cutscene.SetActive(false);
                     two = false;
-                    ligatempo = false;
+                    falascutscene = false;
+                }
+            }
+        }
+
+        if (finalfalas)
+        {
+            if (one)
+            {
+                finalFala1.SetActive(true);
+                if (timer >= timeLimit || Input.GetKey(KeyCode.Space))
+                {
+
+                    timer = 0;
+                    finalFala1.SetActive(false);
+                    two = true;
+                    one = false;
+
+                }
+            }
+            if (two)
+            {
+                finalFala2.SetActive(true);
+
+                if (Input.GetKey(KeyCode.Space) || timer >= timeLimit)
+                {
+                    timer = 0;
+                    finalFala2.SetActive(false);
+                    final.SetActive(false);
+                    two = false;
+                    finalfalas = false;
                 }
             }
         }
