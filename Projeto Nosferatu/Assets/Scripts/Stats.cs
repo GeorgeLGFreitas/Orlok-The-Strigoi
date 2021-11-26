@@ -36,9 +36,9 @@ public class Stats : MonoBehaviour
     [Header("Cantil")]
 
     [SerializeField]
-    float maxCantil;
+    public float maxCantil;
     public float atualCantil;
-    bool restoreInitialStamina = true;
+    public bool restoreInitialStamina = true;
 
     [Header("Tocha")]
 
@@ -141,7 +141,6 @@ public class Stats : MonoBehaviour
     private void Start()
     {
         maxStamina = 100;
-        atualStamina = 20;
         atualSanidade = maxSanidade;
         atualCantil = maxCantil;
         atualTocha = maxTocha;

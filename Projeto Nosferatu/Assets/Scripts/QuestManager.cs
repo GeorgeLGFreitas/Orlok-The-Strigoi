@@ -47,6 +47,10 @@ public class QuestManager : MonoBehaviour
 
     public bool falta2Livros = false;
 
+    public bool todosLivrosNaMesa = false;
+
+    public bool subiuEscada = false;
+
     #endregion
 
     public string[] questsFase1;
@@ -176,6 +180,18 @@ public class QuestManager : MonoBehaviour
                                         if (falta2Livros)
                                         {
                                             text.text = questsFase2[4] + "\n" + questsFase2[5];
+
+                                            if (todosLivrosNaMesa)
+                                            {
+                                                questsFase2[5] = "<color=red>Faltam dois.</color>";
+                                                text.text = questsFase2[4] + "\n" + questsFase2[5];
+
+                                                if (subiuEscada)
+                                                {
+                                                    questsFase2[4] = "<color=red>Fuja pelo teto.</color>";
+                                                    text.text = questsFase2[4] + "\n" + questsFase2[5];
+                                                }
+                                            }
                                         }
                                     }
                                 }

@@ -11,6 +11,9 @@ public class LivroManager : MonoBehaviour
     bool[] livroIIIColocado = new bool[3];
     bool[] livroXIIIColocado = new bool[3];
 
+    [SerializeField]
+    Animator animator;
+
     private void Update()
     {
         for (int i = 0; i < livrosSlots.Length; i++)
@@ -22,12 +25,15 @@ public class LivroManager : MonoBehaviour
             if (livroIColocado[i] & livroIIIColocado[i] & livroXIIIColocado[i])
             {
                 GetComponent<DialogueTrigger>().TriggerDialogue();
+
+                FindObjectOfType<QuestManager>().todosLivrosNaMesa = true;
             }
         }
 
         if (livrosSlots[0].livroIEstaColocado & livrosSlots[1].livroIIIEstaColocado & livrosSlots[2].livroXIIIEstaColocado)
         {
             //Vitoria
+
         }
     }
 }

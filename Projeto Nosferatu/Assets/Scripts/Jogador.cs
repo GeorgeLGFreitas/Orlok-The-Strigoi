@@ -23,7 +23,6 @@ public class Jogador : MonoBehaviour
     void Start()
     {
         chave = false;
-        tocha = false;
     }
 
     // Update is called once per frame
