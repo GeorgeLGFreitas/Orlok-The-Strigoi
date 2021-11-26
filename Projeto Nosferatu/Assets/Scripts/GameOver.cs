@@ -7,25 +7,30 @@ public class GameOver : MonoBehaviour
 
     GameOverOptions gameOverOptions;
 
+    void Start()
+    {
+        Cursor.lockState = CursorLockMode.None;
+    }
     private void Update()
     {
         switch (gameOverOptions)
         {
             case GameOverOptions.MAINMENU:
-                SceneManager.LoadScene("MainMenu");
+                //SceneManager.LoadScene("MainMenu");
                 break;
             case GameOverOptions.EXIT:
-                Application.Quit();
+                //Application.Quit();
                 break;
         }
     }
-
     public void MainMenuSelect()
     {
-        gameOverOptions = GameOverOptions.MAINMENU;
+        SceneManager.LoadScene("MainMenu");
+        //gameOverOptions = GameOverOptions.MAINMENU;
     }
     public void ExitSelect()
     {
-        gameOverOptions = GameOverOptions.EXIT;
+        Application.Quit();
+        //gameOverOptions = GameOverOptions.EXIT;
     }
 }
