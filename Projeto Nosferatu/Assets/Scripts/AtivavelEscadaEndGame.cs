@@ -4,9 +4,18 @@ using UnityEngine;
 
 public class AtivavelEscadaEndGame : Ativavel
 {
-    
+    bool trigged = false;
+
     public override void Ativar()
     {
-        FindObjectOfType<QuestManager>().subiuEscada = true;
+        trigged = true;
+    }
+
+    private void Update()
+    {
+        if (trigged)
+        {
+            FindObjectOfType<QuestManager>().subiuEscada = true;
+        }
     }
 }

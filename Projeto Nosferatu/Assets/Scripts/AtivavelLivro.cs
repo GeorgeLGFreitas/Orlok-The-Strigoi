@@ -96,7 +96,7 @@ public class AtivavelLivro : Ativavel
                 }
 
                 stats.numeroLivroIII--;
-                livroXIIIEstaColocado = true;
+                livroIIIEstaColocado = true;
             }
         }
         

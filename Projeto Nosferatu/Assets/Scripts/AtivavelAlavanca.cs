@@ -13,12 +13,7 @@ public class AtivavelAlavanca : Ativavel
 
     public override void Ativar()
     {
-        for (int i = 0; i < lasers.Length; i++)
-        {
-            lasers[i].ligado = true;
-        }
-
-        luzBranca.SetActive(true);
+        testeLiga = true;
     }
 
     private void Start()
