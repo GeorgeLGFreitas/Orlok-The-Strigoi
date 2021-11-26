@@ -14,6 +14,7 @@ public class SettingsMenu : MonoBehaviour
 
     private void Start()
     {
+        /*
         resolutions = Screen.resolutions;
 
         resolutionDropdown.ClearOptions();
@@ -36,6 +37,7 @@ public class SettingsMenu : MonoBehaviour
         resolutionDropdown.AddOptions(options);
         resolutionDropdown.value = currentResolutionIndex;
         resolutionDropdown.RefreshShownValue();
+        */
     }
 
     public void SetResolution(int resolutionIndex)
@@ -44,10 +46,12 @@ public class SettingsMenu : MonoBehaviour
 
         Screen.SetResolution(resolution.height, resolution.width, Screen.fullScreen);
     }
+    /*
     public void SetFullscrean(bool isFullscreen)
     {
         Screen.fullScreen = isFullscreen;
     }
+    */
     public void SetMusicVolume(float volume)
     {
         musicMixer.SetFloat("MyExposedParam", volume);
