@@ -21600,6 +21600,58 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2224486175555463363, guid: 70bc9bfb99ce5e34799a3bb53246d102, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.000009536743
+      objectReference: {fileID: 0}
+    - target: {fileID: 3120240012750988503, guid: 70bc9bfb99ce5e34799a3bb53246d102, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3120240012750988503, guid: 70bc9bfb99ce5e34799a3bb53246d102, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4838170755930499259, guid: 70bc9bfb99ce5e34799a3bb53246d102, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4838170755930499259, guid: 70bc9bfb99ce5e34799a3bb53246d102, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4838170755930499259, guid: 70bc9bfb99ce5e34799a3bb53246d102, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5010258174993696487, guid: 70bc9bfb99ce5e34799a3bb53246d102, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5010258174993696487, guid: 70bc9bfb99ce5e34799a3bb53246d102, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5010258174993696487, guid: 70bc9bfb99ce5e34799a3bb53246d102, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5444279321480025099, guid: 70bc9bfb99ce5e34799a3bb53246d102, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5444279321480025099, guid: 70bc9bfb99ce5e34799a3bb53246d102, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8222395590764933551, guid: 70bc9bfb99ce5e34799a3bb53246d102, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8222395590764933551, guid: 70bc9bfb99ce5e34799a3bb53246d102, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 70bc9bfb99ce5e34799a3bb53246d102, type: 3}
 --- !u!1 &726281494
@@ -50146,6 +50198,60 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: a90d056f4cc3e0b43bd1dc65b42aaa04, type: 3}
   m_PrefabInstance: {fileID: 1560565027}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1560565029 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -3909261311860316511, guid: a90d056f4cc3e0b43bd1dc65b42aaa04, type: 3}
+  m_PrefabInstance: {fileID: 1560565027}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1560565030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1560565029}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4aac3d1410401941871465e17225c05, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  abre: {fileID: 0}
+  audioS: {fileID: 0}
+  vitoria: {fileID: 0}
+  porta1: 0
+  porta2: 1
+  p1: {fileID: 0}
+  p2: {fileID: 0}
+  questManager: {fileID: 0}
+--- !u!114 &1560565031
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1560565029}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1767997c56b55b44b9f27c84397f5ebf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  newCursor: {fileID: -2987633198902407147, guid: 6401e3adb8e48984f873354676a3869a, type: 3}
+  scalaIcone: {x: 0.2, y: 0.2, z: 0.2}
+--- !u!114 &1560565032
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1560565029}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38f49bd4dc1b7e541b1940ea2daba890, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  corPadrao: {r: 0, g: 0, b: 0, a: 1}
+  corSelecionado: {r: 0.6, g: 0.5529412, b: 0.009411765, a: 0.6}
+  texto: Clique
 --- !u!64 &1560622319
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -74859,6 +74965,7 @@ MonoBehaviour:
   atualSanidade: 0
   maxCantil: 100
   atualCantil: 0
+  restoreInitialStamina: 1
   maxTocha: 100
   atualTocha: 0
   atualPedra: 0
@@ -74935,6 +75042,8 @@ MonoBehaviour:
   discoPeloLivro: 0
   naArea3: 0
   falta2Livros: 0
+  todosLivrosNaMesa: 0
+  subiuEscada: 0
   questsFase1:
   - Encontre o Cantil
   - Mate sua sede
