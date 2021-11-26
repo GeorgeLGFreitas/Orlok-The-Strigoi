@@ -11,15 +11,14 @@ public class BTAlvoCampoDeVisao : BTNode
         status = Status.FAILURE;
 
         Ray raio = new Ray(bt.transform.position, bt.player.transform.position - bt.transform.position);
-        
+      
 
         if (Vector3.Angle(bt.transform.forward, raio.direction) < 90)
         {
             RaycastHit hit;
          
-            if (Physics.Raycast(raio, out hit, 300))
+            if (Physics.Raycast(raio, out hit, 150))
             {
-         
                 if (hit.transform == bt.player.transform)
                 {
                     status = Status.SUCCESS;

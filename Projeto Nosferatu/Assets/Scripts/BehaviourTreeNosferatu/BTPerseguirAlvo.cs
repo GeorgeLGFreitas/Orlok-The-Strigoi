@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.SceneManagement;
 
 public class BTPerseguirAlvo : BTNode
 {
@@ -18,6 +19,7 @@ public class BTPerseguirAlvo : BTNode
         if (Vector3.Distance(bt.transform.position, bt.player.transform.position) < 1)
         {
             status = Status.SUCCESS;
+            SceneManager.LoadScene(3);
             //bt.Idle();
             yield break;
 

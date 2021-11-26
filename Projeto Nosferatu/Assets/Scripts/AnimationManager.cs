@@ -30,7 +30,7 @@ public class AnimationManager : MonoBehaviour
             }
             
         }
-        else Idle(); 
+        else animator.SetBool("Andando",false); 
 
         if(tocha.active == true)
         {

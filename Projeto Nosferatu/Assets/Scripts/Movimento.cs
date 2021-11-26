@@ -19,7 +19,7 @@ public class Movimento : MonoBehaviour
 
     Stats stats;
 
-    void Start()
+    void Awake()
     {
         ctrl = GetComponent<CharacterController>();
         cannonC = GetComponent<CannonController>();

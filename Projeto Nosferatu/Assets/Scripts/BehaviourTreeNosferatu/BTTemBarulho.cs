@@ -13,10 +13,6 @@ public class BTTemBarulho : BTNode
         {
             status = Status.SUCCESS;
         }
-        else if(alvo == null)
-        {
-            status = Status.FAILURE;
-        }
         Print(bt);
         yield break;
     }

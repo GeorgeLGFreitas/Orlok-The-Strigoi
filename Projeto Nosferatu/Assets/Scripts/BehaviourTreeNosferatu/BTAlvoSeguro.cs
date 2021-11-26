@@ -7,10 +7,10 @@ public class BTAlvoSeguro : BTNode
     public override IEnumerator Run(BehaviourTreeNosferatu bt) 
     {
         status = Status.FAILURE;
-        GameObject alvo = GameObject.FindGameObjectWithTag("Player");
+       ;
         
         
-        if (alvo.GetComponent<Jogador>().seguro)
+        if (bt.player.GetComponent<Jogador>().seguro)
         {
             status = Status.SUCCESS;
         }

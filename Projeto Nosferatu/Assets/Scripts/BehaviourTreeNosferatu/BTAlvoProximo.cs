@@ -6,9 +6,8 @@ public class BTAlvoProximo : BTNode
     public override IEnumerator Run(BehaviourTreeNosferatu bt) 
     {
         status = Status.FAILURE;
-        GameObject alvo = GameObject.FindGameObjectWithTag("Player");
         
-        if (Vector3.Distance(bt.transform.position, alvo.transform.position) < 10)
+        if (Vector3.Distance(bt.transform.position, bt.player.transform.position) < 10)
         {
             status = Status.SUCCESS;
             
