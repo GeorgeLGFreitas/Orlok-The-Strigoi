@@ -16,11 +16,12 @@ public class BTFiscalizar : BTNode
         bt.agente.SetDestination(alvo.transform.position);
         bt.Andando();
         
-        if (Vector3.Distance(bt.transform.position, alvo.transform.position) < 3)
+        if (Vector3.Distance(bt.transform.position, alvo.transform.position) < 2)
         {
+            bt.Olhando();
             status = Status.SUCCESS;
             //bt.agente.ResetPath();
-            bt.Olhando();
+            
             
             yield break;
         }

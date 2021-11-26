@@ -15622,6 +15622,63 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 449133862}
   m_CullTransparentMesh: 1
+--- !u!1001 &452285552
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7775227165712630752, guid: bce3efb768187a64c9ca627e54845921, type: 3}
+      propertyPath: m_RootOrder
+      value: 38
+      objectReference: {fileID: 0}
+    - target: {fileID: 7775227165712630752, guid: bce3efb768187a64c9ca627e54845921, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.39
+      objectReference: {fileID: 0}
+    - target: {fileID: 7775227165712630752, guid: bce3efb768187a64c9ca627e54845921, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 101.52427
+      objectReference: {fileID: 0}
+    - target: {fileID: 7775227165712630752, guid: bce3efb768187a64c9ca627e54845921, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 5.82
+      objectReference: {fileID: 0}
+    - target: {fileID: 7775227165712630752, guid: bce3efb768187a64c9ca627e54845921, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7775227165712630752, guid: bce3efb768187a64c9ca627e54845921, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7775227165712630752, guid: bce3efb768187a64c9ca627e54845921, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7775227165712630752, guid: bce3efb768187a64c9ca627e54845921, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7775227165712630752, guid: bce3efb768187a64c9ca627e54845921, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7775227165712630752, guid: bce3efb768187a64c9ca627e54845921, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7775227165712630752, guid: bce3efb768187a64c9ca627e54845921, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7775227165712630763, guid: bce3efb768187a64c9ca627e54845921, type: 3}
+      propertyPath: m_Name
+      value: PedraColetavel (15)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: bce3efb768187a64c9ca627e54845921, type: 3}
 --- !u!1 &452725082
 GameObject:
   m_ObjectHideFlags: 0
@@ -44628,6 +44685,63 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1265585418}
   m_Mesh: {fileID: -5417826123976145723, guid: 986981b1469f56644a4fef85b0a4336c, type: 3}
+--- !u!1001 &1266502925
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7775227165712630752, guid: bce3efb768187a64c9ca627e54845921, type: 3}
+      propertyPath: m_RootOrder
+      value: 39
+      objectReference: {fileID: 0}
+    - target: {fileID: 7775227165712630752, guid: bce3efb768187a64c9ca627e54845921, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 7775227165712630752, guid: bce3efb768187a64c9ca627e54845921, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 101.52427
+      objectReference: {fileID: 0}
+    - target: {fileID: 7775227165712630752, guid: bce3efb768187a64c9ca627e54845921, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7775227165712630752, guid: bce3efb768187a64c9ca627e54845921, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7775227165712630752, guid: bce3efb768187a64c9ca627e54845921, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7775227165712630752, guid: bce3efb768187a64c9ca627e54845921, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7775227165712630752, guid: bce3efb768187a64c9ca627e54845921, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7775227165712630752, guid: bce3efb768187a64c9ca627e54845921, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7775227165712630752, guid: bce3efb768187a64c9ca627e54845921, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7775227165712630752, guid: bce3efb768187a64c9ca627e54845921, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7775227165712630763, guid: bce3efb768187a64c9ca627e54845921, type: 3}
+      propertyPath: m_Name
+      value: PedraColetavel (16)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: bce3efb768187a64c9ca627e54845921, type: 3}
 --- !u!1 &1270899580
 GameObject:
   m_ObjectHideFlags: 0
@@ -67262,6 +67376,63 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1886288206}
   m_Mesh: {fileID: -3217842357862144851, guid: 09c04fe535facb24985d22144934923a, type: 3}
+--- !u!1001 &1887150906
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7775227165712630752, guid: bce3efb768187a64c9ca627e54845921, type: 3}
+      propertyPath: m_RootOrder
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 7775227165712630752, guid: bce3efb768187a64c9ca627e54845921, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 7775227165712630752, guid: bce3efb768187a64c9ca627e54845921, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 101.52427
+      objectReference: {fileID: 0}
+    - target: {fileID: 7775227165712630752, guid: bce3efb768187a64c9ca627e54845921, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 6.52
+      objectReference: {fileID: 0}
+    - target: {fileID: 7775227165712630752, guid: bce3efb768187a64c9ca627e54845921, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7775227165712630752, guid: bce3efb768187a64c9ca627e54845921, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7775227165712630752, guid: bce3efb768187a64c9ca627e54845921, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7775227165712630752, guid: bce3efb768187a64c9ca627e54845921, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7775227165712630752, guid: bce3efb768187a64c9ca627e54845921, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7775227165712630752, guid: bce3efb768187a64c9ca627e54845921, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7775227165712630752, guid: bce3efb768187a64c9ca627e54845921, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7775227165712630763, guid: bce3efb768187a64c9ca627e54845921, type: 3}
+      propertyPath: m_Name
+      value: PedraColetavel (17)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: bce3efb768187a64c9ca627e54845921, type: 3}
 --- !u!1 &1889839948 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -344004081357383697, guid: 71c6ebe958d0517459b74f2e3be4bc77, type: 3}
@@ -67695,6 +67866,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f65e230823b806b4eae6e2246200956d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
   tochaGO: {fileID: 17309114}
   areaDeTexto: {fileID: 1452170920}
   chave: 0
@@ -67821,20 +67993,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 670890500}
+  fase1: 0
   firtsQuest: 0
   bebeuVinho: 0
   interagiuPorta: 0
   interagiuPedra: 0
   arremessou: 0
-  quests:
-  - Encontre o Cantil
-  - Mate sua sede
-  - Encontre a chave
-  - Abra a porta
-  - Arremesse
-  - Ache a segunda chave
-  - Volte e abra a porta para escapar
-  - "Escape do Calabou\xE7o!!"
+  acharChave2: 0
+  helpPrisioner: 0
+  helpedPrisioner: 0
+  vinhoEntregue: 0
+  achouDisco: 0
+  discoPeloLivro: 0
+  questsFase1: []
+  questsFase2: []
   dialogueTrigger: {fileID: 1082299829}
 --- !u!114 &1906548616
 MonoBehaviour:

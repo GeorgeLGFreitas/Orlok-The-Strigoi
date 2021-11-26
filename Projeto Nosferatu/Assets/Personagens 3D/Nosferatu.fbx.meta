@@ -35,7 +35,8 @@ ModelImporter:
     resampleCurves: 1
     optimizeGameObjects: 0
     motionNodeName: 
-    rigImportErrors: 
+    rigImportErrors: "Invalid Avatar Rig Configuration. Missing or invalid transform:\n\tRequired
+      human bone 'LeftFoot' not found\n"
     rigImportWarnings: 
     animationImportErrors: 
     animationImportWarnings: 
@@ -43,7 +44,7 @@ ModelImporter:
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
     importConstraints: 0
-    animationCompression: 1
+    animationCompression: 3
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
@@ -97,7 +98,637 @@ ModelImporter:
   humanDescription:
     serializedVersion: 3
     human: []
-    skeleton: []
+    skeleton:
+    - name: Nosferatu(Clone)
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Arquivos_Nosferauto
+      parentName: Nosferatu(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Nosferatu_Lowpoly1:ZBrushPolyMesh3D
+      parentName: Arquivos_Nosferauto
+      position: {x: -0, y: 0.16233818, z: -0.00015407873}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: pCylinder4:transform1
+      parentName: Nosferatu_Lowpoly1:ZBrushPolyMesh3D
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Olhos1:ZBrushPolyMesh3D
+      parentName: Arquivos_Nosferauto
+      position: {x: -0, y: 0.16240256, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: pCylinder4:transform2
+      parentName: Olhos1:ZBrushPolyMesh3D
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Dente1:ZBrushPolyMesh3D
+      parentName: Arquivos_Nosferauto
+      position: {x: -0, y: 0.16240463, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: pCylinder4:transform3
+      parentName: Dente1:ZBrushPolyMesh3D
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: pCylinder4:ZBrushPolyMesh3D
+      parentName: Arquivos_Nosferauto
+      position: {x: -0, y: 0.16195157, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: pCylinder4:transform4
+      parentName: pCylinder4:ZBrushPolyMesh3D
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: pCylinder4:ZBrushPolyMesh3D1
+      parentName: Arquivos_Nosferauto
+      position: {x: 0.000000019073486, y: 0.08856174, z: -0.014096695}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: polySurface1 1
+      parentName: pCylinder4:ZBrushPolyMesh3D1
+      position: {x: -0.000000019073486, y: -0.08856174, z: 0.014096695}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: transform23
+      parentName: polySurface1 1
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: polySurface2
+      parentName: pCylinder4:ZBrushPolyMesh3D1
+      position: {x: -0.000000019073486, y: -0.08856174, z: 0.014096695}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: transform22
+      parentName: polySurface2
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: polySurface3
+      parentName: pCylinder4:ZBrushPolyMesh3D1
+      position: {x: -0.000000019073486, y: -0.08856174, z: 0.014096695}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: transform17
+      parentName: polySurface3
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: polySurface4 1
+      parentName: pCylinder4:ZBrushPolyMesh3D1
+      position: {x: -0.000000019073486, y: -0.08856174, z: 0.014096695}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: transform21
+      parentName: polySurface4 1
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: polySurface5
+      parentName: pCylinder4:ZBrushPolyMesh3D1
+      position: {x: -0.000000019073486, y: -0.08856174, z: 0.014096695}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: transform18
+      parentName: polySurface5
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: polySurface6
+      parentName: pCylinder4:ZBrushPolyMesh3D1
+      position: {x: -0.000000019073486, y: -0.08856174, z: 0.014096695}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: transform16
+      parentName: polySurface6
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: polySurface7
+      parentName: pCylinder4:ZBrushPolyMesh3D1
+      position: {x: -0.000000019073486, y: -0.08856174, z: 0.014096695}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: transform19
+      parentName: polySurface7
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: polySurface8
+      parentName: pCylinder4:ZBrushPolyMesh3D1
+      position: {x: -0.000000019073486, y: -0.08856174, z: 0.014096695}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: transform20
+      parentName: polySurface8
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: polySurface9
+      parentName: pCylinder4:ZBrushPolyMesh3D1
+      position: {x: -0.000000019073486, y: -0.08856174, z: 0.014096695}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: transform14
+      parentName: polySurface9
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: polySurface10
+      parentName: pCylinder4:ZBrushPolyMesh3D1
+      position: {x: -0.000000019073486, y: -0.08856174, z: 0.014096695}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: transform11
+      parentName: polySurface10
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: polySurface11
+      parentName: pCylinder4:ZBrushPolyMesh3D1
+      position: {x: -0.000000019073486, y: -0.08856174, z: 0.014096695}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: transform13
+      parentName: polySurface11
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: polySurface12
+      parentName: pCylinder4:ZBrushPolyMesh3D1
+      position: {x: -0.000000019073486, y: -0.08856174, z: 0.014096695}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: transform10
+      parentName: polySurface12
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: polySurface13
+      parentName: pCylinder4:ZBrushPolyMesh3D1
+      position: {x: -0.000000019073486, y: -0.08856174, z: 0.014096695}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: transform12
+      parentName: polySurface13
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: polySurface14
+      parentName: pCylinder4:ZBrushPolyMesh3D1
+      position: {x: -0.000000019073486, y: -0.08856174, z: 0.014096695}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: transform15
+      parentName: polySurface14
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: polySurface15
+      parentName: pCylinder4:ZBrushPolyMesh3D1
+      position: {x: -0.000000019073486, y: -0.08856174, z: 0.014096695}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: transform2
+      parentName: polySurface15
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: polySurface16
+      parentName: pCylinder4:ZBrushPolyMesh3D1
+      position: {x: -0.000000019073486, y: -0.08856174, z: 0.014096695}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: transform3
+      parentName: polySurface16
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: polySurface17
+      parentName: pCylinder4:ZBrushPolyMesh3D1
+      position: {x: -0.000000019073486, y: -0.08856174, z: 0.014096695}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: transform4
+      parentName: polySurface17
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: polySurface18
+      parentName: pCylinder4:ZBrushPolyMesh3D1
+      position: {x: -0.000000019073486, y: -0.08856174, z: 0.014096695}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: transform5
+      parentName: polySurface18
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: polySurface19
+      parentName: pCylinder4:ZBrushPolyMesh3D1
+      position: {x: -0.000000019073486, y: -0.08856174, z: 0.014096695}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: transform6
+      parentName: polySurface19
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: polySurface20
+      parentName: pCylinder4:ZBrushPolyMesh3D1
+      position: {x: -0.000000019073486, y: -0.08856174, z: 0.014096695}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: transform7
+      parentName: polySurface20
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: polySurface21
+      parentName: pCylinder4:ZBrushPolyMesh3D1
+      position: {x: -0.000000019073486, y: -0.08856174, z: 0.014096695}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: transform8
+      parentName: polySurface21
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: polySurface22
+      parentName: pCylinder4:ZBrushPolyMesh3D1
+      position: {x: -0.000000019073486, y: -0.08856174, z: 0.014096695}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: transform9
+      parentName: polySurface22
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: transform1
+      parentName: pCylinder4:ZBrushPolyMesh3D1
+      position: {x: -0.000000019073486, y: -0.08856174, z: 0.014096695}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Geometria
+      parentName: Nosferatu(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: polySurface25
+      parentName: Geometria
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: transform56
+      parentName: polySurface25
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: polySurface1
+      parentName: Geometria
+      position: {x: -0, y: 0.15698963, z: 0.010191344}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: transform57
+      parentName: polySurface1
+      position: {x: -0, y: -0.15698963, z: -0.010191344}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: polySurface4
+      parentName: Geometria
+      position: {x: 0.000003337562, y: 0.15800032, z: 0.015152614}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: polySurface29
+      parentName: polySurface4
+      position: {x: -0.0025763493, y: 0.0037618654, z: 0.0068897335}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: transform31
+      parentName: polySurface29
+      position: {x: 0.0025743516, y: -0.1594151, z: -0.015905792}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: polySurface30
+      parentName: polySurface4
+      position: {x: -0.0006266988, y: 0.0029938861, z: 0.008034415}
+      rotation: {x: -0.08602104, y: 9.271096e-15, z: -0.00030054, w: 0.99629325}
+      scale: {x: 1, y: 1, z: 1}
+    - name: transform32
+      parentName: polySurface30
+      position: {x: 0.00062314107, y: -0.15840715, z: -0.016603941}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: polySurface31
+      parentName: polySurface4
+      position: {x: 0.00062507484, y: 0.0029942056, z: 0.008034253}
+      rotation: {x: -0.08602104, y: 9.271096e-15, z: -0.00030054, w: 0.99629325}
+      scale: {x: 1, y: 1, z: 1}
+    - name: transform33
+      parentName: polySurface31
+      position: {x: -0.0006286326, y: -0.15840748, z: -0.016603779}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: polySurface32
+      parentName: polySurface4
+      position: {x: 0.002486501, y: -0.002330138, z: 0.006285097}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: transform34
+      parentName: polySurface32
+      position: {x: -0.0024894932, y: -0.15623368, z: -0.015016493}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: polySurface33
+      parentName: polySurface4
+      position: {x: 0.0025724613, y: 0.0036397665, z: 0.0068834512}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: transform35
+      parentName: polySurface33
+      position: {x: -0.002574459, y: -0.159293, z: -0.01589951}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: polySurface34
+      parentName: polySurface4
+      position: {x: -0.0023737482, y: -0.0023937435, z: 0.0061294404}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: transform36
+      parentName: polySurface34
+      position: {x: 0.002496872, y: -0.15613872, z: -0.014987412}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: polySurface35
+      parentName: polySurface4
+      position: {x: -0.0033135328, y: -0.0019521586, z: 0.0058089183}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: transform37
+      parentName: polySurface35
+      position: {x: 0.003361401, y: -0.1560443, z: -0.014510093}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: polySurface36
+      parentName: polySurface4
+      position: {x: -0.000003337562, y: -0.15800032, z: -0.008632551}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: transform38
+      parentName: polySurface36
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: polySurface37
+      parentName: polySurface4
+      position: {x: -0.000003337562, y: -0.15800032, z: -0.008632551}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: transform39
+      parentName: polySurface37
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: polySurface38
+      parentName: polySurface4
+      position: {x: -0.000003337562, y: -0.15800032, z: -0.008632551}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: transform40
+      parentName: polySurface38
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: polySurface39
+      parentName: polySurface4
+      position: {x: -0.000003337562, y: -0.15800032, z: -0.008632551}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: transform41
+      parentName: polySurface39
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: polySurface40
+      parentName: polySurface4
+      position: {x: -0.000003337562, y: -0.15800032, z: -0.008632551}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: transform42
+      parentName: polySurface40
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: polySurface41
+      parentName: polySurface4
+      position: {x: 0.003851506, y: 0.0036102019, z: 0.0057496135}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: transform43
+      parentName: polySurface41
+      position: {x: -0.0038553288, y: -0.15912618, z: -0.014243281}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: polySurface42
+      parentName: polySurface4
+      position: {x: -0.0038536321, y: 0.0036108792, z: 0.0057496643}
+      rotation: {x: 0.9395401, y: -0, z: 0.2539469, w: 0.2297293}
+      scale: {x: 1, y: 1, z: 1}
+    - name: transform44
+      parentName: polySurface42
+      position: {x: 0.003849809, y: -0.15912685, z: -0.014243333}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: polySurface43
+      parentName: polySurface4
+      position: {x: 0.0032049406, y: 0.0038635605, z: 0.0061862203}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: transform45
+      parentName: polySurface43
+      position: {x: -0.0032069378, y: -0.15951678, z: -0.01520228}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: polySurface44
+      parentName: polySurface4
+      position: {x: -0.0032035029, y: 0.0038640897, z: 0.0061862203}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: transform46
+      parentName: polySurface44
+      position: {x: 0.003201505, y: -0.15951732, z: -0.01520228}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: polySurface45
+      parentName: polySurface4
+      position: {x: 0.0016765505, y: 0.0044229, z: 0.0073602027}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: transform47
+      parentName: polySurface45
+      position: {x: -0.0016785482, y: -0.16007614, z: -0.01637626}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: polySurface46
+      parentName: polySurface4
+      position: {x: -0.0016732856, y: 0.0044232765, z: 0.007359442}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: transform48
+      parentName: polySurface46
+      position: {x: 0.0016712879, y: -0.16007651, z: -0.0163755}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: polySurface47
+      parentName: polySurface4
+      position: {x: -0.004125532, y: -0.0014905451, z: 0.0048509953}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: transform49
+      parentName: polySurface47
+      position: {x: 0.0041227234, y: -0.156119, z: -0.013634985}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: polySurface48 1
+      parentName: polySurface4
+      position: {x: 0.0042898715, y: -0.0010791697, z: 0.005063256}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: transform50
+      parentName: polySurface48 1
+      position: {x: -0.0041292906, y: -0.1561182, z: -0.013631489}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: transform30
+      parentName: polySurface4
+      position: {x: -0.000003337562, y: -0.15800032, z: -0.015152614}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: polySurface48
+      parentName: Nosferatu(Clone)
+      position: {x: 0.000085561274, y: 0.15817094, z: 0.014803376}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 0.78082496, y: 0.7179518, z: 0.7179518}
+    - name: transform53
+      parentName: polySurface48
+      position: {x: -0.000085561274, y: -0.15926874, z: -0.02160624}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: polySurface49
+      parentName: Nosferatu(Clone)
+      position: {x: 0.000085561274, y: 0.15817094, z: 0.014803376}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 0.78082496, y: 0.7179518, z: 0.7179518}
+    - name: transform54
+      parentName: polySurface49
+      position: {x: -0.000085561274, y: -0.15926874, z: -0.02160624}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: polySurface50
+      parentName: Nosferatu(Clone)
+      position: {x: 0.000085561274, y: 0.15817094, z: 0.014803376}
+      rotation: {x: 1, y: 0, z: 0, w: -6.123234e-17}
+      scale: {x: 0.78082496, y: 0.7179518, z: 0.7179518}
+    - name: transform52
+      parentName: polySurface50
+      position: {x: -0.000085561274, y: -0.15926874, z: -0.02160624}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: polySurface51
+      parentName: Nosferatu(Clone)
+      position: {x: 0.000085561274, y: 0.15817094, z: 0.014803376}
+      rotation: {x: 1, y: 0, z: 0, w: -6.123234e-17}
+      scale: {x: 0.78082496, y: 0.7179518, z: 0.7179518}
+    - name: transform51
+      parentName: polySurface51
+      position: {x: -0.000085561274, y: -0.15926874, z: -0.02160624}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: polySurface52
+      parentName: Nosferatu(Clone)
+      position: {x: 0.000026318336, y: 0.1582359, z: 0.014973651}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: transform55
+      parentName: polySurface52
+      position: {x: -0.000026318336, y: -0.1582359, z: -0.014973651}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Geometria_polySurface1
+      parentName: Nosferatu(Clone)
+      position: {x: 0.000000019073486, y: 0.088561736, z: -0.014096696}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: transform61
+      parentName: Geometria_polySurface1
+      position: {x: -0.000000019073486, y: -0.088561736, z: 0.014096696}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: pSphere4
+      parentName: Nosferatu(Clone)
+      position: {x: 0.004283361, y: 0.16718647, z: 0.012808584}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 0.2709852, y: 0.2709852, z: 0.2709852}
+    - name: transform58
+      parentName: pSphere4
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: pSphere5
+      parentName: Nosferatu(Clone)
+      position: {x: -0.004129305, y: 0.16718647, z: 0.012808584}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 0.27116302, y: 0.27116302, z: 0.27116302}
+    - name: transform59
+      parentName: pSphere5
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: pSphere6
+      parentName: Nosferatu(Clone)
+      position: {x: 0.00007613948, y: 0.16718647, z: 0.012808583}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: polySurface53
+      parentName: pSphere6
+      position: {x: -0.00007613948, y: -0.16718647, z: -0.012808583}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: transform62
+      parentName: polySurface53
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: polySurface54 1
+      parentName: pSphere6
+      position: {x: -0.00007613948, y: -0.16718647, z: -0.012808583}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: transform63
+      parentName: polySurface54 1
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: transform60
+      parentName: pSphere6
+      position: {x: -0.00007613948, y: -0.16718647, z: -0.012808583}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: polySurface54
+      parentName: Nosferatu(Clone)
+      position: {x: 0.000000019073486, y: 0.088561736, z: -0.014096696}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
     armTwist: 0.5
     foreArmTwist: 0.5
     upperLegTwist: 0.5
@@ -108,13 +739,13 @@ ModelImporter:
     globalScale: 1
     rootMotionBoneName: 
     hasTranslationDoF: 0
-    hasExtraRoot: 0
+    hasExtraRoot: 1
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 2
   humanoidOversampling: 1
-  avatarSetup: 0
+  avatarSetup: 1
   addHumanoidExtraRootOnlyWhenUsingAvatar: 1
   additionalBone: 0
   userData: 
