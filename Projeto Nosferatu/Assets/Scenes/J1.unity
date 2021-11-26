@@ -21614,11 +21614,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2224486175555463363, guid: 70bc9bfb99ce5e34799a3bb53246d102, type: 3}
       propertyPath: m_AnchoredPosition.y
-<<<<<<< Updated upstream
       value: 0
-=======
-      value: 0.000015258789
->>>>>>> Stashed changes
       objectReference: {fileID: 0}
     - target: {fileID: 3120240012750988503, guid: 70bc9bfb99ce5e34799a3bb53246d102, type: 3}
       propertyPath: m_AnchorMax.x
@@ -74975,22 +74971,22 @@ MonoBehaviour:
   animator: {fileID: 2882008712742101845}
   efeitoSanidade: {fileID: 64887830}
   efeitoStamina: {fileID: 239180130}
-  maxStamina: 1000
-  atualStamina: 1000
-  maxSanidade: 1000
-  atualSanidade: 1000
-  maxCantil: 1000
-  atualCantil: 1000
+  maxStamina: 100
+  atualStamina: 0
+  maxSanidade: 100
+  atualSanidade: 0
+  maxCantil: 100
+  atualCantil: 0
   restoreInitialStamina: 1
-  maxTocha: 1000
-  atualTocha: 1000
-  atualPedra: 100
+  maxTocha: 100
+  atualTocha: 0
+  atualPedra: 0
   primeiraMira: 0
   primeiroTiro: 0
   arremessouPrimeiraVez: 0
   countPedraText: {fileID: 1106935021}
   pedraSelected: 0
-  atualGarrafa: 100
+  atualGarrafa: 0
   countGarrafaText: {fileID: 342173732}
   garrafaSelected: 0
   sizeIndex: 7
@@ -75004,17 +75000,17 @@ MonoBehaviour:
   - {fileID: 1374090818}
   - {fileID: 1634794347}
   itemsGroupBool: 0000000000000000
-  numeroChave: 2
+  numeroChave: 0
   numeroChaveText: {fileID: 1476217044}
-  numeroAlimento: 1
+  numeroAlimento: 0
   numeorAlimentoText: {fileID: 1596866462}
-  numeroDiscoPrato: 1
+  numeroDiscoPrato: 0
   numeroDiscoPratoText: {fileID: 436649065}
-  numeroLivroI: 1
+  numeroLivroI: 0
   numeroLivroIText: {fileID: 15180679}
-  numeroLivroIII: 1
+  numeroLivroIII: 0
   numeroLivroIIIText: {fileID: 764408659}
-  numeroLivroXIII: 1
+  numeroLivroXIII: 0
   numeroLivroXIIIText: {fileID: 1226921729}
   timer: 0
   sanidadeDecaimento: 0.015
