@@ -111,6 +111,7 @@ public class DialogoCinemaMudo : MonoBehaviour
                     final.SetActive(false);
                     two = false;
                     finalfalas = false;
+                    SceneManager.LoadScene("Vitoria");
                 }
             }
         }
