@@ -34,70 +34,58 @@ public class DialogoCinemaMudo : MonoBehaviour
 
     public void FalasCutscene1()
     {
-        ligatempo=true;
+        ligatempo = true;
+        timer = 0;
         one = true;
-        two =false;
+        two = false;
         cutscene.SetActive(true);
-        
-        if(one)
-        { 
-            cutsceneFala1.SetActive(true);
-            if(timer >= timeLimit || Input.GetKey(KeyCode.Space))
-            {
-                timer= 0; 
-                cutsceneFala1.SetActive(false);
-                one= false;
-                two = true; 
-            }
-        }
 
-        if(two)
-        {
-            cutsceneFala2.SetActive(true);  
-            
-            if(Input.GetKey(KeyCode.Space) || timer >= timeLimit)
-            {
-                timer= 0;
-                cutsceneFala2.SetActive(false);
-                cutscene.SetActive(false);
-                two = false;
-                ligatempo=false;
-                
-
-            }
-        }
-       
     }
 
     public void FalasFinal()
     {
         final.SetActive(true);
         finalFala1.SetActive(true);
-        if(Input.GetKey(KeyCode.Space) || timer < 0)
+        if (Input.GetKey(KeyCode.Space) || timer <= 0)
         {
-           finalFala1.SetActive(false);
-           finalFala2.SetActive(true);
-
+            finalFala1.SetActive(false);
+            finalFala2.SetActive(true);
         }
-
     }
 
-
-    
-
-        
-    // Update is called once per frame
     void Update()
     {
-        if(ligatempo) timer+=Time.deltaTime;
+        timer += Time.deltaTime;
 
+        if (ligatempo)
+        {
+            if (one)
+            {
+                cutsceneFala1.SetActive(true);
+                if (timer >= timeLimit || Input.GetKey(KeyCode.Space))
+                {
 
-       
- 
+                    timer = 0;
+                    cutsceneFala1.SetActive(false);
+                    two = true;
+                    one = false;
+
+                }
+            }
+            if (two)
+            {
+                cutsceneFala2.SetActive(true);
+
+                if (Input.GetKey(KeyCode.Space) || timer >= timeLimit)
+                {
+                    timer = 0;
+                    cutsceneFala2.SetActive(false);
+                    cutscene.SetActive(false);
+                    two = false;
+                    ligatempo = false;
+                }
+            }
+        }
     }
-    
-         
 
-        
-    
 }
