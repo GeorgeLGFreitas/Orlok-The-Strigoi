@@ -10,6 +10,9 @@ public class AnimationManager : MonoBehaviour
     public CannonController cannon;
     public Movimento movimento;
     public Visao visao;
+    public GameObject tocha;
+    public RuntimeAnimatorController anim1;
+    public RuntimeAnimatorController anim2;
    
     void Awake()
     {
@@ -21,8 +24,19 @@ public class AnimationManager : MonoBehaviour
         if(movimento.movi.x > 0 || movimento.movi.z > 0 )
         {
             andando();
+            if(movimento.corre)
+            {
+                correndo();
+            }
+            
         }
         else animator.SetBool("Andando",false); 
+
+        if(tocha.active == true)
+        {
+            animator.runtimeAnimatorController = anim2 as RuntimeAnimatorController;
+        }
+        else animator.runtimeAnimatorController = anim1 as RuntimeAnimatorController;
     }
     public void Idle()
     {
@@ -30,11 +44,6 @@ public class AnimationManager : MonoBehaviour
         animator.SetBool("Correndo",false);
         animator.SetBool("Bebendo",false);
         animator.SetBool("Arremesso",false);
-        animator.SetBool("AndandoTocha",false);
-        animator.SetBool("CorrendoTocha",false);
-        animator.SetBool("BebendoTocha",false);
-        animator.SetBool("ArremessoTocha",false);
-        animator.SetBool("GITocha",false);
         animator.SetBool("GI",false);
     }
 
@@ -45,11 +54,6 @@ public class AnimationManager : MonoBehaviour
         animator.SetBool("Correndo",false);
         animator.SetBool("Bebendo",false);
         animator.SetBool("Arremesso",false);
-        animator.SetBool("AndandoTocha",false);
-        animator.SetBool("CorrendoTocha",false);
-        animator.SetBool("BebendoTocha",false);
-        animator.SetBool("ArremessoTocha",false);
-        animator.SetBool("GITocha",false);
         animator.SetBool("GI",false);
     }
 
@@ -60,11 +64,6 @@ public class AnimationManager : MonoBehaviour
         animator.SetBool("Correndo",false);
         animator.SetBool("Bebendo",false);
         animator.SetBool("Arremesso",false);
-        animator.SetBool("AndandoTocha",false);
-        animator.SetBool("CorrendoTocha",false);
-        animator.SetBool("BebendoTocha",false);
-        animator.SetBool("ArremessoTocha",false);
-        animator.SetBool("GITocha",false);
         animator.SetBool("GI",false);
     }
 
@@ -74,11 +73,6 @@ public class AnimationManager : MonoBehaviour
         animator.SetBool("Correndo",false);
         animator.SetBool("Bebendo",false);
         animator.SetBool("Arremesso",false);
-        animator.SetBool("AndandoTocha",false);
-        animator.SetBool("CorrendoTocha",false);
-        animator.SetBool("BebendoTocha",false);
-        animator.SetBool("ArremessoTocha",false);
-        animator.SetBool("GITocha",false);
         animator.SetBool("GI",false);
     }
 
@@ -88,11 +82,6 @@ public class AnimationManager : MonoBehaviour
         animator.SetBool("Correndo",true);
         animator.SetBool("Bebendo",false);
         animator.SetBool("Arremesso",false);
-        animator.SetBool("AndandoTocha",false);
-        animator.SetBool("CorrendoTocha",false);
-        animator.SetBool("BebendoTocha",false);
-        animator.SetBool("ArremessoTocha",false);
-        animator.SetBool("GITocha",false);
         animator.SetBool("GI",false);
     }
     public void bebendo()
@@ -101,11 +90,6 @@ public class AnimationManager : MonoBehaviour
         animator.SetBool("Correndo",false);
         animator.SetBool("Bebendo",true);
         animator.SetBool("Arremesso",false);
-        animator.SetBool("AndandoTocha",false);
-        animator.SetBool("CorrendoTocha",false);
-        animator.SetBool("BebendoTocha",false);
-        animator.SetBool("ArremessoTocha",false);
-        animator.SetBool("GITocha",false);
         animator.SetBool("GI",false);
     }
 
@@ -115,97 +99,14 @@ public class AnimationManager : MonoBehaviour
         animator.SetBool("Correndo",false);
         animator.SetBool("Bebendo",false);
         animator.SetBool("Arremesso",true);
-        animator.SetBool("AndandoTocha",false);
-        animator.SetBool("CorrendoTocha",false);
-        animator.SetBool("BebendoTocha",false);
-        animator.SetBool("ArremessoTocha",false);
-        animator.SetBool("GITocha",false);
         animator.SetBool("GI",false);
     }
-
-
-     void andandoTocha()
-    {
-        animator.SetBool("Andando",false);
-        animator.SetBool("Correndo",false);
-        animator.SetBool("Bebendo",false);
-        animator.SetBool("Arremesso",false);
-        animator.SetBool("AndandoTocha",true);
-        animator.SetBool("CorrendoTocha",false);
-        animator.SetBool("BebendoTocha",false);
-        animator.SetBool("ArremessoTocha",false);
-        animator.SetBool("GITocha",false);
-        animator.SetBool("GI",false);
-    }
-
-     void correndoTocha()
-    {
-        animator.SetBool("Andando",false);
-        animator.SetBool("Correndo",false);
-        animator.SetBool("Bebendo",false);
-        animator.SetBool("Arremesso",false);
-        animator.SetBool("AndandoTocha",false);
-        animator.SetBool("CorrendoTocha",true);
-        animator.SetBool("BebendoTocha",false);
-        animator.SetBool("ArremessoTocha",false);
-        animator.SetBool("GITocha",false);
-        animator.SetBool("GI",false);
-    }
-
-    
-
-     void bebendoTocha()
-    {
-        animator.SetBool("Andando",false);
-        animator.SetBool("Correndo",true);
-        animator.SetBool("Bebendo",false);
-        animator.SetBool("Arremesso",false);
-        animator.SetBool("AndandoTocha",false);
-        animator.SetBool("CorrendoTocha",false);
-        animator.SetBool("BebendoTocha",true);
-        animator.SetBool("ArremessoTocha",false);
-        animator.SetBool("GITocha",false);
-        animator.SetBool("GI",false);
-    }
-    void aremessoTocha()
-    {
-        animator.SetBool("Andando",false);
-        animator.SetBool("Correndo",false);
-        animator.SetBool("Bebendo",false);
-        animator.SetBool("Arremesso",false);
-        animator.SetBool("AndandoTocha",false);
-        animator.SetBool("CorrendoTocha",false);
-        animator.SetBool("BebendoTocha",false);
-        animator.SetBool("ArremessoTocha",true);
-        animator.SetBool("GITocha",false);
-        animator.SetBool("GI",false);
-    }
-
-    public void GITocha()
-    {
-        animator.SetBool("Andando",false);
-        animator.SetBool("Correndo",false);
-        animator.SetBool("Bebendo",false);
-        animator.SetBool("Arremesso",false);
-        animator.SetBool("AndandoTocha",false);
-        animator.SetBool("CorrendoTocha",false);
-        animator.SetBool("BebendoTocha",false);
-        animator.SetBool("ArremessoTocha",false);
-        animator.SetBool("GITocha",true);
-        animator.SetBool("GI",false);
-    }
-
     public void GI()
     {
         animator.SetBool("Andando",false);
         animator.SetBool("Correndo",false);
         animator.SetBool("Bebendo",false);
         animator.SetBool("Arremesso",false);
-        animator.SetBool("AndandoTocha",false);
-        animator.SetBool("CorrendoTocha",false);
-        animator.SetBool("BebendoTocha",false);
-        animator.SetBool("ArremessoTocha",false);
-        animator.SetBool("GITocha",false);
         animator.SetBool("GI",true);
     }
 }

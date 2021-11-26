@@ -560,11 +560,36 @@ ModelImporter:
     skeleton:
     - name: Correndo(Clone)
       parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MASTER_Ctrl
+      parentName: Correndo(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: ROOT_Ctrl
+      parentName: MASTER_Ctrl
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: BODY_Ctrl
+      parentName: ROOT_Ctrl
+      position: {x: -0, y: 0.08971679, z: 0.005437246}
+      rotation: {x: 0.25213832, y: -0.11287202, z: -0.03573079, w: 0.9604215}
+      scale: {x: 1, y: 1, z: 1}
+    - name: WAIST_Ctrl
+      parentName: BODY_Ctrl
+      position: {x: 0.0026114928, y: -1.7494198e-17, z: -3.0921358e-17}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: JOINTS
+      parentName: Correndo(Clone)
       position: {x: -0, y: 0, z: 0}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: ROOT
-      parentName: Correndo(Clone)
+      parentName: JOINTS
       position: {x: -0, y: 0, z: 0}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
