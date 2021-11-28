@@ -5,7 +5,7 @@ using UnityEngine;
 public class AnimationManager : MonoBehaviour
 {
     public Animator animator;
-
+    public GameObject atencao;
     public Jogador jogador;
     public CannonController cannon;
     public Movimento movimento;
@@ -108,5 +108,10 @@ public class AnimationManager : MonoBehaviour
         animator.SetBool("Bebendo",false);
         animator.SetBool("Arremesso",false);
         animator.SetBool("GI",true);
+    }
+
+    public void Atencao()
+    {
+       Instantiate(atencao, transform.position, Quaternion.identity);
     }
 }

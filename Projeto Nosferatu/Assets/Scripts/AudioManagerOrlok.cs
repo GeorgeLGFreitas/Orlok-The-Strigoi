@@ -7,9 +7,9 @@ public class AudioManagerOrlok : MonoBehaviour
     public AudioSource audioS;
     public AudioClip[] passos;
     public AudioClip gole;
-    void Start()
+    void Awake()
     {
-        
+        audioS = GetComponent<AudioSource>();
     }
 
     void Update()

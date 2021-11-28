@@ -4,22 +4,23 @@ using UnityEngine;
 
 public class AlertaBT : MonoBehaviour
 {
-   public bool _destrutivel;
+    public bool _destrutivel;
+
+
+    public Transform prefab;
    
+    void OnCollisionEnter(Collision other)
+    {
 
-   public Transform prefab;
-
-   void OnCollisionEnter (Collision other)
-   {
-       
         Instantiate(prefab, transform.position, Quaternion.identity);
        
-       
-       if(_destrutivel)
-       {
-        Destroy(gameObject);
-       }
-   }
+
+        if (_destrutivel && !other.collider.CompareTag("Pedra"))
+        {
+            Debug.Log(other.collider.gameObject);
+            Destroy(gameObject);
+        }
+    }
 
 
 }

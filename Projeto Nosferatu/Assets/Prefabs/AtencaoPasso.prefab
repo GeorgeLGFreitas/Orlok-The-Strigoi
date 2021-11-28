@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3295247448733315931}
   - component: {fileID: -4323175125980293951}
   m_Layer: 0
-  m_Name: AtencaoPedra
+  m_Name: AtencaoPasso
   m_TagString: Atencao
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -49,7 +49,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: d74d48be9c17ceb4ca7c3ff83c068328, type: 3}
   audioS: {fileID: -4323175125980293951}
   tempo: 1
-  pedra: 1
+  pedra: 0
 --- !u!82 &-4323175125980293951
 AudioSource:
   m_ObjectHideFlags: 0
