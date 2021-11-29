@@ -9,6 +9,12 @@ public class AtivavelTampaCaixao : Ativavel
 
     bool openCaixao = false;
 
+    AudioManagerGeneral audioMG;
+
+    void Start()
+    {
+        FindObjectOfType<AudioManagerGeneral>();
+    }
     public override void Ativar()
     {
         openCaixao = true;
