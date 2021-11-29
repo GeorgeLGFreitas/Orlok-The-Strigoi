@@ -33400,6 +33400,63 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6900039188793894937, guid: 3feddf9f1f23fc9429b2ad4fdce20044, type: 3}
   m_PrefabInstance: {fileID: 1023587169}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1026080190
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7775227165712630752, guid: bce3efb768187a64c9ca627e54845921, type: 3}
+      propertyPath: m_RootOrder
+      value: 23
+      objectReference: {fileID: 0}
+    - target: {fileID: 7775227165712630752, guid: bce3efb768187a64c9ca627e54845921, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 20.58
+      objectReference: {fileID: 0}
+    - target: {fileID: 7775227165712630752, guid: bce3efb768187a64c9ca627e54845921, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.54
+      objectReference: {fileID: 0}
+    - target: {fileID: 7775227165712630752, guid: bce3efb768187a64c9ca627e54845921, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -19.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 7775227165712630752, guid: bce3efb768187a64c9ca627e54845921, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7028963
+      objectReference: {fileID: 0}
+    - target: {fileID: 7775227165712630752, guid: bce3efb768187a64c9ca627e54845921, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.13193274
+      objectReference: {fileID: 0}
+    - target: {fileID: 7775227165712630752, guid: bce3efb768187a64c9ca627e54845921, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.5057402
+      objectReference: {fileID: 0}
+    - target: {fileID: 7775227165712630752, guid: bce3efb768187a64c9ca627e54845921, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.48244938
+      objectReference: {fileID: 0}
+    - target: {fileID: 7775227165712630752, guid: bce3efb768187a64c9ca627e54845921, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 17.609
+      objectReference: {fileID: 0}
+    - target: {fileID: 7775227165712630752, guid: bce3efb768187a64c9ca627e54845921, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 61.579
+      objectReference: {fileID: 0}
+    - target: {fileID: 7775227165712630752, guid: bce3efb768187a64c9ca627e54845921, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -58.383
+      objectReference: {fileID: 0}
+    - target: {fileID: 7775227165712630763, guid: bce3efb768187a64c9ca627e54845921, type: 3}
+      propertyPath: m_Name
+      value: PedraColetavel (3)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: bce3efb768187a64c9ca627e54845921, type: 3}
 --- !u!1 &1026767618
 GameObject:
   m_ObjectHideFlags: 0
@@ -34849,7 +34906,7 @@ MonoBehaviour:
   gaiolaS: {fileID: 6717230045795784047}
   sarcofagoS: {fileID: 168902171}
   pilares:
-  - {fileID: 8300000, guid: 07a975fe0f5c80a4f93aff7173686c4f, type: 3}
+  - {fileID: 8300000, guid: 383d00f4b44b8f04aaa222790ce7dfd5, type: 3}
   gaiola: {fileID: 8300000, guid: cde0522a3d98a9842b0823b77a90c126, type: 3}
   sarcofago: {fileID: 8300000, guid: 0b55ca1a6e9f7ba45916e3a41d49a1fd, type: 3}
 --- !u!4 &1098984227

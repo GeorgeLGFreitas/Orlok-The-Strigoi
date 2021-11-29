@@ -39,22 +39,23 @@ public class AtivavelPilar : Ativavel
     {
         giraPilar = true;
 
-        if (pilar1)
+        if (pilar1 && timer == 2f)
         {
+      
             audioMG._pilarS();
         }
 
-        if (pilar2)
+        if (pilar2 && timer == 2f)
         {
             audioMG._pilarS2();
         }
 
-        if (pilar3)
+        if (pilar3 && timer == 2f)
         {
             audioMG._pilarS3();
         }
 
-        if (pilar4)
+        if (pilar4 && timer == 2f)
         {
             audioMG._pilarS4();
         }
