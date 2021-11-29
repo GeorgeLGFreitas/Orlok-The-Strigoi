@@ -17,24 +17,28 @@ public class AudioManagerGeneral : MonoBehaviour
 
     public void _pilarS()
     {
+        pilarS.Stop();
         pilarS.pitch = Random.Range(0.85f,1);
         pilarS.PlayOneShot(pilares[Random.Range(0,pilares.Length)], 0.65f);
     }
 
     public void _pilarS2()
     {
+        pilarS2.Stop();
         pilarS2.pitch = Random.Range(0.85f,1);
         pilarS2.PlayOneShot(pilares[Random.Range(0,pilares.Length)], 0.65f);
     }
 
     public void _pilarS3()
     {
+        pilarS3.Stop();
         pilarS3.pitch = Random.Range(0.85f,1);
         pilarS3.PlayOneShot(pilares[Random.Range(0,pilares.Length)], 0.65f);
     }
 
     public void _pilarS4()
     {
+        pilarS4.Stop();
         pilarS4.pitch = Random.Range(0.85f,1);
         pilarS4.PlayOneShot(pilares[Random.Range(0,pilares.Length)], 0.65f);
     }
@@ -47,5 +51,7 @@ public class AudioManagerGeneral : MonoBehaviour
     {
         sarcofagoS.PlayOneShot(sarcofago);
     }
+
+   
 
 }
