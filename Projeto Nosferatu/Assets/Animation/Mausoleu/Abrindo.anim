@@ -166,4 +166,11 @@ AnimationClip:
   m_EulerEditorCurves: []
   m_HasGenericRootTransform: 1
   m_HasMotionFloatCurves: 0
-  m_Events: []
+  m_Events:
+  - time: 0.016666668
+    functionName: _gaiola
+    data: 
+    objectReferenceParameter: {fileID: 11500000, guid: fe6e2cfd1e48e4549b05d9065eef9f3e, type: 3}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0

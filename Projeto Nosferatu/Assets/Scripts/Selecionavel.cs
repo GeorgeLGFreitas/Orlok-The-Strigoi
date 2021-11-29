@@ -11,7 +11,7 @@ public class Selecionavel : MonoBehaviour
 
     MeshRenderer render;
 
-    mouseCursor mouseCursor;
+    public mouseCursor mouseCursor;
 
     void Start()
     {

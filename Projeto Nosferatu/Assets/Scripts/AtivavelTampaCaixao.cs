@@ -7,9 +7,25 @@ public class AtivavelTampaCaixao : Ativavel
     [SerializeField]
     GameObject receptorDeLuz;
 
+    bool openCaixao = false;
+
+    AudioManagerGeneral audioMG;
+
+    void Start()
+    {
+        FindObjectOfType<AudioManagerGeneral>();
+    }
     public override void Ativar()
     {
-        FindObjectOfType<Animator>().SetBool("openCaixao", true);
-        receptorDeLuz.SetActive(false);
+        openCaixao = true;
+    }
+
+    private void Update()
+    {
+        if (openCaixao)
+        {
+            GetComponent<Animator>().SetBool("openCaixao", true);
+            receptorDeLuz.SetActive(false);
+        }
     }
 }

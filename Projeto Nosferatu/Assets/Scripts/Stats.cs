@@ -187,8 +187,8 @@ public class Stats : MonoBehaviour
     void Awake()
     {
         efeitoSanidade = GameObject.Find("Sanidade Volume");
-        volumeSanidade = efeitoSanidade.GetComponent<Volume>();
-        volumeSanidade.profile.TryGet<Vignette>(out vignette);
+        //volumeSanidade = efeitoSanidade.GetComponent<Volume>();
+        //volumeSanidade.profile.TryGet<Vignette>(out vignette);
     }
 
     private void FixedUpdate()

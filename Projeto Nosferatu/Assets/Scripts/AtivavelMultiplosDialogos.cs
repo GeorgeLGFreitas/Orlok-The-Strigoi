@@ -39,26 +39,20 @@ public class AtivavelMultiplosDialogos : Ativavel
     {
         if (!primeiroDialogoTrigged)
         {
-            if (stats.itemsGroupBool[5] == true & stats.numeroAlimento != 0)
-            {
-                primeiroDialogo.TriggerDialogue();
-                primeiroDialogoTrigged = true;
-                questManager.helpPrisioner = true;
-            }
-            else
-            {
-                itemErradoDialogo.TriggerDialogue();
-            }
+            primeiroDialogo.TriggerDialogue();
+            primeiroDialogoTrigged = true;
+            questManager.helpPrisioner = true;
         }
         else
         {
             if (!segundoDialogoTrigged)
             {
-                if (stats.itemsGroupBool[1] == true)
+                if (stats.itemsGroupBool[5] == true & stats.numeroAlimento != 0)
                 {
                     segundoDialogo.TriggerDialogue();
                     segundoDialogoTrigged = true;
                     questManager.helpedPrisioner = true;
+                    stats.numeroAlimento--;
                 }
                 else
                 {
@@ -78,6 +72,8 @@ public class AtivavelMultiplosDialogos : Ativavel
                         FindObjectOfType<DialogueManager>().triggerQuest = true;
 
                         triggerCutscene.SetActive(true);
+
+                        questManager.vinhoEntregue = true;
                     }
                     else
                     {
