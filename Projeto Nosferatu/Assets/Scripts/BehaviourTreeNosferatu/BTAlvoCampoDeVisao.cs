@@ -21,6 +21,7 @@ public class BTAlvoCampoDeVisao : BTNode
             {
                 if (hit.transform == bt.player.transform)
                 {
+                    
                     status = Status.SUCCESS;
                 }
             }

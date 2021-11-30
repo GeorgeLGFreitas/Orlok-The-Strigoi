@@ -9,6 +9,8 @@ public class BehaviourTreeNosferatu : MonoBehaviour
     public BTNode root;
     public GameObject player;
     public Animator animator;
+
+    public AudioManagerNos audioNos;
     public NavMeshAgent agente;
     NavMeshHit navMeshHit;
     public RuntimeAnimatorController anim1;
@@ -25,6 +27,7 @@ public class BehaviourTreeNosferatu : MonoBehaviour
     {
         agente = GetComponent<NavMeshAgent>();
         animator = GetComponent<Animator>();
+        audioNos = GetComponent<AudioManagerNos>();
         Idle();
     }
 

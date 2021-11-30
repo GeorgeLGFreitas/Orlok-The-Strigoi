@@ -15,12 +15,14 @@ public class BTPerseguirAlvo : BTNode
        
         bt.agente.SetDestination(bt.player.transform.position);
         
+        
         bt.Correndo();
         if (Vector3.Distance(bt.transform.position, bt.player.transform.position) < 1)
         {
             status = Status.SUCCESS;
+            bt.Idle();
             SceneManager.LoadScene(3);
-            //bt.Idle();
+            
             yield break;
 
         }
@@ -29,6 +31,6 @@ public class BTPerseguirAlvo : BTNode
         //bt.Idle();
         Print(bt);
         
-    }
+    }  
 
 }
