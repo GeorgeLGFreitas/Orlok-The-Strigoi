@@ -14578,7 +14578,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timer: 0
-  timeLimit: 0
   nameText: {fileID: 1874351623}
   dialogueText: {fileID: 1836470958}
   animator: {fileID: 503716992}
@@ -48573,7 +48572,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1457317388}
   m_LocalRotation: {x: 0.000012505222, y: -0.99998003, z: 0.0020943568, w: 0.0059707947}
-  m_LocalPosition: {x: 30.884853, y: 95.321, z: -10.969387}
+  m_LocalPosition: {x: 0.10485268, y: 0.34100056, z: 0.22061348}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 659098082}
@@ -51546,16 +51545,16 @@ MonoBehaviour:
   animator: {fileID: 1588530421}
   efeitoSanidade: {fileID: 1231560711}
   efeitoStamina: {fileID: 851724034}
-  maxStamina: 1000
-  atualStamina: 1000
-  maxSanidade: 1000
-  atualSanidade: 1000
-  maxCantil: 1000
-  atualCantil: 1000
+  maxStamina: 100
+  atualStamina: 100
+  maxSanidade: 100
+  atualSanidade: 100
+  maxCantil: 100
+  atualCantil: 100
   restoreInitialStamina: 0
-  maxTocha: 1000
-  atualTocha: 1000
-  atualPedra: 5
+  maxTocha: 100
+  atualTocha: 100
+  atualPedra: 0
   primeiraMira: 1
   primeiroTiro: 1
   arremessouPrimeiraVez: 1
@@ -51575,17 +51574,17 @@ MonoBehaviour:
   - {fileID: 104129460}
   - {fileID: 1474392252}
   itemsGroupBool: 0000000000000000
-  numeroChave: 1
+  numeroChave: 0
   numeroChaveText: {fileID: 1658165627}
-  numeroAlimento: 1
+  numeroAlimento: 0
   numeorAlimentoText: {fileID: 782938081}
-  numeroDiscoPrato: 1
+  numeroDiscoPrato: 0
   numeroDiscoPratoText: {fileID: 32012998}
-  numeroLivroI: 1
+  numeroLivroI: 0
   numeroLivroIText: {fileID: 834105179}
-  numeroLivroIII: 1
+  numeroLivroIII: 0
   numeroLivroIIIText: {fileID: 1757116958}
-  numeroLivroXIII: 1
+  numeroLivroXIII: 0
   numeroLivroXIIIText: {fileID: 1050137475}
   timer: 0
   sanidadeDecaimento: 0.015
@@ -51641,7 +51640,7 @@ MonoBehaviour:
   - "Fuja do Calabou\xE7o"
   - "Fuja do Calabou\xE7o"
   questsFase2:
-  - Ajude o Prioneiro
+  - Ajude o Prisioneiro
   - Vinho para o Prisioneiro
   - Encontre o disco
   - Disco pelo Livro
@@ -62608,7 +62607,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timer: 0
-  timeLimit: 0
   nameText: {fileID: 1874351623}
   dialogueText: {fileID: 1836470958}
   animator: {fileID: 503716992}
@@ -79055,8 +79053,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    name: Orlok
-    name2: Prisioneiro
+    name: Prisioneiro
+    name2: Orlok
     sentences:
     - "Tem algu\xE9m ai embaixo?"
     - "Fale baixo! Ela ir\xE1 te escutar!"
@@ -79072,7 +79070,7 @@ MonoBehaviour:
     - "A sua esquerda, subindo as escadas,\r\n\xE9 o sal\xE3o de banquetes, traga-me\r\nalgo
       para comer meu bom rapaz..."
   isPlayerTrigger: 0
-  mudancaPersonagem: 01000000030000000400000006000000
+  mudancaPersonagem: 0700000005000000040000000300000002000000
 --- !u!114 &906806358133390754
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -79196,7 +79194,7 @@ MonoBehaviour:
     - "Voc\xEA sabe como escapar?"
     - "Sim, mas minha garganta est\xE1 seca,\r\ntraga-me algo para beber e te conto\r\nmais..."
   isPlayerTrigger: 0
-  mudancaPersonagem: 01000000020000000800000009000000
+  mudancaPersonagem: 09000000080000000200000001000000
 --- !u!114 &906806358133390760
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -4030,7 +4030,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timer: 0
-  timeLimit: 4
   nameText: {fileID: 1963557714}
   dialogueText: {fileID: 311628199}
   animator: {fileID: 1250777637}
@@ -21496,7 +21495,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2224486175555463363, guid: 70bc9bfb99ce5e34799a3bb53246d102, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.0000076293945
+      value: 0.000015258789
       objectReference: {fileID: 0}
     - target: {fileID: 3120240012750988503, guid: 70bc9bfb99ce5e34799a3bb53246d102, type: 3}
       propertyPath: m_AnchorMax.x
@@ -73801,12 +73800,12 @@ MonoBehaviour:
   animator: {fileID: 2882008712742101845}
   tochaGO: {fileID: 1773135175}
   areaDeTexto: {fileID: 1611418107}
-  chave: 1
-  chave2: 1
-  tocha: 1
+  chave: 0
+  chave2: 0
+  tocha: 0
   porta: 0
   seguro: 0
-  cantil: 1
+  cantil: 0
 --- !u!114 &2882008712742101854
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -73859,16 +73858,16 @@ MonoBehaviour:
   animator: {fileID: 2882008712742101845}
   efeitoSanidade: {fileID: 64887830}
   efeitoStamina: {fileID: 239180130}
-  maxStamina: 1000
-  atualStamina: 1000
-  maxSanidade: 1000
-  atualSanidade: 1000
-  maxCantil: 1000
-  atualCantil: 1000
+  maxStamina: 100
+  atualStamina: 20
+  maxSanidade: 100
+  atualSanidade: 100
+  maxCantil: 100
+  atualCantil: 100
   restoreInitialStamina: 1
-  maxTocha: 1000
-  atualTocha: 1000
-  atualPedra: 5
+  maxTocha: 100
+  atualTocha: 100
+  atualPedra: 0
   primeiraMira: 0
   primeiroTiro: 0
   arremessouPrimeiraVez: 0
@@ -73888,17 +73887,17 @@ MonoBehaviour:
   - {fileID: 1374090818}
   - {fileID: 1634794347}
   itemsGroupBool: 0000000000000000
-  numeroChave: 2
+  numeroChave: 0
   numeroChaveText: {fileID: 1476217044}
-  numeroAlimento: 2
+  numeroAlimento: 0
   numeorAlimentoText: {fileID: 1596866462}
-  numeroDiscoPrato: 2
+  numeroDiscoPrato: 0
   numeroDiscoPratoText: {fileID: 436649065}
-  numeroLivroI: 2
+  numeroLivroI: 0
   numeroLivroIText: {fileID: 15180679}
-  numeroLivroIII: 2
+  numeroLivroIII: 0
   numeroLivroIIIText: {fileID: 764408659}
-  numeroLivroXIII: 2
+  numeroLivroXIII: 0
   numeroLivroXIIIText: {fileID: 1226921729}
   timer: 0
   sanidadeDecaimento: 0.015
