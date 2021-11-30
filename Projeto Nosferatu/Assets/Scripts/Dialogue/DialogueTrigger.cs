@@ -13,6 +13,7 @@ public class DialogueTrigger : MonoBehaviour
     {
         FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
         FindObjectOfType<DialogueManager>().mudancaDePersonagem = mudancaPersonagem;
+
     }
 
     private void OnTriggerEnter(Collider other)

@@ -15,12 +15,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Mapa 2.unity
     guid: 14066c142886a20439b76f463d3f7fd8
   - enabled: 1
-    path: Assets/Scenes/GameOver.unity
-    guid: e3243fa26a11a9b46904b2403533c16b
-  - enabled: 1
     path: Assets/Scenes/Vitoria.unity
     guid: 49e553bfec26c264693224806cae0a5a
-  - enabled: 0
-    path: Assets/Scenes/George.unity
-    guid: a23574f2d141a5d4abe91f7ced1a2eb1
+  - enabled: 1
+    path: Assets/Scenes/GameOver.unity
+    guid: e3243fa26a11a9b46904b2403533c16b
   m_configObjects: {}

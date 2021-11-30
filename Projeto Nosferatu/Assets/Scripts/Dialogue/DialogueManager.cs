@@ -6,8 +6,9 @@ using UnityEngine;
 
 public class DialogueManager : MonoBehaviour
 {
-    public float timer;
-    public float timeLimit;
+    public float timer = 4f;
+    bool onDialogue = false;
+
     public Text nameText;
     public Text dialogueText;
 
@@ -27,17 +28,17 @@ public class DialogueManager : MonoBehaviour
 
     [SerializeField]
     Stats stats;
+
     private void Start()
     {
         sentences = new Queue<string>();
-
     }
-    
 
     public void StartDialogue(Dialogue dialogue)
     {
         animator.SetBool("IsOpen", true);
 
+        onDialogue = true;
 
         nameText.text = dialogue.name;
 
@@ -51,17 +52,19 @@ public class DialogueManager : MonoBehaviour
             sentences.Enqueue(sentence);
         }
 
-        timer = 0;
+        Debug.Log(sentences);
 
         DisplayNextSentence();
-
-        
-
-
     }
 
     public void DisplayNextSentence()
     {
+        if (sentences.Count == 0)
+        {
+            EndDialogue();
+            return;
+        }
+
         switch (changeCharacter)
         {
             case true:
@@ -72,15 +75,11 @@ public class DialogueManager : MonoBehaviour
                 break;
         }
 
-        if (sentences.Count == 0)
-        {
-            EndDialogue();
-            return;
-        }
-
         string sentence = sentences.Dequeue();
         StopAllCoroutines();
         StartCoroutine(TypeSentence(sentence));
+
+        timer = 4;  
     }
 
     IEnumerator TypeSentence(string sentence)
@@ -97,6 +96,7 @@ public class DialogueManager : MonoBehaviour
     void EndDialogue()
     {
         animator.SetBool("IsOpen", false);
+        onDialogue = false;
         if (!firstQuest)
         {
             QuestManager questManager = FindObjectOfType<QuestManager>();
@@ -116,24 +116,38 @@ public class DialogueManager : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Return) || timer >= timeLimit)
+        if (onDialogue)
         {
-            timer = 0;
-            for (int i = 0; i < mudancaDePersonagem.Length; i++)
+            timer -= Time.deltaTime;
+            if (timer <= 0)
             {
-                if (sentences.Count == mudancaDePersonagem[i])
+                for (int i = 0; i < mudancaDePersonagem.Length; i++)
                 {
-                    changeCharacter = !changeCharacter;
+                    if (sentences.Count == mudancaDePersonagem[i])
+                    {
+                        changeCharacter = !changeCharacter;
+
+                    }
                 }
+
+                DisplayNextSentence();
+
+                timer = 4;
             }
-            
-            DisplayNextSentence();
+
+
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                for (int i = 0; i < mudancaDePersonagem.Length; i++)
+                {
+                    if (sentences.Count == mudancaDePersonagem[i])
+                    {
+                        changeCharacter = !changeCharacter;
+                    }
+                }
+
+                DisplayNextSentence();
+            }
         }
-    }
-
-    private void FixedUpdate() 
-    {
-        timer += Time.deltaTime;
-
     }
 }
