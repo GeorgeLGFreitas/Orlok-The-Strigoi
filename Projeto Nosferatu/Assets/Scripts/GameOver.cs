@@ -33,4 +33,8 @@ public class GameOver : MonoBehaviour
         Application.Quit();
         //gameOverOptions = GameOverOptions.EXIT;
     }
+    public void RestartGame()
+    {
+        SceneManager.LoadScene("J1");
+    }
 }

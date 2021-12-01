@@ -67,7 +67,8 @@ public class QuestManager : MonoBehaviour
         jogador = GetComponent<Jogador>();
         if (fase1)
         {
-            text.text = questsFase1[6];
+            text.text = questsFase1[5];
+            firtsQuest = true;
         }
     }
 
@@ -77,62 +78,49 @@ public class QuestManager : MonoBehaviour
         {
             if (firtsQuest)
             {
-                text.text = questsFase1[6] + "\n" + questsFase1[0];
-
                 if (timer < Time.deltaTime)
                 {
                     if (!dialogueTriggerBool)
                     {
                         dialogueTrigger.TriggerDialogue();
                         dialogueTriggerBool = true;
+
+                        text.text = questsFase1[5] + "\n" + questsFase1[0];
                     }
                 }
                 timer -= Time.deltaTime;
                 if (jogador.cantil)
                 {
                     questsFase1[0] = "<color=red>Encontre o Cantil</color>";
-                    text.text = questsFase1[6] + "\n" + questsFase1[0] + "\n" + questsFase1[1];
+                    text.text = questsFase1[5] + "\n" + questsFase1[0] + "\n" + questsFase1[1];
 
                     if (bebeuVinho)
                     {
                         questsFase1[1] = "<color=red>Mate sua sede</color>";
-                        text.text = questsFase1[6] + "\n" + questsFase1[0] + "\n" + questsFase1[1];
+                        text.text = questsFase1[5] + "\n" + questsFase1[0] + "\n" + questsFase1[1];
 
-                        if (interagiuPorta)
+                        if (jogador.porta)
                         {
-                            text.text = questsFase1[6] + "\n" + questsFase1[0] + "\n" + questsFase1[1] + "\n" + questsFase1[2];
-                        }
+                            questsFase1[2] = "<color=red>Abra a porta</color>";
+                            text.text = questsFase1[5] + "\n" + questsFase1[0] + "\n" + questsFase1[1] + "\n" + questsFase1[2];
 
-                        if (jogador.chave)
-                        {
-                            questsFase1[2] = "<color=red>Encontre a chave</color>";
-                            text.text = questsFase1[6] + "\n" + questsFase1[0] + "\n" + questsFase1[1] + "\n" + questsFase1[2] + "\n" + questsFase1[3];
-                        }
-                        else
-                        {
-                            if (jogador.porta)
+                            if (interagiuPedra)
                             {
-                                questsFase1[3] = "<color=red>Abra a porta</color>";
-                                text.text = questsFase1[6] + "\n" + questsFase1[0] + "\n" + questsFase1[1] + "\n" + questsFase1[2] + "\n" + questsFase1[3];
+                                text.text = questsFase1[5] + "\n" + questsFase1[0] + "\n" + questsFase1[1] + "\n" + questsFase1[2] + "\n" + questsFase1[3];
 
-                                if (interagiuPedra)
+                                if (arremessou)
                                 {
-                                    text.text = questsFase1[6] + "\n" + questsFase1[0] + "\n" + questsFase1[1] + "\n" + questsFase1[2] + "\n" + questsFase1[3] + "\n" + questsFase1[4];
+                                    questsFase1[3] = "<color=red>Arremesse</color>";
+                                    text.text = questsFase1[5] + "\n" + questsFase1[0] + "\n" + questsFase1[1] + "\n" + questsFase1[2] + "\n" + questsFase1[3];
 
-                                    if (arremessou)
+                                    if (acharChave2)
                                     {
-                                        questsFase1[4] = "<color=red>Arremesse</color>";
-                                        text.text = questsFase1[6] + "\n" + questsFase1[0] + "\n" + questsFase1[1] + "\n" + questsFase1[2] + "\n" + questsFase1[3] + "\n" + questsFase1[4];
+                                        text.text = questsFase1[5] + "\n" + questsFase1[0] + "\n" + questsFase1[1] + "\n" + questsFase1[2] + "\n" + questsFase1[3] + "\n" + questsFase1[4];
 
-                                        if (acharChave2)
+                                        if (jogador.chave2)
                                         {
-                                            text.text = questsFase1[6] + "\n" + questsFase1[0] + "\n" + questsFase1[1] + "\n" + questsFase1[2] + "\n" + questsFase1[3] + "\n" + questsFase1[4] + "\n" + questsFase1[5];
-
-                                            if (jogador.chave2)
-                                            {
-                                                questsFase1[5] = "<color=red>Encontre a chave</color>";
-                                                text.text = questsFase1[6] + "\n" + questsFase1[0] + "\n" + questsFase1[1] + "\n" + questsFase1[2] + "\n" + questsFase1[3] + "\n" + questsFase1[4] + "\n" + questsFase1[5];
-                                            }
+                                            questsFase1[4] = "<color=red>Encontre a chave</color>";
+                                            text.text = questsFase1[5] + "\n" + questsFase1[0] + "\n" + questsFase1[1] + "\n" + questsFase1[2] + "\n" + questsFase1[3] + "\n" + questsFase1[4];
                                         }
                                     }
                                 }

@@ -21,7 +21,7 @@ public class BTPerseguirAlvo : BTNode
         {
             status = Status.SUCCESS;
             bt.Idle();
-            SceneManager.LoadScene(3);
+            SceneManager.LoadScene("GameOver");
             
             yield break;
 

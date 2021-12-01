@@ -8,6 +8,7 @@ public class AtivavelVinho : Ativavel
     {
         FindObjectOfType<Stats>().atualCantil = FindObjectOfType<Stats>().maxCantil;
         GetComponent<mouseCursor>().OriginalImage();
+        FindObjectOfType<Stats>().textoC.text = "";
         Destroy(gameObject);
     }
 }

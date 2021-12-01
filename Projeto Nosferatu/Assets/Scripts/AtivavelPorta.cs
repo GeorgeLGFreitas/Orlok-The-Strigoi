@@ -52,7 +52,7 @@ public class AtivavelPorta : Ativavel
     public override void Ativar()
     {
 
-        if(jogador.chave && porta1)
+        if(porta1)
         {
             jogador.chave = false;
             jogador.porta = true;
@@ -64,15 +64,24 @@ public class AtivavelPorta : Ativavel
 
             stats.numeroChave--;
         }
+
+        if(porta2)
+        {
+            if (jogador.chave2)
+            {
+                if (jogador.cantil)
+                {
+                    SceneManager.LoadScene("Mapa 2");
+                }
+                else
+                {
+                    GetComponent<Selecionavel>().texto = "Cantil Necessario";
+                }
+            }
+        }
         else
         {
-            questManager.interagiuPorta = true;
-        }
-
-        if(jogador.chave2 && porta2)
-        {
-            SceneManager.LoadScene("Mapa 2");
-        
+            GetComponent<Selecionavel>().texto = "Trancado";
         }
     }
 

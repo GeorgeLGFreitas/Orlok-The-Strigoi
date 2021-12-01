@@ -16,7 +16,6 @@ public class DialogueManager : MonoBehaviour
 
     private Queue<string> sentences;
 
-    bool firstQuest = false;
     bool changeCharacter = false;
 
     public bool triggerQuest = false;
@@ -97,12 +96,7 @@ public class DialogueManager : MonoBehaviour
     {
         animator.SetBool("IsOpen", false);
         onDialogue = false;
-        if (!firstQuest)
-        {
-            QuestManager questManager = FindObjectOfType<QuestManager>();
-            questManager.firtsQuest = true;
-            firstQuest = true;
-        }
+
         if (stats.atualSanidade <= 0)
         {
             SceneManager.LoadScene("GameOver");

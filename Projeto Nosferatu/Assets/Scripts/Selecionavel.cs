@@ -23,7 +23,20 @@ public class Selecionavel : MonoBehaviour
     public void Liga()
     {
         render.material.SetColor("_EmissionColor", corSelecionado);
-        mouseCursor.ChangeImage(); 
+        mouseCursor.ChangeImage();
+
+        AtivavelPorta porta = GetComponent<AtivavelPorta>();
+        if (porta != null)
+        {
+            if (porta.porta2 & FindObjectOfType<Jogador>().chave2 == false)
+            {
+                texto = "Trancado";
+            }
+            else
+            {
+                texto = "E ou Clique";
+            }
+        }
     }
 
      public void Desliga()

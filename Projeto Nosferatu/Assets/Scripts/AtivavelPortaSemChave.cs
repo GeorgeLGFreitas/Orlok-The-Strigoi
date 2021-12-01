@@ -9,6 +9,9 @@ public class AtivavelPortaSemChave : Ativavel
 
     bool abrePorta = false;
 
+    public AudioClip abre;
+    public AudioSource audioS;
+
     private void Update()
     {
         if (abrePorta)
@@ -27,6 +30,7 @@ public class AtivavelPortaSemChave : Ativavel
     public override void Ativar()
     {
         abrePorta = true;
-        FindObjectOfType<QuestManager>().naArea3 = true;
+        audioS.PlayOneShot(abre);
+
     }
 }

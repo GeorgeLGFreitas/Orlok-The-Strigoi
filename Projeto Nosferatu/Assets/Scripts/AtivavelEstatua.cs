@@ -8,6 +8,8 @@ public class AtivavelEstatua : Ativavel
     GameObject livroIGameObject;
     [SerializeField]
     GameObject discoGameObject;
+    [SerializeField]
+    AtivavelPortaSemChave portaSemChave;
 
     QuestManager questManager;
     mouseCursor cursor;
@@ -21,6 +23,7 @@ public class AtivavelEstatua : Ativavel
 
         livroIGameObject.SetActive(true);
         discoGameObject.SetActive(false);
+        portaSemChave.enabled = false;
     }
 
     public override void Ativar()
@@ -34,6 +37,8 @@ public class AtivavelEstatua : Ativavel
             livroIGameObject.SetActive(false);
 
             questManager.discoPeloLivro = true;
+
+            portaSemChave.enabled = true;
         }
     }
 }

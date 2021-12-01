@@ -9,8 +9,7 @@ using System.Collections.Generic;
 public class Stats : MonoBehaviour
 {
     public Text textoC;
-    bool unica = true;
-    bool endPrimeiroDialogo = false;
+
     public AnimationManager animator;
     public GameObject efeitoSanidade;
     public GameObject efeitoStamina;
@@ -39,6 +38,10 @@ public class Stats : MonoBehaviour
     public float maxCantil;
     public float atualCantil;
     public bool restoreInitialStamina = true;
+    [SerializeField]
+    GameObject cantilCintura;
+    [SerializeField]
+    GameObject cantilMao;
 
     [Header("Tocha")]
 
@@ -182,6 +185,17 @@ public class Stats : MonoBehaviour
 
         itemsGroup[0].SetActive(true);
         itemsGroupBool[0] = true;
+
+        if (jogador.cantil)
+        {
+            cantilCintura.SetActive(true);
+            cantilMao.SetActive(false);
+        }
+        else
+        {
+            cantilCintura.SetActive(false);
+            cantilMao.SetActive(false);
+        }
     }
 
     void Awake()
@@ -234,12 +248,6 @@ public class Stats : MonoBehaviour
 
         if (atualStamina <= 30)
         {
-            if (unica)
-            {
-                gameObject.GetComponent<DialogueTrigger>().TriggerDialogue();
-                unica = false;
-            }
-
             efeitoStamina.SetActive(true);
         }
 
@@ -268,6 +276,16 @@ public class Stats : MonoBehaviour
                 if (Input.GetKey(KeyCode.F))
                 {
                     animator.bebendo();
+                }
+                if (animator.animator.GetBool("Bebendo"))
+                {
+                    cantilCintura.SetActive(false);
+                    cantilMao.SetActive(true);
+                }
+                else
+                {
+                    cantilCintura.SetActive(true);
+                    cantilMao.SetActive(false);
                 }
             }
         }
@@ -415,7 +433,6 @@ public class Stats : MonoBehaviour
         {
             atualCantil -= consumido;
             atualStamina += consumido;
-
 
             if (restoreInitialStamina)
             {
