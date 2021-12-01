@@ -5,7 +5,7 @@ public class PauseMenu : MonoBehaviour
 {
     enum Pause
     {
-        UNPAUSED,PAUSED, SETTINGS, MENU, EXIT
+        UNPAUSED,PAUSED, SETTINGS, CONTROLS, MENU, EXIT
     };
 
     Pause pause;
@@ -14,6 +14,8 @@ public class PauseMenu : MonoBehaviour
     GameObject pausedGroup;
     [SerializeField]
     GameObject settingsGroup;
+    [SerializeField]
+    GameObject controlsGroup;
 
     public bool pausado;
 
@@ -35,6 +37,9 @@ public class PauseMenu : MonoBehaviour
                 break;
             case Pause.SETTINGS:
                 Settings();
+                break;
+            case Pause.CONTROLS:
+
                 break;
             case Pause.MENU:
                 Menu();
@@ -68,6 +73,7 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 1;
         pausedGroup.SetActive(false);
         settingsGroup.SetActive(false);
+        controlsGroup.SetActive(false);
     }
     void Paused()
     {
@@ -75,12 +81,21 @@ public class PauseMenu : MonoBehaviour
         pausado = true;
         Time.timeScale = 0;
         pausedGroup.SetActive(true);
+        controlsGroup.SetActive(false);
         settingsGroup.SetActive(false);
     }
     void Settings()
     {
         pausedGroup.SetActive(false);
+        controlsGroup.SetActive(false);
         settingsGroup.SetActive(true);
+    }
+    void Controls()
+    {
+        pausedGroup.SetActive(false);
+        settingsGroup.SetActive(false);
+        controlsGroup.SetActive(true);
+
     }
     void Menu()
     {
@@ -99,6 +114,10 @@ public class PauseMenu : MonoBehaviour
     public void SettingsSelect()
     {
         pause = Pause.SETTINGS;
+    }
+    public void ControlsSelect()
+    {
+        pause = Pause.CONTROLS;
     }
     public void MenuSelect()
     {
