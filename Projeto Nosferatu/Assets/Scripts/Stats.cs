@@ -309,10 +309,11 @@ public class Stats : MonoBehaviour
             atualTocha -= tochaDecaimento * Time.deltaTime;
             atualSanidade = maxSanidade;
 
-            if (atualTocha <= -1)
+            if (atualTocha <= 0)
             {
                 atualTocha = 0;
-                tochaEsgotadaDialogo.TriggerDialogue();
+                tochaSlider.gameObject.SetActive(false);
+                jogador.tocha = false;
             }
         }
 

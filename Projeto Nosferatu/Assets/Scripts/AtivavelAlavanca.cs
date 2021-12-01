@@ -14,11 +14,7 @@ public class AtivavelAlavanca : Ativavel
     public override void Ativar()
     {
         testeLiga = true;
-    }
-
-    private void Start()
-    {
-        luzBranca.SetActive(false);
+        GetComponent<Animator>().SetBool("ativouAlavanca", true);
     }
 
     private void Update()

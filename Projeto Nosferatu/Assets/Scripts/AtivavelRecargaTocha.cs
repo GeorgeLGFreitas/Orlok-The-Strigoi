@@ -26,6 +26,7 @@ public class AtivavelRecargaTocha : Ativavel
         else
         {
             jogador.tocha = true;
+            stats.atualTocha = stats.maxTocha;
             Destroy(tocha);
         }
     }

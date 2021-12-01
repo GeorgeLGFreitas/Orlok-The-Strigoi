@@ -23,6 +23,7 @@ public class AtivavelPedra : Ativavel
         stats.primeiraMira = true;
 
         cursor.OriginalImage();
+        stats.textoC.text = "";
 
         Destroy(gameObject);
     }
