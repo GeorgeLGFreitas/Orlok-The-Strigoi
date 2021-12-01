@@ -39,15 +39,13 @@ public class PauseMenu : MonoBehaviour
                 Settings();
                 break;
             case Pause.CONTROLS:
-
+                Controls();
                 break;
             case Pause.MENU:
                 Menu();
                 break;
             case Pause.EXIT:
                 Application.Quit();
-                break;
-            default:
                 break;
         }
 

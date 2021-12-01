@@ -27,7 +27,7 @@ public class CannonController : MonoBehaviour
     }
     private void LateUpdate()
     {
-        if (stats.atualPedra != 0)
+        if (stats.atualPedra != 0 & stats.itemsGroupBool[0] == true || stats.atualGarrafa != 0 & stats.itemsGroupBool[1] == true)
         {
             if (Input.GetKey(KeyCode.Mouse1))
             {

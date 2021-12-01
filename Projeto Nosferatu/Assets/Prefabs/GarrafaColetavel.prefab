@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 2202780998227551456}
   - component: {fileID: 8268424816806575688}
   m_Layer: 0
-  m_Name: Garrafa1
+  m_Name: GarrafaColetavel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

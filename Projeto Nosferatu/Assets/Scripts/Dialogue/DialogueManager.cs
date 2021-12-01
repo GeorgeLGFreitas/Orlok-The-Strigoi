@@ -6,7 +6,9 @@ using UnityEngine;
 
 public class DialogueManager : MonoBehaviour
 {
-    public float timer = 4f;
+    [SerializeField]
+    float tempoTimer;
+    float timer;
     bool onDialogue = false;
 
     public Text nameText;
@@ -31,6 +33,7 @@ public class DialogueManager : MonoBehaviour
     private void Start()
     {
         sentences = new Queue<string>();
+        timer = tempoTimer;
     }
 
     public void StartDialogue(Dialogue dialogue)
@@ -78,7 +81,7 @@ public class DialogueManager : MonoBehaviour
         StopAllCoroutines();
         StartCoroutine(TypeSentence(sentence));
 
-        timer = 4;  
+        timer = tempoTimer;  
     }
 
     IEnumerator TypeSentence(string sentence)
@@ -126,7 +129,7 @@ public class DialogueManager : MonoBehaviour
 
                 DisplayNextSentence();
 
-                timer = 4;
+                timer = tempoTimer;
             }
 
 

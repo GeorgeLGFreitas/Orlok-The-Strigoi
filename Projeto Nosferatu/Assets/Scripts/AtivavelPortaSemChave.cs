@@ -23,6 +23,10 @@ public class AtivavelPortaSemChave : Ativavel
             {
                 timer = 4.5f;
                 abrePorta = false;
+
+                gameObject.GetComponent<Selecionavel>().enabled = false;
+                gameObject.GetComponent<mouseCursor>().enabled = false;
+                gameObject.GetComponent<AtivavelPortaSemChave>().enabled = false;
             }
         }
     }
@@ -31,6 +35,5 @@ public class AtivavelPortaSemChave : Ativavel
     {
         abrePorta = true;
         audioS.PlayOneShot(abre);
-
     }
 }

@@ -16,6 +16,7 @@ public class AtivavelEscadaEndGame : Ativavel
         if (trigged)
         {
             FindObjectOfType<QuestManager>().subiuEscada = true;
+            FindObjectOfType<DialogoCinemaMudo>().FalasFinal();
         }
     }
 }

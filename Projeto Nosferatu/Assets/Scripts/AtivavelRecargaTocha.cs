@@ -22,6 +22,7 @@ public class AtivavelRecargaTocha : Ativavel
         {
             stats.atualTocha = stats.maxTocha;
             tochaReabastecerDialogo.TriggerDialogue();
+            GetComponent<AudioSource>().PlayOneShot();
         }
         else
         {

@@ -4148,7 +4148,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: adab3c93b1cb7ba429044556b4bf305a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timer: 0
+  tempoTimer: 0
   nameText: {fileID: 1963557714}
   dialogueText: {fileID: 311628199}
   animator: {fileID: 1250777637}
@@ -31678,7 +31678,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 500
+  MaxDistance: 15
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0

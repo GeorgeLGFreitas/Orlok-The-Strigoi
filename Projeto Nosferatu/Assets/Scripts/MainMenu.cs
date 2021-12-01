@@ -5,7 +5,7 @@ public class MainMenu : MonoBehaviour
 {
     enum ActiveScene
     {
-        MENU, SETTINGS, CREDITS, EXIT, PLAY
+        MENU, SETTINGS, CREDITS, CONTROLS, EXIT, PLAY
     };
 
     ActiveScene activeScene;
@@ -16,6 +16,8 @@ public class MainMenu : MonoBehaviour
     GameObject settingsGroup;
     [SerializeField]
     GameObject creditsGroup;
+    [SerializeField]
+    GameObject controlsGroup;
     [SerializeField]
     GameObject inicioFala1;
     [SerializeField]
@@ -72,13 +74,14 @@ public class MainMenu : MonoBehaviour
             case ActiveScene.CREDITS:
                 Credits();
                 break;
+            case ActiveScene.CONTROLS:
+                Controls();
+                break;
             case ActiveScene.EXIT:
                 Application.Quit();
                 break;
             case ActiveScene.PLAY:
                 Play();
-                break;
-            default:
                 break;
         }
     }
@@ -90,6 +93,7 @@ public class MainMenu : MonoBehaviour
         settingsGroup.SetActive(false);
         creditsGroup.SetActive(false);
         PainelFalas.SetActive(false);
+        controlsGroup.SetActive(false);
     }
     void Settings()
     {
@@ -97,10 +101,20 @@ public class MainMenu : MonoBehaviour
         menuGroup.SetActive(false);
         creditsGroup.SetActive(false);
         PainelFalas.SetActive(false);
+        controlsGroup.SetActive(false);
     }
     void Credits()
     {
         creditsGroup.SetActive(true);
+        menuGroup.SetActive(false);
+        settingsGroup.SetActive(false);
+        PainelFalas.SetActive(false);
+        controlsGroup.SetActive(false);
+    }
+    void Controls()
+    {
+        controlsGroup.SetActive(true);
+        creditsGroup.SetActive(false);
         menuGroup.SetActive(false);
         settingsGroup.SetActive(false);
         PainelFalas.SetActive(false);
@@ -111,8 +125,8 @@ public class MainMenu : MonoBehaviour
         menuGroup.SetActive(false);
         settingsGroup.SetActive(false);
         creditsGroup.SetActive(false);
-        
-        
+        controlsGroup.SetActive(false);
+
 
         bool one =true;
         bool two = false;
@@ -164,6 +178,10 @@ public class MainMenu : MonoBehaviour
     public void CreditsSelect()
     {
         activeScene = ActiveScene.CREDITS;
+    }
+    public void ControlsSelect()
+    {
+        activeScene = ActiveScene.CONTROLS;
     }
     public void ExitSelect()
     {
