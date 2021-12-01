@@ -45,6 +45,10 @@ public class AtivavelPorta : Ativavel
             {
                 timer = 4.5f;
                 abrePorta = false;
+                gameObject.GetComponent<AtivavelPorta>().enabled = false;
+                gameObject.GetComponent<Selecionavel>().enabled = false;
+                gameObject.GetComponent<mouseCursor>().enabled = false;
+                audioS.enabled = false;
             }
         }
     }

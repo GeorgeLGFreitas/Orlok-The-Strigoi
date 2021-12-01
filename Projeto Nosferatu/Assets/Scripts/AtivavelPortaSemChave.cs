@@ -27,6 +27,7 @@ public class AtivavelPortaSemChave : Ativavel
                 gameObject.GetComponent<Selecionavel>().enabled = false;
                 gameObject.GetComponent<mouseCursor>().enabled = false;
                 gameObject.GetComponent<AtivavelPortaSemChave>().enabled = false;
+                audioS.enabled = false;
             }
         }
     }

@@ -113,6 +113,7 @@ public class DialogueManager : MonoBehaviour
     {
         if (onDialogue)
         {
+            /*
             timer -= Time.deltaTime;
             if (timer <= 0)
             {
@@ -129,7 +130,7 @@ public class DialogueManager : MonoBehaviour
 
                 timer = tempoTimer;
             }
-
+            */
 
             if (Input.GetKeyDown(KeyCode.Space))
             {
