@@ -142,7 +142,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   corPadrao: {r: 0, g: 0, b: 0, a: 1}
   corSelecionado: {r: 0.6, g: 0.5529412, b: 0.009411765, a: 0.6}
-  texto: '"E" para coletar'
+  texto: Clique
   mouseCursor: {fileID: 0}
 --- !u!114 &613814154
 MonoBehaviour:
@@ -170,8 +170,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fa7db1d31a84cf48ab6059cf7c393d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  somRecarregaTocha: {fileID: 8300000, guid: fdef1b98adfb5454299ddf8df772a382, type: 3}
   tocha: {fileID: 8803984994882933146}
+  somTochaRecarregar: {fileID: 8300000, guid: fdef1b98adfb5454299ddf8df772a382, type: 3}
 --- !u!1001 &7835064816167552324
 PrefabInstance:
   m_ObjectHideFlags: 0
