@@ -8,8 +8,13 @@ public class AtivavelQuestCantilFase2 : Ativavel
     Animator paredeAnimator;
     Stats stats;
 
-    [SerializeField]
+    [SerializeField] 
     float vinhoNecessario;
+
+    [SerializeField]
+    BalancaRodar balanca;
+
+    int vezesAtivado;
 
     private void Start()
     {
@@ -18,16 +23,25 @@ public class AtivavelQuestCantilFase2 : Ativavel
 
     public override void Ativar()
     {
-        if (stats.atualCantil < vinhoNecessario)
+        if(paredeAnimator.GetBool("isParedeOpen") == false)
         {
-            vinhoNecessario -= stats.atualCantil;
-            stats.atualCantil = 0;
-        }
-        else
-        {
-            stats.atualCantil -= vinhoNecessario;
-
-            paredeAnimator.SetBool("isParedeOpen", true);
+            if (stats.atualCantil < vinhoNecessario)
+            {
+                 
+                balanca.quantidade = 100 * stats.atualCantil / 150;
+                Debug.Log(balanca.quantidade);
+                balanca.RodaBalanca1();
+                vinhoNecessario -= stats.atualCantil;
+                stats.atualCantil = 0;
+            }
+            else
+            {
+                balanca.quantidade = 100 * stats.atualCantil / 150;
+                Debug.Log(balanca.quantidade);
+                stats.atualCantil -= vinhoNecessario;
+                balanca.RodaBalanca1();
+                paredeAnimator.SetBool("isParedeOpen", true);
+            }
         }
     }
 }
