@@ -345,73 +345,6 @@ Transform:
   m_Father: {fileID: 1195050542698339431}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: -8.518, y: 357.212, z: -269.30798}
---- !u!1 &13236521 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8803984995765732716, guid: cc1ea0e0db6d0394a887061a590126d9, type: 3}
-  m_PrefabInstance: {fileID: 1282908347}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &13236525
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 13236521}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03e1062e02eaa3144a1c4de96faec7f6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogue:
-    name: Orlock
-    name2: Orlock
-    sentences:
-    - Bem melhor agora!!
-  isPlayerTrigger: 0
-  mudancaPersonagem: 
---- !u!114 &13236526
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 13236521}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 38f49bd4dc1b7e541b1940ea2daba890, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  corPadrao: {r: 0, g: 0, b: 0, a: 1}
-  corSelecionado: {r: 0.6, g: 0.5529412, b: 0.009411765, a: 0.6}
-  texto: '"E" para reabastecer a tocha'
-  mouseCursor: {fileID: 0}
---- !u!114 &13236527
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 13236521}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7fa7db1d31a84cf48ab6059cf7c393d7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tocha: {fileID: 0}
---- !u!114 &13236528
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 13236521}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1767997c56b55b44b9f27c84397f5ebf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  newCursor: {fileID: -2987633198902407147, guid: 6401e3adb8e48984f873354676a3869a, type: 3}
-  scalaIcone: {x: 0.2, y: 0.2, z: 0.2}
 --- !u!114 &15180679 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 378678878, guid: 47ae8f85203bb7d4aae924abc1650f7d, type: 3}
@@ -653,6 +586,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1590678272}
     m_Modifications:
+    - target: {fileID: 544186912525440446, guid: cc1ea0e0db6d0394a887061a590126d9, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4239870920899554155, guid: cc1ea0e0db6d0394a887061a590126d9, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -713,7 +650,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Porta Tocha Texturizacao (39)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 544186912525440446, guid: cc1ea0e0db6d0394a887061a590126d9, type: 3}
+    - {fileID: 312334682, guid: cc1ea0e0db6d0394a887061a590126d9, type: 3}
+    - {fileID: 613814153, guid: cc1ea0e0db6d0394a887061a590126d9, type: 3}
+    - {fileID: 613814154, guid: cc1ea0e0db6d0394a887061a590126d9, type: 3}
+    - {fileID: 7873599906519594275, guid: cc1ea0e0db6d0394a887061a590126d9, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: cc1ea0e0db6d0394a887061a590126d9, type: 3}
 --- !u!1 &20292710 stripped
 GameObject:
@@ -956,6 +898,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1590678272}
     m_Modifications:
+    - target: {fileID: 544186912525440446, guid: cc1ea0e0db6d0394a887061a590126d9, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4239870920899554155, guid: cc1ea0e0db6d0394a887061a590126d9, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -2203,6 +2149,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1590678272}
     m_Modifications:
+    - target: {fileID: 544186912525440446, guid: cc1ea0e0db6d0394a887061a590126d9, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7885099706421064272, guid: cc1ea0e0db6d0394a887061a590126d9, type: 3}
       propertyPath: m_Range
       value: 1.3
@@ -2268,6 +2218,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1590678272}
     m_Modifications:
+    - target: {fileID: 544186912525440446, guid: cc1ea0e0db6d0394a887061a590126d9, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7885099706421064272, guid: cc1ea0e0db6d0394a887061a590126d9, type: 3}
       propertyPath: m_Range
       value: 1.3
@@ -4693,9 +4647,13 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1590678272}
     m_Modifications:
+    - target: {fileID: 544186912525440446, guid: cc1ea0e0db6d0394a887061a590126d9, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8171175802636700448, guid: cc1ea0e0db6d0394a887061a590126d9, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8171175803867635670, guid: cc1ea0e0db6d0394a887061a590126d9, type: 3}
       propertyPath: m_RootOrder
@@ -5476,6 +5434,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1590678272}
     m_Modifications:
+    - target: {fileID: 544186912525440446, guid: cc1ea0e0db6d0394a887061a590126d9, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8171175803867635670, guid: cc1ea0e0db6d0394a887061a590126d9, type: 3}
       propertyPath: m_RootOrder
       value: 16
@@ -5683,6 +5645,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1590678272}
     m_Modifications:
+    - target: {fileID: 544186912525440446, guid: cc1ea0e0db6d0394a887061a590126d9, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7885099706421064272, guid: cc1ea0e0db6d0394a887061a590126d9, type: 3}
       propertyPath: m_Range
       value: 1.3
@@ -6260,73 +6226,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 363386603}
   m_Mesh: {fileID: 6607799463532520230, guid: 986981b1469f56644a4fef85b0a4336c, type: 3}
---- !u!1 &363464449 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8803984995765732716, guid: cc1ea0e0db6d0394a887061a590126d9, type: 3}
-  m_PrefabInstance: {fileID: 2130375321}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &363464453
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 363464449}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03e1062e02eaa3144a1c4de96faec7f6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogue:
-    name: Orlock
-    name2: Orlock
-    sentences:
-    - Bem melhor agora!!
-  isPlayerTrigger: 0
-  mudancaPersonagem: 
---- !u!114 &363464454
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 363464449}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 38f49bd4dc1b7e541b1940ea2daba890, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  corPadrao: {r: 0, g: 0, b: 0, a: 1}
-  corSelecionado: {r: 0.6, g: 0.5529412, b: 0.009411765, a: 0.6}
-  texto: '"E" para reabastecer a tocha'
-  mouseCursor: {fileID: 0}
---- !u!114 &363464455
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 363464449}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7fa7db1d31a84cf48ab6059cf7c393d7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tocha: {fileID: 0}
---- !u!114 &363464456
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 363464449}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1767997c56b55b44b9f27c84397f5ebf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  newCursor: {fileID: -2987633198902407147, guid: 6401e3adb8e48984f873354676a3869a, type: 3}
-  scalaIcone: {x: 0.2, y: 0.2, z: 0.2}
 --- !u!4 &366822435 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4002508613009822431, guid: 37bf91d2b4e5fd7499858d971124ea80, type: 3}
@@ -7367,6 +7266,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1590678272}
     m_Modifications:
+    - target: {fileID: 544186912525440446, guid: cc1ea0e0db6d0394a887061a590126d9, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8171175802636700448, guid: cc1ea0e0db6d0394a887061a590126d9, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -8352,75 +8255,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 5635865135541999480, guid: 84525fce65c5b284c9db4db6b6d702b2, type: 3}
---- !u!1001 &473852098
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 1751425680}
-    m_Modifications:
-    - target: {fileID: 1627405049414669534, guid: 892447579fa0e6c4784f1613283aefb0, type: 3}
-      propertyPath: m_Name
-      value: 'Tocha '
-      objectReference: {fileID: 0}
-    - target: {fileID: 2152268627019664996, guid: 892447579fa0e6c4784f1613283aefb0, type: 3}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2152268627019664996, guid: 892447579fa0e6c4784f1613283aefb0, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2152268627019664996, guid: 892447579fa0e6c4784f1613283aefb0, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2152268627019664996, guid: 892447579fa0e6c4784f1613283aefb0, type: 3}
-      propertyPath: m_LocalScale.z
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2152268627019664996, guid: 892447579fa0e6c4784f1613283aefb0, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2152268627019664996, guid: 892447579fa0e6c4784f1613283aefb0, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.03276062
-      objectReference: {fileID: 0}
-    - target: {fileID: 2152268627019664996, guid: 892447579fa0e6c4784f1613283aefb0, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0.0075834594
-      objectReference: {fileID: 0}
-    - target: {fileID: 2152268627019664996, guid: 892447579fa0e6c4784f1613283aefb0, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.9916685
-      objectReference: {fileID: 0}
-    - target: {fileID: 2152268627019664996, guid: 892447579fa0e6c4784f1613283aefb0, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0.12881622
-      objectReference: {fileID: 0}
-    - target: {fileID: 2152268627019664996, guid: 892447579fa0e6c4784f1613283aefb0, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2152268627019664996, guid: 892447579fa0e6c4784f1613283aefb0, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2152268627019664996, guid: 892447579fa0e6c4784f1613283aefb0, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: -14.802
-      objectReference: {fileID: 0}
-    - target: {fileID: 2152268627019664996, guid: 892447579fa0e6c4784f1613283aefb0, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2152268627019664996, guid: 892447579fa0e6c4784f1613283aefb0, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 892447579fa0e6c4784f1613283aefb0, type: 3}
 --- !u!1 &476472044
 GameObject:
   m_ObjectHideFlags: 0
@@ -8617,6 +8451,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1590678272}
     m_Modifications:
+    - target: {fileID: 544186912525440446, guid: cc1ea0e0db6d0394a887061a590126d9, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8171175803867635670, guid: cc1ea0e0db6d0394a887061a590126d9, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -14158,6 +13996,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1590678272}
     m_Modifications:
+    - target: {fileID: 544186912525440446, guid: cc1ea0e0db6d0394a887061a590126d9, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8171175803867635670, guid: cc1ea0e0db6d0394a887061a590126d9, type: 3}
       propertyPath: m_RootOrder
       value: 10
@@ -14450,6 +14292,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1590678272}
     m_Modifications:
+    - target: {fileID: 544186912525440446, guid: cc1ea0e0db6d0394a887061a590126d9, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7885099706421064272, guid: cc1ea0e0db6d0394a887061a590126d9, type: 3}
       propertyPath: m_Range
       value: 1.3
@@ -15086,11 +14932,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7266512535288554025, guid: b7ef5abaa0f0f2344bc5d8761e5226fa, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -43.02002
+      value: -56
       objectReference: {fileID: 0}
     - target: {fileID: 7266512535288554025, guid: b7ef5abaa0f0f2344bc5d8761e5226fa, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -16.777954
+      value: -14.900024
       objectReference: {fileID: 0}
     - target: {fileID: 7266512535288554025, guid: b7ef5abaa0f0f2344bc5d8761e5226fa, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -15412,7 +15258,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5614371887943967820, guid: bde96d980e37fbc4a9f0d04b94d6746b, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -26.777954
+      value: -23.3
       objectReference: {fileID: 0}
     - target: {fileID: 5614371887943967820, guid: bde96d980e37fbc4a9f0d04b94d6746b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -20895,9 +20741,13 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1590678272}
     m_Modifications:
+    - target: {fileID: 544186912525440446, guid: cc1ea0e0db6d0394a887061a590126d9, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8171175802636700448, guid: cc1ea0e0db6d0394a887061a590126d9, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8171175803867635670, guid: cc1ea0e0db6d0394a887061a590126d9, type: 3}
       propertyPath: m_RootOrder
@@ -21751,6 +21601,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1590678272}
     m_Modifications:
+    - target: {fileID: 544186912525440446, guid: cc1ea0e0db6d0394a887061a590126d9, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8171175803867635670, guid: cc1ea0e0db6d0394a887061a590126d9, type: 3}
       propertyPath: m_RootOrder
       value: 13
@@ -26662,75 +26516,6 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     vectorLabel1_3: W
---- !u!1001 &747246334
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 1147030840}
-    m_Modifications:
-    - target: {fileID: 1627405049414669534, guid: 892447579fa0e6c4784f1613283aefb0, type: 3}
-      propertyPath: m_Name
-      value: 'Tocha '
-      objectReference: {fileID: 0}
-    - target: {fileID: 2152268627019664996, guid: 892447579fa0e6c4784f1613283aefb0, type: 3}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2152268627019664996, guid: 892447579fa0e6c4784f1613283aefb0, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2152268627019664996, guid: 892447579fa0e6c4784f1613283aefb0, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2152268627019664996, guid: 892447579fa0e6c4784f1613283aefb0, type: 3}
-      propertyPath: m_LocalScale.z
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2152268627019664996, guid: 892447579fa0e6c4784f1613283aefb0, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2152268627019664996, guid: 892447579fa0e6c4784f1613283aefb0, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.03276062
-      objectReference: {fileID: 0}
-    - target: {fileID: 2152268627019664996, guid: 892447579fa0e6c4784f1613283aefb0, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0.0075834594
-      objectReference: {fileID: 0}
-    - target: {fileID: 2152268627019664996, guid: 892447579fa0e6c4784f1613283aefb0, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.9916685
-      objectReference: {fileID: 0}
-    - target: {fileID: 2152268627019664996, guid: 892447579fa0e6c4784f1613283aefb0, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0.12881622
-      objectReference: {fileID: 0}
-    - target: {fileID: 2152268627019664996, guid: 892447579fa0e6c4784f1613283aefb0, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2152268627019664996, guid: 892447579fa0e6c4784f1613283aefb0, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2152268627019664996, guid: 892447579fa0e6c4784f1613283aefb0, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: -14.802
-      objectReference: {fileID: 0}
-    - target: {fileID: 2152268627019664996, guid: 892447579fa0e6c4784f1613283aefb0, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2152268627019664996, guid: 892447579fa0e6c4784f1613283aefb0, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 892447579fa0e6c4784f1613283aefb0, type: 3}
 --- !u!1 &752101441
 GameObject:
   m_ObjectHideFlags: 0
@@ -27012,7 +26797,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 24300002, guid: 6b1f3f0bad4346e42a9a6da7a6d18e6a, type: 2}
   m_audioClip: {fileID: 8300000, guid: 546cc15ab7f77fd49977221e3b76843b, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.04
+  m_Volume: 0.75
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -27496,7 +27281,7 @@ GameObject:
   m_Component:
   - component: {fileID: 794891092}
   - component: {fileID: 794891091}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: TriggerCutscene
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27966,73 +27751,6 @@ LODGroup:
     renderers:
     - renderer: {fileID: 819838197}
   m_Enabled: 1
---- !u!1 &818004569 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8803984995765732716, guid: cc1ea0e0db6d0394a887061a590126d9, type: 3}
-  m_PrefabInstance: {fileID: 660241373}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &818004573
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 818004569}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03e1062e02eaa3144a1c4de96faec7f6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogue:
-    name: Orlock
-    name2: Orlock
-    sentences:
-    - Bem melhor agora!!
-  isPlayerTrigger: 0
-  mudancaPersonagem: 
---- !u!114 &818004574
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 818004569}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 38f49bd4dc1b7e541b1940ea2daba890, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  corPadrao: {r: 0, g: 0, b: 0, a: 1}
-  corSelecionado: {r: 0.6, g: 0.5529412, b: 0.009411765, a: 0.6}
-  texto: '"E" para reabastecer a tocha'
-  mouseCursor: {fileID: 0}
---- !u!114 &818004575
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 818004569}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7fa7db1d31a84cf48ab6059cf7c393d7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tocha: {fileID: 0}
---- !u!114 &818004576
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 818004569}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1767997c56b55b44b9f27c84397f5ebf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  newCursor: {fileID: -2987633198902407147, guid: 6401e3adb8e48984f873354676a3869a, type: 3}
-  scalaIcone: {x: 0.2, y: 0.2, z: 0.2}
 --- !u!1 &819838195
 GameObject:
   m_ObjectHideFlags: 0
@@ -28542,6 +28260,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1590678272}
     m_Modifications:
+    - target: {fileID: 544186912525440446, guid: cc1ea0e0db6d0394a887061a590126d9, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7885099706421064272, guid: cc1ea0e0db6d0394a887061a590126d9, type: 3}
       propertyPath: m_Range
       value: 1.3
@@ -28607,6 +28329,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1590678272}
     m_Modifications:
+    - target: {fileID: 544186912525440446, guid: cc1ea0e0db6d0394a887061a590126d9, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7885099706421064272, guid: cc1ea0e0db6d0394a887061a590126d9, type: 3}
       propertyPath: m_Range
       value: 1.3
@@ -29084,75 +28810,6 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.0053627267, y: 0.1378614, z: 0.23406099}
     m_Extent: {x: 0.11120145, y: 0.03927268, z: 0.037149087}
   m_DirtyAABB: 0
---- !u!1001 &877531258
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 660241374}
-    m_Modifications:
-    - target: {fileID: 1627405049414669534, guid: 892447579fa0e6c4784f1613283aefb0, type: 3}
-      propertyPath: m_Name
-      value: 'Tocha '
-      objectReference: {fileID: 0}
-    - target: {fileID: 2152268627019664996, guid: 892447579fa0e6c4784f1613283aefb0, type: 3}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2152268627019664996, guid: 892447579fa0e6c4784f1613283aefb0, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2152268627019664996, guid: 892447579fa0e6c4784f1613283aefb0, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2152268627019664996, guid: 892447579fa0e6c4784f1613283aefb0, type: 3}
-      propertyPath: m_LocalScale.z
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2152268627019664996, guid: 892447579fa0e6c4784f1613283aefb0, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2152268627019664996, guid: 892447579fa0e6c4784f1613283aefb0, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.03276062
-      objectReference: {fileID: 0}
-    - target: {fileID: 2152268627019664996, guid: 892447579fa0e6c4784f1613283aefb0, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0.0075834594
-      objectReference: {fileID: 0}
-    - target: {fileID: 2152268627019664996, guid: 892447579fa0e6c4784f1613283aefb0, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.9916685
-      objectReference: {fileID: 0}
-    - target: {fileID: 2152268627019664996, guid: 892447579fa0e6c4784f1613283aefb0, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0.12881622
-      objectReference: {fileID: 0}
-    - target: {fileID: 2152268627019664996, guid: 892447579fa0e6c4784f1613283aefb0, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2152268627019664996, guid: 892447579fa0e6c4784f1613283aefb0, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2152268627019664996, guid: 892447579fa0e6c4784f1613283aefb0, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: -14.802
-      objectReference: {fileID: 0}
-    - target: {fileID: 2152268627019664996, guid: 892447579fa0e6c4784f1613283aefb0, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2152268627019664996, guid: 892447579fa0e6c4784f1613283aefb0, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 892447579fa0e6c4784f1613283aefb0, type: 3}
 --- !u!1001 &878906896
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -30036,6 +29693,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1590678272}
     m_Modifications:
+    - target: {fileID: 544186912525440446, guid: cc1ea0e0db6d0394a887061a590126d9, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8171175803867635670, guid: cc1ea0e0db6d0394a887061a590126d9, type: 3}
       propertyPath: m_RootOrder
       value: 23
@@ -31007,6 +30668,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1590678272}
     m_Modifications:
+    - target: {fileID: 544186912525440446, guid: cc1ea0e0db6d0394a887061a590126d9, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4239870920899554155, guid: cc1ea0e0db6d0394a887061a590126d9, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -31067,7 +30732,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Porta Tocha Texturizacao (8)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 544186912525440446, guid: cc1ea0e0db6d0394a887061a590126d9, type: 3}
+    - {fileID: 312334682, guid: cc1ea0e0db6d0394a887061a590126d9, type: 3}
+    - {fileID: 613814153, guid: cc1ea0e0db6d0394a887061a590126d9, type: 3}
+    - {fileID: 613814154, guid: cc1ea0e0db6d0394a887061a590126d9, type: 3}
+    - {fileID: 7873599906519594275, guid: cc1ea0e0db6d0394a887061a590126d9, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: cc1ea0e0db6d0394a887061a590126d9, type: 3}
 --- !u!4 &985047262 stripped
 Transform:
@@ -37283,6 +36953,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1590678272}
     m_Modifications:
+    - target: {fileID: 544186912525440446, guid: cc1ea0e0db6d0394a887061a590126d9, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4239870920899554155, guid: cc1ea0e0db6d0394a887061a590126d9, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -37508,6 +37182,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1590678272}
     m_Modifications:
+    - target: {fileID: 544186912525440446, guid: cc1ea0e0db6d0394a887061a590126d9, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8171175803867635670, guid: cc1ea0e0db6d0394a887061a590126d9, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -37601,6 +37279,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1590678272}
     m_Modifications:
+    - target: {fileID: 544186912525440446, guid: cc1ea0e0db6d0394a887061a590126d9, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8171175803867635670, guid: cc1ea0e0db6d0394a887061a590126d9, type: 3}
       propertyPath: m_RootOrder
       value: 25
@@ -37729,6 +37411,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1590678272}
     m_Modifications:
+    - target: {fileID: 544186912525440446, guid: cc1ea0e0db6d0394a887061a590126d9, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4239870920899554155, guid: cc1ea0e0db6d0394a887061a590126d9, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -37789,7 +37475,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Porta Tocha Texturizacao (15)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 544186912525440446, guid: cc1ea0e0db6d0394a887061a590126d9, type: 3}
+    - {fileID: 312334682, guid: cc1ea0e0db6d0394a887061a590126d9, type: 3}
+    - {fileID: 613814153, guid: cc1ea0e0db6d0394a887061a590126d9, type: 3}
+    - {fileID: 613814154, guid: cc1ea0e0db6d0394a887061a590126d9, type: 3}
+    - {fileID: 7873599906519594275, guid: cc1ea0e0db6d0394a887061a590126d9, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: cc1ea0e0db6d0394a887061a590126d9, type: 3}
 --- !u!4 &1075512986 stripped
 Transform:
@@ -38741,11 +38432,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4359317453081298925, guid: e2f05562ad7bd13448393385451aac7e, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -11.199951
+      value: -17
       objectReference: {fileID: 0}
     - target: {fileID: 4359317453081298925, guid: e2f05562ad7bd13448393385451aac7e, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -7.5
+      value: -10.5
       objectReference: {fileID: 0}
     - target: {fileID: 4359317453081298925, guid: e2f05562ad7bd13448393385451aac7e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -38772,9 +38463,13 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1590678272}
     m_Modifications:
+    - target: {fileID: 544186912525440446, guid: cc1ea0e0db6d0394a887061a590126d9, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8171175802636700448, guid: cc1ea0e0db6d0394a887061a590126d9, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8171175803867635670, guid: cc1ea0e0db6d0394a887061a590126d9, type: 3}
       propertyPath: m_RootOrder
@@ -39057,6 +38752,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1590678272}
     m_Modifications:
+    - target: {fileID: 544186912525440446, guid: cc1ea0e0db6d0394a887061a590126d9, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8171175803867635670, guid: cc1ea0e0db6d0394a887061a590126d9, type: 3}
       propertyPath: m_RootOrder
       value: 9
@@ -39296,6 +38995,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1590678272}
     m_Modifications:
+    - target: {fileID: 544186912525440446, guid: cc1ea0e0db6d0394a887061a590126d9, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7885099706421064272, guid: cc1ea0e0db6d0394a887061a590126d9, type: 3}
       propertyPath: m_Range
       value: 1.3
@@ -39791,6 +39494,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1590678272}
     m_Modifications:
+    - target: {fileID: 544186912525440446, guid: cc1ea0e0db6d0394a887061a590126d9, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7885099706421064272, guid: cc1ea0e0db6d0394a887061a590126d9, type: 3}
       propertyPath: m_Range
       value: 1.3
@@ -40016,6 +39723,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1590678272}
     m_Modifications:
+    - target: {fileID: 544186912525440446, guid: cc1ea0e0db6d0394a887061a590126d9, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7885099706421064272, guid: cc1ea0e0db6d0394a887061a590126d9, type: 3}
       propertyPath: m_Range
       value: 1.3
@@ -40849,73 +40560,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -1098367839370016454, guid: 84525fce65c5b284c9db4db6b6d702b2, type: 3}
---- !u!1 &1267191875 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8803984995765732716, guid: cc1ea0e0db6d0394a887061a590126d9, type: 3}
-  m_PrefabInstance: {fileID: 422234964}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1267191879
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1267191875}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7fa7db1d31a84cf48ab6059cf7c393d7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tocha: {fileID: 0}
---- !u!114 &1267191880
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1267191875}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1767997c56b55b44b9f27c84397f5ebf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  newCursor: {fileID: -2987633198902407147, guid: 6401e3adb8e48984f873354676a3869a, type: 3}
-  scalaIcone: {x: 0.2, y: 0.2, z: 0.2}
---- !u!114 &1267191881
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1267191875}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 38f49bd4dc1b7e541b1940ea2daba890, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  corPadrao: {r: 0, g: 0, b: 0, a: 1}
-  corSelecionado: {r: 0.6, g: 0.5529412, b: 0.009411765, a: 0.6}
-  texto: '"E" para reabastecer a tocha'
-  mouseCursor: {fileID: 0}
---- !u!114 &1267191882
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1267191875}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03e1062e02eaa3144a1c4de96faec7f6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogue:
-    name: Orlock
-    name2: Orlock
-    sentences:
-    - Bem melhor agora!!
-  isPlayerTrigger: 0
-  mudancaPersonagem: 
 --- !u!4 &1269244649 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6618271774239910188, guid: 9cca77c4babc1f245a1d7725346b172b, type: 3}
@@ -41070,9 +40714,13 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1590678272}
     m_Modifications:
+    - target: {fileID: 544186912525440446, guid: cc1ea0e0db6d0394a887061a590126d9, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8171175802636700448, guid: cc1ea0e0db6d0394a887061a590126d9, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8171175803867635670, guid: cc1ea0e0db6d0394a887061a590126d9, type: 3}
       propertyPath: m_RootOrder
@@ -41927,6 +41575,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1590678272}
     m_Modifications:
+    - target: {fileID: 544186912525440446, guid: cc1ea0e0db6d0394a887061a590126d9, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8171175803867635670, guid: cc1ea0e0db6d0394a887061a590126d9, type: 3}
       propertyPath: m_RootOrder
       value: 82
@@ -42383,6 +42035,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1590678272}
     m_Modifications:
+    - target: {fileID: 544186912525440446, guid: cc1ea0e0db6d0394a887061a590126d9, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4239870920899554155, guid: cc1ea0e0db6d0394a887061a590126d9, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -42443,7 +42099,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Porta Tocha Texturizacao (29)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 544186912525440446, guid: cc1ea0e0db6d0394a887061a590126d9, type: 3}
+    - {fileID: 312334682, guid: cc1ea0e0db6d0394a887061a590126d9, type: 3}
+    - {fileID: 613814153, guid: cc1ea0e0db6d0394a887061a590126d9, type: 3}
+    - {fileID: 613814154, guid: cc1ea0e0db6d0394a887061a590126d9, type: 3}
+    - {fileID: 7873599906519594275, guid: cc1ea0e0db6d0394a887061a590126d9, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: cc1ea0e0db6d0394a887061a590126d9, type: 3}
 --- !u!64 &1366784669
 MeshCollider:
@@ -48960,6 +48621,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1590678272}
     m_Modifications:
+    - target: {fileID: 544186912525440446, guid: cc1ea0e0db6d0394a887061a590126d9, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4239870920899554155, guid: cc1ea0e0db6d0394a887061a590126d9, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -49020,7 +48685,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Porta Tocha Texturizacao (28)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 544186912525440446, guid: cc1ea0e0db6d0394a887061a590126d9, type: 3}
+    - {fileID: 312334682, guid: cc1ea0e0db6d0394a887061a590126d9, type: 3}
+    - {fileID: 613814153, guid: cc1ea0e0db6d0394a887061a590126d9, type: 3}
+    - {fileID: 613814154, guid: cc1ea0e0db6d0394a887061a590126d9, type: 3}
+    - {fileID: 7873599906519594275, guid: cc1ea0e0db6d0394a887061a590126d9, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: cc1ea0e0db6d0394a887061a590126d9, type: 3}
 --- !u!1001 &1461456708
 PrefabInstance:
@@ -49688,43 +49358,43 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8505489924671988841, guid: d14f21d4a81453e46bc3abf31b12cfb4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8.852
+      value: 4.797
       objectReference: {fileID: 0}
     - target: {fileID: 8505489924671988841, guid: d14f21d4a81453e46bc3abf31b12cfb4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 101.973
+      value: 102.491
       objectReference: {fileID: 0}
     - target: {fileID: 8505489924671988841, guid: d14f21d4a81453e46bc3abf31b12cfb4, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -4.676
+      value: -2.855
       objectReference: {fileID: 0}
     - target: {fileID: 8505489924671988841, guid: d14f21d4a81453e46bc3abf31b12cfb4, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: -0.89937806
       objectReference: {fileID: 0}
     - target: {fileID: 8505489924671988841, guid: d14f21d4a81453e46bc3abf31b12cfb4, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0.20153837
       objectReference: {fileID: 0}
     - target: {fileID: 8505489924671988841, guid: d14f21d4a81453e46bc3abf31b12cfb4, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: -0.38375714
       objectReference: {fileID: 0}
     - target: {fileID: 8505489924671988841, guid: d14f21d4a81453e46bc3abf31b12cfb4, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: -0.056849774
       objectReference: {fileID: 0}
     - target: {fileID: 8505489924671988841, guid: d14f21d4a81453e46bc3abf31b12cfb4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
+      value: -23.963
       objectReference: {fileID: 0}
     - target: {fileID: 8505489924671988841, guid: d14f21d4a81453e46bc3abf31b12cfb4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: -313.087
       objectReference: {fileID: 0}
     - target: {fileID: 8505489924671988841, guid: d14f21d4a81453e46bc3abf31b12cfb4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
+      value: -3.289
       objectReference: {fileID: 0}
     - target: {fileID: 9025849898331586259, guid: d14f21d4a81453e46bc3abf31b12cfb4, type: 3}
       propertyPath: m_Name
@@ -50774,75 +50444,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1001 &1599044618
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 2130375322}
-    m_Modifications:
-    - target: {fileID: 1627405049414669534, guid: 892447579fa0e6c4784f1613283aefb0, type: 3}
-      propertyPath: m_Name
-      value: 'Tocha '
-      objectReference: {fileID: 0}
-    - target: {fileID: 2152268627019664996, guid: 892447579fa0e6c4784f1613283aefb0, type: 3}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2152268627019664996, guid: 892447579fa0e6c4784f1613283aefb0, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2152268627019664996, guid: 892447579fa0e6c4784f1613283aefb0, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2152268627019664996, guid: 892447579fa0e6c4784f1613283aefb0, type: 3}
-      propertyPath: m_LocalScale.z
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2152268627019664996, guid: 892447579fa0e6c4784f1613283aefb0, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2152268627019664996, guid: 892447579fa0e6c4784f1613283aefb0, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.03276062
-      objectReference: {fileID: 0}
-    - target: {fileID: 2152268627019664996, guid: 892447579fa0e6c4784f1613283aefb0, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0.0075834594
-      objectReference: {fileID: 0}
-    - target: {fileID: 2152268627019664996, guid: 892447579fa0e6c4784f1613283aefb0, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.9916685
-      objectReference: {fileID: 0}
-    - target: {fileID: 2152268627019664996, guid: 892447579fa0e6c4784f1613283aefb0, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0.12881622
-      objectReference: {fileID: 0}
-    - target: {fileID: 2152268627019664996, guid: 892447579fa0e6c4784f1613283aefb0, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2152268627019664996, guid: 892447579fa0e6c4784f1613283aefb0, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2152268627019664996, guid: 892447579fa0e6c4784f1613283aefb0, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: -14.802
-      objectReference: {fileID: 0}
-    - target: {fileID: 2152268627019664996, guid: 892447579fa0e6c4784f1613283aefb0, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2152268627019664996, guid: 892447579fa0e6c4784f1613283aefb0, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 892447579fa0e6c4784f1613283aefb0, type: 3}
 --- !u!64 &1605290625
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -51066,7 +50667,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 44b791a8ffe98e34197f2597590a2a8a, type: 3}
+    m_Font: {fileID: 12800000, guid: 878828c64a632e543b4489fb8bd3fbe7, type: 3}
     m_FontSize: 20
     m_FontStyle: 0
     m_BestFit: 0
@@ -51296,6 +50897,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1590678272}
     m_Modifications:
+    - target: {fileID: 544186912525440446, guid: cc1ea0e0db6d0394a887061a590126d9, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4239870920899554155, guid: cc1ea0e0db6d0394a887061a590126d9, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -51356,7 +50961,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Porta Tocha Texturizacao (32)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 544186912525440446, guid: cc1ea0e0db6d0394a887061a590126d9, type: 3}
+    - {fileID: 312334682, guid: cc1ea0e0db6d0394a887061a590126d9, type: 3}
+    - {fileID: 613814153, guid: cc1ea0e0db6d0394a887061a590126d9, type: 3}
+    - {fileID: 613814154, guid: cc1ea0e0db6d0394a887061a590126d9, type: 3}
+    - {fileID: 7873599906519594275, guid: cc1ea0e0db6d0394a887061a590126d9, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: cc1ea0e0db6d0394a887061a590126d9, type: 3}
 --- !u!1001 &1630839975
 PrefabInstance:
@@ -51431,73 +51041,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bce3efb768187a64c9ca627e54845921, type: 3}
---- !u!1 &1631144472 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8803984995765732716, guid: cc1ea0e0db6d0394a887061a590126d9, type: 3}
-  m_PrefabInstance: {fileID: 1751425679}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1631144476
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1631144472}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03e1062e02eaa3144a1c4de96faec7f6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogue:
-    name: Orlock
-    name2: Orlock
-    sentences:
-    - Bem melhor agora!!
-  isPlayerTrigger: 0
-  mudancaPersonagem: 
---- !u!114 &1631144477
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1631144472}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 38f49bd4dc1b7e541b1940ea2daba890, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  corPadrao: {r: 0, g: 0, b: 0, a: 1}
-  corSelecionado: {r: 0.6, g: 0.5529412, b: 0.009411765, a: 0.6}
-  texto: '"E" para reabastecer a tocha'
-  mouseCursor: {fileID: 0}
---- !u!114 &1631144478
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1631144472}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7fa7db1d31a84cf48ab6059cf7c393d7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tocha: {fileID: 0}
---- !u!114 &1631144479
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1631144472}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1767997c56b55b44b9f27c84397f5ebf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  newCursor: {fileID: -2987633198902407147, guid: 6401e3adb8e48984f873354676a3869a, type: 3}
-  scalaIcone: {x: 0.2, y: 0.2, z: 0.2}
 --- !u!4 &1632740758 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6618271774239910188, guid: 9cca77c4babc1f245a1d7725346b172b, type: 3}
@@ -52624,73 +52167,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -2578372580300966491, guid: 84525fce65c5b284c9db4db6b6d702b2, type: 3}
---- !u!1 &1693444616 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8803984995765732716, guid: cc1ea0e0db6d0394a887061a590126d9, type: 3}
-  m_PrefabInstance: {fileID: 283864211}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1693444620
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1693444616}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03e1062e02eaa3144a1c4de96faec7f6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogue:
-    name: Orlock
-    name2: Orlock
-    sentences:
-    - Bem melhor agora!!
-  isPlayerTrigger: 0
-  mudancaPersonagem: 
---- !u!114 &1693444621
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1693444616}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 38f49bd4dc1b7e541b1940ea2daba890, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  corPadrao: {r: 0, g: 0, b: 0, a: 1}
-  corSelecionado: {r: 0.6, g: 0.5529412, b: 0.009411765, a: 0.6}
-  texto: '"E" para reabastecer a tocha'
-  mouseCursor: {fileID: 0}
---- !u!114 &1693444622
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1693444616}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7fa7db1d31a84cf48ab6059cf7c393d7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tocha: {fileID: 0}
---- !u!114 &1693444623
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1693444616}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1767997c56b55b44b9f27c84397f5ebf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  newCursor: {fileID: -2987633198902407147, guid: 6401e3adb8e48984f873354676a3869a, type: 3}
-  scalaIcone: {x: 0.2, y: 0.2, z: 0.2}
 --- !u!64 &1694038320
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -53330,73 +52806,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8957860262109488985, guid: 35818333e408a164d9efad83ddba7f2f, type: 3}
   m_PrefabInstance: {fileID: 1190337905}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1743090775 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8803984995765732716, guid: cc1ea0e0db6d0394a887061a590126d9, type: 3}
-  m_PrefabInstance: {fileID: 1147030839}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1743090779
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1743090775}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03e1062e02eaa3144a1c4de96faec7f6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogue:
-    name: Orlock
-    name2: Orlock
-    sentences:
-    - Bem melhor agora!!
-  isPlayerTrigger: 0
-  mudancaPersonagem: 
---- !u!114 &1743090780
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1743090775}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 38f49bd4dc1b7e541b1940ea2daba890, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  corPadrao: {r: 0, g: 0, b: 0, a: 1}
-  corSelecionado: {r: 0.6, g: 0.5529412, b: 0.009411765, a: 0.6}
-  texto: '"E" para reabastecer a tocha'
-  mouseCursor: {fileID: 0}
---- !u!114 &1743090781
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1743090775}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7fa7db1d31a84cf48ab6059cf7c393d7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tocha: {fileID: 0}
---- !u!114 &1743090782
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1743090775}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1767997c56b55b44b9f27c84397f5ebf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  newCursor: {fileID: -2987633198902407147, guid: 6401e3adb8e48984f873354676a3869a, type: 3}
-  scalaIcone: {x: 0.2, y: 0.2, z: 0.2}
 --- !u!4 &1745455962 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8957860262109488985, guid: 35818333e408a164d9efad83ddba7f2f, type: 3}
@@ -53575,9 +52984,13 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1590678272}
     m_Modifications:
+    - target: {fileID: 544186912525440446, guid: cc1ea0e0db6d0394a887061a590126d9, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8171175802636700448, guid: cc1ea0e0db6d0394a887061a590126d9, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8171175803867635670, guid: cc1ea0e0db6d0394a887061a590126d9, type: 3}
       propertyPath: m_RootOrder
@@ -53883,6 +53296,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1590678272}
     m_Modifications:
+    - target: {fileID: 544186912525440446, guid: cc1ea0e0db6d0394a887061a590126d9, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4239870920899554155, guid: cc1ea0e0db6d0394a887061a590126d9, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -53943,7 +53360,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Porta Tocha Texturizacao (33)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 544186912525440446, guid: cc1ea0e0db6d0394a887061a590126d9, type: 3}
+    - {fileID: 312334682, guid: cc1ea0e0db6d0394a887061a590126d9, type: 3}
+    - {fileID: 613814153, guid: cc1ea0e0db6d0394a887061a590126d9, type: 3}
+    - {fileID: 613814154, guid: cc1ea0e0db6d0394a887061a590126d9, type: 3}
+    - {fileID: 7873599906519594275, guid: cc1ea0e0db6d0394a887061a590126d9, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: cc1ea0e0db6d0394a887061a590126d9, type: 3}
 --- !u!1 &1764649103 stripped
 GameObject:
@@ -54644,6 +54066,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1590678272}
     m_Modifications:
+    - target: {fileID: 544186912525440446, guid: cc1ea0e0db6d0394a887061a590126d9, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8171175803867635670, guid: cc1ea0e0db6d0394a887061a590126d9, type: 3}
       propertyPath: m_RootOrder
       value: 24
@@ -54856,6 +54282,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1590678272}
     m_Modifications:
+    - target: {fileID: 544186912525440446, guid: cc1ea0e0db6d0394a887061a590126d9, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8171175803867635670, guid: cc1ea0e0db6d0394a887061a590126d9, type: 3}
       propertyPath: m_RootOrder
       value: 8
@@ -56819,75 +56249,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -8391158271260896448, guid: 84525fce65c5b284c9db4db6b6d702b2, type: 3}
---- !u!1001 &2009698257
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 1282908348}
-    m_Modifications:
-    - target: {fileID: 1627405049414669534, guid: 892447579fa0e6c4784f1613283aefb0, type: 3}
-      propertyPath: m_Name
-      value: 'Tocha '
-      objectReference: {fileID: 0}
-    - target: {fileID: 2152268627019664996, guid: 892447579fa0e6c4784f1613283aefb0, type: 3}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2152268627019664996, guid: 892447579fa0e6c4784f1613283aefb0, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2152268627019664996, guid: 892447579fa0e6c4784f1613283aefb0, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2152268627019664996, guid: 892447579fa0e6c4784f1613283aefb0, type: 3}
-      propertyPath: m_LocalScale.z
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2152268627019664996, guid: 892447579fa0e6c4784f1613283aefb0, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2152268627019664996, guid: 892447579fa0e6c4784f1613283aefb0, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.03276062
-      objectReference: {fileID: 0}
-    - target: {fileID: 2152268627019664996, guid: 892447579fa0e6c4784f1613283aefb0, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0.0075834594
-      objectReference: {fileID: 0}
-    - target: {fileID: 2152268627019664996, guid: 892447579fa0e6c4784f1613283aefb0, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.9916685
-      objectReference: {fileID: 0}
-    - target: {fileID: 2152268627019664996, guid: 892447579fa0e6c4784f1613283aefb0, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0.12881622
-      objectReference: {fileID: 0}
-    - target: {fileID: 2152268627019664996, guid: 892447579fa0e6c4784f1613283aefb0, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2152268627019664996, guid: 892447579fa0e6c4784f1613283aefb0, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2152268627019664996, guid: 892447579fa0e6c4784f1613283aefb0, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: -14.802
-      objectReference: {fileID: 0}
-    - target: {fileID: 2152268627019664996, guid: 892447579fa0e6c4784f1613283aefb0, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2152268627019664996, guid: 892447579fa0e6c4784f1613283aefb0, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 892447579fa0e6c4784f1613283aefb0, type: 3}
 --- !u!1 &2013846175
 GameObject:
   m_ObjectHideFlags: 0
@@ -57307,6 +56668,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1590678272}
     m_Modifications:
+    - target: {fileID: 544186912525440446, guid: cc1ea0e0db6d0394a887061a590126d9, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7885099706421064272, guid: cc1ea0e0db6d0394a887061a590126d9, type: 3}
       propertyPath: m_Range
       value: 1.3
@@ -57508,75 +56873,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a66d3042f21308140984d4c39e65ae97, type: 3}
---- !u!1001 &2038512888
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 283864212}
-    m_Modifications:
-    - target: {fileID: 1627405049414669534, guid: 892447579fa0e6c4784f1613283aefb0, type: 3}
-      propertyPath: m_Name
-      value: 'Tocha '
-      objectReference: {fileID: 0}
-    - target: {fileID: 2152268627019664996, guid: 892447579fa0e6c4784f1613283aefb0, type: 3}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2152268627019664996, guid: 892447579fa0e6c4784f1613283aefb0, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2152268627019664996, guid: 892447579fa0e6c4784f1613283aefb0, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2152268627019664996, guid: 892447579fa0e6c4784f1613283aefb0, type: 3}
-      propertyPath: m_LocalScale.z
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2152268627019664996, guid: 892447579fa0e6c4784f1613283aefb0, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2152268627019664996, guid: 892447579fa0e6c4784f1613283aefb0, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.03276062
-      objectReference: {fileID: 0}
-    - target: {fileID: 2152268627019664996, guid: 892447579fa0e6c4784f1613283aefb0, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0.0075834594
-      objectReference: {fileID: 0}
-    - target: {fileID: 2152268627019664996, guid: 892447579fa0e6c4784f1613283aefb0, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.9916685
-      objectReference: {fileID: 0}
-    - target: {fileID: 2152268627019664996, guid: 892447579fa0e6c4784f1613283aefb0, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0.12881622
-      objectReference: {fileID: 0}
-    - target: {fileID: 2152268627019664996, guid: 892447579fa0e6c4784f1613283aefb0, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2152268627019664996, guid: 892447579fa0e6c4784f1613283aefb0, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2152268627019664996, guid: 892447579fa0e6c4784f1613283aefb0, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: -14.802
-      objectReference: {fileID: 0}
-    - target: {fileID: 2152268627019664996, guid: 892447579fa0e6c4784f1613283aefb0, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2152268627019664996, guid: 892447579fa0e6c4784f1613283aefb0, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 892447579fa0e6c4784f1613283aefb0, type: 3}
 --- !u!64 &2047292430
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -63312,6 +62608,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1590678272}
     m_Modifications:
+    - target: {fileID: 544186912525440446, guid: cc1ea0e0db6d0394a887061a590126d9, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8171175803867635670, guid: cc1ea0e0db6d0394a887061a590126d9, type: 3}
       propertyPath: m_RootOrder
       value: 94
@@ -63912,9 +63212,13 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1590678272}
     m_Modifications:
+    - target: {fileID: 544186912525440446, guid: cc1ea0e0db6d0394a887061a590126d9, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8171175802636700448, guid: cc1ea0e0db6d0394a887061a590126d9, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8171175803867635670, guid: cc1ea0e0db6d0394a887061a590126d9, type: 3}
       propertyPath: m_RootOrder
@@ -64055,6 +63359,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1590678272}
     m_Modifications:
+    - target: {fileID: 544186912525440446, guid: cc1ea0e0db6d0394a887061a590126d9, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 544186912525440446, guid: cc1ea0e0db6d0394a887061a590126d9, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8171175803867635670, guid: cc1ea0e0db6d0394a887061a590126d9, type: 3}
       propertyPath: m_RootOrder
       value: 7
@@ -65666,7 +64978,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 495438762204974483, guid: 47ae8f85203bb7d4aae924abc1650f7d, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 17.741943
+      value: 21.21991
       objectReference: {fileID: 0}
     - target: {fileID: 495438762204974483, guid: 47ae8f85203bb7d4aae924abc1650f7d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -72960,7 +72272,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 24300002, guid: 92cb8065c7700cc42b3fc3a375636476, type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 0.75
+  m_Volume: 0.25
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -73171,6 +72483,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 2882008712742101845}
   tochaGO: {fileID: 1773135175}
+  tochaLuz:
+  - {fileID: 1457291201}
+  - {fileID: 1945919275}
   areaDeTexto: {fileID: 1611418107}
   chave: 0
   chave2: 0
@@ -73274,7 +72589,7 @@ MonoBehaviour:
   numeroLivroXIII: 0
   numeroLivroXIIIText: {fileID: 1226921729}
   timer: 0
-  sanidadeDecaimento: 0.015
+  sanidadeDecaimento: 0.035
   efeitosanidadeDecaimento: 0.98
   tochaDecaimento: 0.35
   staminaDecaimento: 0.25
@@ -80369,6 +79684,10 @@ PrefabInstance:
     - target: {fileID: 2149078696364867445, guid: 0480386729a016f4583f83e9a4f6f7d1, type: 3}
       propertyPath: m_Name
       value: Dialogo Cinema Mudo
+      objectReference: {fileID: 0}
+    - target: {fileID: 2149078696364867445, guid: 0480386729a016f4583f83e9a4f6f7d1, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0480386729a016f4583f83e9a4f6f7d1, type: 3}

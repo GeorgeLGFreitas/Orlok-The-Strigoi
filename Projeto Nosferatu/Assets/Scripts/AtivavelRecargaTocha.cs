@@ -6,6 +6,8 @@ public class AtivavelRecargaTocha : Ativavel
 {
     Stats stats;
     Jogador jogador;
+    [SerializeField]
+    AudioClip somRecarregaTocha;
     DialogueTrigger tochaReabastecerDialogo;
     public GameObject tocha;
 
@@ -22,7 +24,7 @@ public class AtivavelRecargaTocha : Ativavel
         {
             stats.atualTocha = stats.maxTocha;
             tochaReabastecerDialogo.TriggerDialogue();
-            GetComponent<AudioSource>().PlayOneShot();
+            GetComponent<AudioSource>().PlayOneShot(somRecarregaTocha);
         }
         else
         {
