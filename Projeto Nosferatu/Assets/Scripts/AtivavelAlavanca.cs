@@ -8,6 +8,8 @@ public class AtivavelAlavanca : Ativavel
     Laser[] lasers;
     [SerializeField]
     GameObject luzBranca;
+    [SerializeField]
+    AudioClip audioAlavanca;
 
     public bool testeLiga;
 
@@ -15,6 +17,11 @@ public class AtivavelAlavanca : Ativavel
     {
         testeLiga = true;
         GetComponent<Animator>().SetBool("ativouAlavanca", true);
+        GetComponent<AudioSource>().PlayOneShot(audioAlavanca);
+
+        gameObject.GetComponent<Selecionavel>().enabled = false;
+        gameObject.GetComponent<mouseCursor>().enabled = false;
+        gameObject.GetComponent<AtivavelAlavanca>().enabled = false;
     }
 
     private void Update()

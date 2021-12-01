@@ -54,8 +54,6 @@ public class DialogueManager : MonoBehaviour
             sentences.Enqueue(sentence);
         }
 
-        Debug.Log(sentences);
-
         DisplayNextSentence();
     }
 

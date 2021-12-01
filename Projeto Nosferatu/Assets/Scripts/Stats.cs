@@ -42,6 +42,7 @@ public class Stats : MonoBehaviour
     GameObject cantilCintura;
     [SerializeField]
     GameObject cantilMao;
+    float timerCantil = 4f;
 
     [Header("Tocha")]
 
@@ -58,6 +59,8 @@ public class Stats : MonoBehaviour
     [SerializeField]
     Text countPedraText;
     public bool pedraSelected;
+    float timerMira = 4f;
+    float timerArremesso = 4f;
 
     [Header("Garrafa")]
 
@@ -207,6 +210,7 @@ public class Stats : MonoBehaviour
 
     private void FixedUpdate()
     {
+
         #region Sliders
         staminaSlider.value = atualStamina;
         sanidadeSlider.value = atualSanidade;
@@ -264,7 +268,15 @@ public class Stats : MonoBehaviour
         {
             if (restoreInitialStamina)
             {
+
+                timerCantil -= Time.deltaTime;
+
                 textoC.text = "'F' para beber";
+
+                if (timerCantil <= 0)
+                {
+                    textoC.text = "";
+                }
             }
 
             if (atualCantil == 0)
@@ -307,13 +319,24 @@ public class Stats : MonoBehaviour
             tochaSlider.gameObject.SetActive(true);
 
             atualTocha -= tochaDecaimento * Time.deltaTime;
-            atualSanidade = maxSanidade;
+            if (atualTocha >= 99)
+            {
+                atualSanidade = maxSanidade;
+            }
 
             if (atualTocha <= 0)
             {
                 atualTocha = 0;
                 tochaSlider.gameObject.SetActive(false);
                 jogador.tocha = false;
+            }
+            if (atualTocha <= 70)
+            {
+                atualSanidade -= 0.020f;
+            }
+            if (atualTocha <= 30)
+            {
+                atualSanidade -= 0.010f;
             }
         }
 
@@ -325,15 +348,15 @@ public class Stats : MonoBehaviour
                 atualSanidade -= sanidadeDecaimento;
                 if (atualSanidade >= 70)
                 {
-                    vignette.intensity.value -= efeitosanidadeDecaimento;
+                    //vignette.intensity.value -= efeitosanidadeDecaimento;
                 }
                 else if (atualSanidade < 70 & atualSanidade >= 40)
                 {
-                    vignette.intensity.value -= efeitosanidadeDecaimento * 2;
+                    //vignette.intensity.value -= efeitosanidadeDecaimento * 2;
                 }
                 else if (atualSanidade < 40)
                 {
-                    vignette.intensity.value -= efeitosanidadeDecaimento * 3;
+                    //vignette.intensity.value -= efeitosanidadeDecaimento * 3;
                 }
             }
         }
@@ -342,11 +365,24 @@ public class Stats : MonoBehaviour
 
         if (questManager.interagiuPedra)
         {
-            textoC.text = "Segure o bot�o direito para mirar.";
+            textoC.text = "Segure o botão direito para mirar.";
+
+            timerMira -= Time.deltaTime;
+            if (timerMira <= 0)
+            {
+                textoC.text = "";
+            }
 
             if (primeiroTiro)
             {
-                textoC.text = "Aperte o bot�o esquerdo para atirar.";
+                textoC.text = "Aperte o botão esquerdo para atirar.";
+
+                timerArremesso -= Time.deltaTime;
+
+                if (timerArremesso <= 0)
+                {
+                    textoC.text = "";
+                }
 
                 if (arremessouPrimeiraVez)
                 {
