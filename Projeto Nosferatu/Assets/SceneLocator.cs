@@ -5,14 +5,17 @@ using UnityEngine.SceneManagement;
 
 public class SceneLocator : MonoBehaviour
 {
+    public int cenaF = 0;
+    public int cenaC = 0;
+    Scene cena;
     private void Awake()
     {
-        //DontDestroyOnLoad(this);
-        //SceneManager.sceneLoaded += OnSceneLoaded;
+        DontDestroyOnLoad(this);
     }
-    
-    public void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    void Update()
     {
-        //PlayerPrefs.SetString("_last_scene_", scene.name);
+        cena = SceneManager.GetActiveScene();
+        cenaC = cena.buildIndex;
+        if(cenaC != 3) cenaF = cena.buildIndex;
     }
 }

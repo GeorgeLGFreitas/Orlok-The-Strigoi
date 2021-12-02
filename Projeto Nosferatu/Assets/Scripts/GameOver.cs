@@ -12,6 +12,7 @@ public class GameOver : MonoBehaviour
     void Start()
     {
         Cursor.lockState = CursorLockMode.None;
+        sceneL = FindObjectOfType<SceneLocator>();
     }
     private void Update()
     {
@@ -37,7 +38,15 @@ public class GameOver : MonoBehaviour
     }
     public void RestartGame()
     {
-        //SceneManager.LoadScene("J1");
-        SceneManager.LoadScene(PlayerPrefs.GetString("_last_scene_"));
+        
+        if(sceneL.cenaF == 1)
+        {
+         SceneManager.LoadScene("J1");
+        }
+        if(sceneL.cenaF == 2)
+        {
+         SceneManager.LoadScene("Mapa 2");
+        }
+        
     }
 }
