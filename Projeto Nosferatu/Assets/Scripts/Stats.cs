@@ -233,7 +233,7 @@ public class Stats : MonoBehaviour
 
         if (canRun)
         {
-            if (movimento.velocity > 3 & movimento.movi != Vector3.zero)
+            if (movimento.corre)
             {
                 atualStamina -= staminaDecaimento;
             }

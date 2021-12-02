@@ -13,11 +13,11 @@ public class BTAlvoCampoDeVisao : BTNode
         Ray raio = new Ray(bt.transform.position, bt.player.transform.position - bt.transform.position);
       
 
-        if (Vector3.Angle(bt.transform.forward, raio.direction) < 90)
+        if (Vector3.Angle(bt.transform.forward, raio.direction) < 180)
         {
             RaycastHit hit;
          
-            if (Physics.Raycast(raio, out hit, 150))
+            if (Physics.Raycast(raio, out hit, 180))
             {
                 if (hit.transform == bt.player.transform)
                 {

@@ -106,15 +106,15 @@ NavMeshSettings:
   m_BuildSettings:
     serializedVersion: 2
     agentTypeID: 0
-    agentRadius: 0.5
+    agentRadius: 0.28
     agentHeight: 2
-    agentSlope: 51
+    agentSlope: 60
     agentClimb: 0.4
     ledgeDropHeight: 0
     maxJumpAcrossDistance: 0
     minRegionArea: 2
     manualCellSize: 0
-    cellSize: 0.16666667
+    cellSize: 0.093333334
     manualTileSize: 0
     tileSize: 256
     accuratePlacement: 0
@@ -2348,7 +2348,7 @@ MonoBehaviour:
   m_IgnoreNavMeshObstacle: 1
   m_OverrideTileSize: 0
   m_TileSize: 256
-  m_OverrideVoxelSize: 1
+  m_OverrideVoxelSize: 0
   m_VoxelSize: 0.16666667
   m_BuildHeightMesh: 0
   m_NavMeshData: {fileID: 0}
@@ -10193,6 +10193,7 @@ GameObject:
   - component: {fileID: 222140840}
   - component: {fileID: 222140848}
   - component: {fileID: 222140847}
+  - component: {fileID: 222140849}
   m_Layer: 0
   m_Name: Nosferatu (1)
   m_TagString: Untagged
@@ -10239,7 +10240,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 222140839}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.5
+  m_Radius: 0.28
   m_Speed: 3.5
   m_Acceleration: 8
   avoidancePriority: 50
@@ -10250,7 +10251,7 @@ NavMeshAgent:
   m_AutoRepath: 1
   m_Height: 2
   m_BaseOffset: 0
-  m_WalkableMask: 4294967295
+  m_WalkableMask: 9
   m_ObstacleAvoidanceType: 4
 --- !u!114 &222140843
 MonoBehaviour:
@@ -10360,7 +10361,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 20
+  MaxDistance: 16.282272
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -10435,6 +10436,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &222140849
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 222140839}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87537d16d32508a40b5dd2fff1783b7a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
 --- !u!1 &227276970
 GameObject:
   m_ObjectHideFlags: 0
@@ -14080,7 +14094,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 356204581}
   m_LocalRotation: {x: 1, y: -0, z: -0, w: 0}
-  m_LocalPosition: {x: -13.120001, y: -93.27, z: -11.5}
+  m_LocalPosition: {x: -13.120001, y: 100, z: -11.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1013720345}
@@ -14111,7 +14125,7 @@ MonoBehaviour:
   m_IgnoreNavMeshObstacle: 1
   m_OverrideTileSize: 0
   m_TileSize: 256
-  m_OverrideVoxelSize: 1
+  m_OverrideVoxelSize: 0
   m_VoxelSize: 0.16666667
   m_BuildHeightMesh: 0
   m_NavMeshData: {fileID: 23800000, guid: d408b7a56eb723640acdb288bfecd76d, type: 2}
@@ -26790,8 +26804,8 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 704320909}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
+  m_IsTrigger: 1
+  m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -28341,6 +28355,7 @@ GameObject:
   - component: {fileID: 781771320}
   - component: {fileID: 781771328}
   - component: {fileID: 781771327}
+  - component: {fileID: 781771329}
   m_Layer: 0
   m_Name: Nosferatu
   m_TagString: Untagged
@@ -28387,7 +28402,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 781771319}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.5
+  m_Radius: 0.28
   m_Speed: 3.5
   m_Acceleration: 8
   avoidancePriority: 50
@@ -28398,7 +28413,7 @@ NavMeshAgent:
   m_AutoRepath: 1
   m_Height: 2
   m_BaseOffset: 0
-  m_WalkableMask: 4294967295
+  m_WalkableMask: 9
   m_ObstacleAvoidanceType: 4
 --- !u!114 &781771323
 MonoBehaviour:
@@ -28583,6 +28598,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &781771329
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 781771319}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87537d16d32508a40b5dd2fff1783b7a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
 --- !u!1001 &782051488
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -33995,6 +34023,49 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.36831897, y: 0.45200714, z: 0.3008327}
   m_Center: {x: -0.000023000226, y: -0.0017822456, z: -0.0095138475}
+--- !u!1 &1038558010
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1038558012}
+  - component: {fileID: 1038558011}
+  m_Layer: 0
+  m_Name: SceneLocator
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1038558011
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1038558010}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0097e0c6079ca7e4fa312b97993bd077, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1038558012
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1038558010}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 23
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1038783182
 GameObject:
   m_ObjectHideFlags: 0
@@ -51172,6 +51243,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 1588530421}
   tochaGO: {fileID: 1059580945}
+  tochaLuz: []
   areaDeTexto: {fileID: 160164437}
   chave: 0
   chave2: 0
@@ -61167,10 +61239,10 @@ MonoBehaviour:
   m_IgnoreNavMeshObstacle: 1
   m_OverrideTileSize: 0
   m_TileSize: 256
-  m_OverrideVoxelSize: 1
+  m_OverrideVoxelSize: 0
   m_VoxelSize: 0.16666667
   m_BuildHeightMesh: 0
-  m_NavMeshData: {fileID: 23800000, guid: 5c9cf826968e29244a7ed876ff9ad121, type: 2}
+  m_NavMeshData: {fileID: 0}
 --- !u!1 &1806939326
 GameObject:
   m_ObjectHideFlags: 0
@@ -62153,10 +62225,10 @@ MonoBehaviour:
   m_IgnoreNavMeshObstacle: 1
   m_OverrideTileSize: 0
   m_TileSize: 256
-  m_OverrideVoxelSize: 1
+  m_OverrideVoxelSize: 0
   m_VoxelSize: 0.16666667
   m_BuildHeightMesh: 0
-  m_NavMeshData: {fileID: 23800000, guid: 9c7a356ce91f8ca42aa7fa604c4cf52f, type: 2}
+  m_NavMeshData: {fileID: 0}
 --- !u!1 &1870648444
 GameObject:
   m_ObjectHideFlags: 0
@@ -71127,10 +71199,10 @@ MonoBehaviour:
   m_IgnoreNavMeshObstacle: 1
   m_OverrideTileSize: 0
   m_TileSize: 256
-  m_OverrideVoxelSize: 1
+  m_OverrideVoxelSize: 0
   m_VoxelSize: 0.16666667
   m_BuildHeightMesh: 0
-  m_NavMeshData: {fileID: 23800000, guid: 514b27bc2e343564cafa1a1871f44fde, type: 2}
+  m_NavMeshData: {fileID: 0}
 --- !u!1001 &2047082429
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -73393,10 +73465,10 @@ MonoBehaviour:
   m_IgnoreNavMeshObstacle: 1
   m_OverrideTileSize: 0
   m_TileSize: 256
-  m_OverrideVoxelSize: 1
+  m_OverrideVoxelSize: 0
   m_VoxelSize: 0.16666667
   m_BuildHeightMesh: 0
-  m_NavMeshData: {fileID: 23800000, guid: cc3f4978439acff45a58374c08521c59, type: 2}
+  m_NavMeshData: {fileID: 0}
 --- !u!1 &2145331871
 GameObject:
   m_ObjectHideFlags: 0
@@ -89683,7 +89755,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!65 &2337580955285009521
 BoxCollider:
@@ -90059,7 +90131,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!65 &2439722902986002952
 BoxCollider:
@@ -94980,7 +95052,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!33 &3220659511994493438
 MeshFilter:
@@ -96740,7 +96812,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!65 &3630364946521115506
 BoxCollider:
@@ -104290,6 +104362,7 @@ MonoBehaviour:
   - {fileID: 448450003}
   - {fileID: 2031922268}
   luzBranca: {fileID: 1292643788}
+  audioAlavanca: {fileID: 0}
   testeLiga: 0
 --- !u!95 &5265589512535434402
 Animator:
@@ -106580,7 +106653,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!65 &5673447021074118944
 BoxCollider:
@@ -112014,7 +112087,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!65 &6608473354865099968
 BoxCollider:
@@ -116220,7 +116293,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!65 &7700866433429919842
 BoxCollider:
@@ -119138,7 +119211,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!65 &8431933665134286449
 BoxCollider:
