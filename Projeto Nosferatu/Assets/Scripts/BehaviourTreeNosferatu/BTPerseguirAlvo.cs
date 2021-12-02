@@ -28,7 +28,7 @@ public class BTPerseguirAlvo : BTNode
         }
 
         else if (status == Status.RUNNING) status = Status.FAILURE;
-        //bt.Idle();
+        
         Print(bt);
         
     }  

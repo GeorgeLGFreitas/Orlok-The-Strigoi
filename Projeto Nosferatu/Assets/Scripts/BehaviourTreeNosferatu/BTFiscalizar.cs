@@ -16,17 +16,31 @@ public class BTFiscalizar : BTNode
         bt.agente.SetDestination(alvo.transform.position);
         bt.Andando();
         
-        if (Vector3.Distance(bt.transform.position, alvo.transform.position) < 2)
+        if (Vector3.Distance(bt.transform.position, alvo.transform.position) < 0.5f)
         {
-            bt.Olhando();
+            bt.Correndo();
+            bt.agente.SetDestination(bt.player.transform.position);
+            status = Status.SUCCESS;
+            //bt.agente.ResetPath();
+            yield break;
+        }
+
+        else if (Vector3.Distance(bt.transform.position, alvo.transform.position) < 3)
+        {
+            bt.Idle();
             status = Status.SUCCESS;
             //bt.agente.ResetPath();
             
-            
             yield break;
         }
+        
       
-        else if (status == Status.RUNNING) status = Status.FAILURE;
+        else if (status == Status.RUNNING) 
+        {
+            status = Status.FAILURE;
+
+        }
+        
         Print(bt);
         
     }

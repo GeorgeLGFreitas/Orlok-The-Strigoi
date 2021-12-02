@@ -31,16 +31,12 @@ public class Movimento : MonoBehaviour
     }
     void Update()
     {
-        if (movi.x > 0)
-        {
-
-        }
-
         if (cannonC.mirando == true)
         {
             velocity = vel / 3;
         }
-        else if (Input.GetKey(KeyCode.LeftShift) & cannonC.mirando == false & stats.atualStamina > 0)
+        else if (Input.GetKey(KeyCode.LeftShift) && cannonC.mirando == false && Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.LeftShift) && cannonC.mirando == false && Input.GetKey(KeyCode.S) 
+        || Input.GetKey(KeyCode.LeftShift) && cannonC.mirando == false && Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftShift) && cannonC.mirando == false && Input.GetKey(KeyCode.D))
         {
             velocity = vel * 2;
             corre = true;
@@ -51,6 +47,7 @@ public class Movimento : MonoBehaviour
             corre = false;
             velocity = vel;
         }
+
         /*
         else if (Input.GetKey(KeyCode.LeftControl))
         {
@@ -62,7 +59,6 @@ public class Movimento : MonoBehaviour
                 velocity = vel / 5;
             }
         }
-        
         */
 
 

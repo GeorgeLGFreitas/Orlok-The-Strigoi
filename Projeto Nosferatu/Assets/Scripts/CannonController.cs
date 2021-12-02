@@ -35,7 +35,7 @@ public class CannonController : MonoBehaviour
 
                 mirando = true;
                 bPowerT += Input.mouseScrollDelta.y * 0.3f;
-                bPowerTC = Mathf.Clamp(bPowerT, 5, 10);
+                bPowerTC = Mathf.Clamp(bPowerT, 5, 13);
                 bPowerT = bPowerTC;
                 BlastPower = bPowerT;
 

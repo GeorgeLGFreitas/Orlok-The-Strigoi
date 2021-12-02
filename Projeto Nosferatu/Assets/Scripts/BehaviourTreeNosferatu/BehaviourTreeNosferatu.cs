@@ -25,15 +25,21 @@ public class BehaviourTreeNosferatu : MonoBehaviour
 
     void Awake()
     {
+        
         agente = GetComponent<NavMeshAgent>();
         animator = GetComponent<Animator>();
         audioNos = GetComponent<AudioManagerNos>();
         Idle();
     }
 
+    void Start()
+    {
+        
+    }
     void Update()
     {
         agente.SamplePathPosition(NavMesh.AllAreas, 0f, out navMeshHit);
+        agente.updateRotation = true;
         Debug.Log(navMeshHit.mask);
         if(navMeshHit.mask == 8)
         {
@@ -44,6 +50,7 @@ public class BehaviourTreeNosferatu : MonoBehaviour
 
     public void Correndo()
     {
+       
         animator.SetBool("Correndo", true);
         animator.SetBool("Andando", false);
         animator.SetBool("Idle", false);
@@ -51,7 +58,8 @@ public class BehaviourTreeNosferatu : MonoBehaviour
     }
 
     public void Andando()
-    {
+    {   
+       
         animator.SetBool("Correndo", false);
         animator.SetBool("Andando", true);
         animator.SetBool("Idle", false);
@@ -60,6 +68,7 @@ public class BehaviourTreeNosferatu : MonoBehaviour
 
     public void Idle()
     {
+        
         animator.SetBool("Correndo", false);
         animator.SetBool("Andando", false);
         animator.SetBool("Idle", true);
@@ -68,6 +77,7 @@ public class BehaviourTreeNosferatu : MonoBehaviour
 
     public void Olhando()
     {
+      
         animator.SetBool("Olhando", true);
         animator.SetBool("Correndo", false);
         animator.SetBool("Andando", false);

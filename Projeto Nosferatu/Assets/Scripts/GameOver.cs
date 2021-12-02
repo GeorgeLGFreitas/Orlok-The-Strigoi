@@ -7,6 +7,8 @@ public class GameOver : MonoBehaviour
 
     GameOverOptions gameOverOptions;
 
+    public SceneLocator sceneL;
+
     void Start()
     {
         Cursor.lockState = CursorLockMode.None;
@@ -35,6 +37,7 @@ public class GameOver : MonoBehaviour
     }
     public void RestartGame()
     {
-        SceneManager.LoadScene("J1");
+        //SceneManager.LoadScene("J1");
+        SceneManager.LoadScene(PlayerPrefs.GetString("_last_scene_"));
     }
 }
