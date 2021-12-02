@@ -7,11 +7,12 @@ public class SceneLocator : MonoBehaviour
 {
     private void Awake()
     {
-        DontDestroyOnLoad(this);
-        SceneManager.sceneLoaded += OnSceneLoaded;
+        //DontDestroyOnLoad(this);
+        //SceneManager.sceneLoaded += OnSceneLoaded;
     }
+    
     public void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        PlayerPrefs.SetString("_last_scene_", scene.name);
+        //PlayerPrefs.SetString("_last_scene_", scene.name);
     }
 }
