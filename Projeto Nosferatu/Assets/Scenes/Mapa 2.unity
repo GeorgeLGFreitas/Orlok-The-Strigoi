@@ -10396,7 +10396,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -28557,7 +28557,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -36407,7 +36407,7 @@ NavMeshObstacle:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1143878162}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_Shape: 1
   m_Extents: {x: 0.0050000004, y: 0.0050000004, z: 0.0050000004}
@@ -48358,7 +48358,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1457317388}
   m_LocalRotation: {x: 0.000012505222, y: -0.99998003, z: 0.0020943568, w: 0.0059707947}
-  m_LocalPosition: {x: -31.945145, y: 8.931001, z: -78.369385}
+  m_LocalPosition: {x: -0.22514725, y: -0.0089998245, z: -0.5193863}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 659098082}
@@ -51423,7 +51423,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1588530418}
   m_LocalRotation: {x: -0, y: -0.9955096, z: -0, w: 0.094660975}
-  m_LocalPosition: {x: -62.5, y: 15.1, z: -61.1}
+  m_LocalPosition: {x: -30.78, y: 6.16, z: 16.75}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 754470588}
@@ -55165,7 +55165,7 @@ NavMeshObstacle:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1748875996}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_Shape: 1
   m_Extents: {x: 0.085, y: 0.09, z: 0.03}
@@ -60666,7 +60666,7 @@ NavMeshObstacle:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1788808966}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_Shape: 1
   m_Extents: {x: 0.0050000004, y: 0.0050000004, z: 0.0050000004}
@@ -70902,7 +70902,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2036679645}
   m_LocalRotation: {x: -0, y: -0.99966735, z: -0, w: -0.025791291}
-  m_LocalPosition: {x: -31.945145, y: 8.931001, z: -78.369385}
+  m_LocalPosition: {x: -0.22514725, y: -0.0089998245, z: -0.5193863}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1334091901}
@@ -77502,6 +77502,7 @@ GameObject:
   - component: {fileID: 3644021129060778336}
   - component: {fileID: 3122698550617719482}
   - component: {fileID: 666874412461502089}
+  - component: {fileID: 666874412461502090}
   m_Layer: 0
   m_Name: pCube1
   m_TagString: Untagged
@@ -77522,6 +77523,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.009999999, y: 0.01, z: 0.009999998}
   m_Center: {x: -9.313226e-10, y: 0, z: 0}
+--- !u!208 &666874412461502090
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 666874412461502088}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.0050000004, y: 0.0050000004, z: 0.0050000004}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!4 &668031544519000410
 Transform:
   m_ObjectHideFlags: 0
