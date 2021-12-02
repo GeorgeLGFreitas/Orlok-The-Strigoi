@@ -66,7 +66,6 @@ public class AtivavelPorta : Ativavel
             audioS.PlayOneShot(abre);
             dialogueTrigger.TriggerDialogue();
 
-            stats.numeroChave--;
         }
 
         if(porta2)
