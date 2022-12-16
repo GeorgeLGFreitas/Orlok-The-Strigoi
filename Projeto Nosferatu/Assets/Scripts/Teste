@@ -1,0 +1,160 @@
+public class BTMedicamentoEncontrado : BTNode
+{
+    enum Status { SUCCESS, FAILURE, RUNNING }
+    Status status;
+
+    IEnumerator Run(GameObject npc)
+    {
+        status = Status.FAILURE;
+        GameObject[] medicamentos = GameObject.FindGameObjectsWithTag("Medicamento");
+        foreach (GameObject medicamento in medicamentos)
+        {
+            if (medicamento == bt.gameObject) continue;
+            Ray raio = new Ray(bt.transform.position, bt.player.transform.position - bt.transform.position);
+
+
+            if (Vector3.Angle(bt.transform.forward, raio.direction) < 75)
+            {
+                RaycastHit hit;
+
+                if (Physics.Raycast(raio, out hit, 9))
+                {
+                    if (hit.transform == medicamento)
+                    {
+
+                        status = Status.SUCCESS;
+                    }
+                }
+            }
+           
+        }
+        yield break;
+    }
+}
+
+
+
+
+IEnumerator Run(GameObject npc)
+
+{
+
+    Armadilha = EncontraArmadilha();
+
+    if (Vector3.Distance(Armadilha.transform.position, transform.position) < 6)
+
+    {
+
+        Ray raio = new Ray(bt.transform.position, bt.Armadilha.transform.position - bt.transform.position);
+
+
+        if (Vector3.Angle(bt.transform.forward, raio.direction) < 80)
+
+        {
+
+            RaycastHit hit; GameObject Armadilha;
+
+
+
+            GameObject EncontraArmadilha()
+
+            {
+
+                GameObject[] gos;
+
+                gos = GameObject.FindGameObjectsWithTag("Armadilha");
+
+                GameObject closest = null;
+
+                float distance = Mathf.Infinity;
+
+                Vector3 position = transform.position;
+
+                foreach (GameObject go in gos)
+
+                {
+
+                    Vector3 diff = go.transform.position - position;
+
+                    float curDistance = diff.sqrMagnitude;
+
+                    if (curDistance < distance)
+
+                    {
+
+                        closest = go;
+
+                        distance = curDistance;
+
+                    }
+
+                }
+
+                return closest;
+
+            }
+
+
+
+            IEnumerator Run(GameObject npc)
+
+            {
+
+                Armadilha = EncontraArmadilha();
+
+                if (Vector3.Distance(Armadilha.transform.position, transform.position) < 6)
+
+                {
+
+                    Ray raio = new Ray(bt.transform.position, bt.Armadilha.transform.position - bt.transform.position);
+
+
+                    if (Vector3.Angle(bt.transform.forward, raio.direction) < 80)
+
+                    {
+
+                        RaycastHit hit;
+                        if (Physics.Raycast(raio, out hit, 10))
+
+                        {
+
+                            if (hit.transform == bt.Armadilha.transform)
+
+                            {
+                                status = Status.SUCCESS;
+
+                            }
+                            else
+                            {
+                                status = Status.FAILURE;
+                            }
+
+                        }
+
+                    }
+
+                }
+
+            }
+            if (Physics.Raycast(raio, out hit, 10))
+
+            {
+
+                if (hit.transform == bt.Armadilha.transform)
+
+                {
+                    status = Status.SUCCESS;
+
+                }
+                else
+                {
+                    status = Status.FAILURE;
+                }
+
+            }
+
+        }
+
+    }
+
+}

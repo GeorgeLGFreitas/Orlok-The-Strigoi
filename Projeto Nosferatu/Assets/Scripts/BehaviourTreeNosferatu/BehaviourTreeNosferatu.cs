@@ -38,14 +38,17 @@ public class BehaviourTreeNosferatu : MonoBehaviour
     }
     void Update()
     {
+        //agente.updateRotation = true;
         agente.SamplePathPosition(NavMesh.AllAreas, 0f, out navMeshHit);
         agente.updateRotation = true;
+        
         Debug.Log(navMeshHit.mask);
         if(navMeshHit.mask == 8)
         {
             this.GetComponent<Animator>().runtimeAnimatorController = anim2 as RuntimeAnimatorController;
         }
         else this.GetComponent<Animator>().runtimeAnimatorController = anim1 as RuntimeAnimatorController;
+        
     }
 
     public void Correndo()
